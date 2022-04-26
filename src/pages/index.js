@@ -11,7 +11,7 @@ import { SiteWrapper } from "../components/SiteWrapper";
 import { Work } from "../components/Work";
 
 const IndexPage = () => {
-	const [isMarqueeShowing, setIsMarqueeShowing] = useState(true);
+	const [isMarqueeShowing, setIsMarqueeShowing] = useState(false);
 
 	return (
 		<>
@@ -24,8 +24,8 @@ const IndexPage = () => {
 				<Header />
 				<Body />
 				<Popups />
-				<Work />
 				<Deal />
+				<Work />
 				<Footer />
 			</SiteWrapper>
 		</>

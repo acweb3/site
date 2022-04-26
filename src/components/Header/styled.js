@@ -71,7 +71,6 @@ export const H1 = styled.h1`
 	text-shadow: 9px 6px #000;
 
 	text-align: center;
-	transform: matrix3d(1, 0, 0, 0, -0.1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 
 	${breakpoints.small`
 		width: 62%;
@@ -89,8 +88,6 @@ export const H2 = styled.h2`
 	text-shadow: 9px 6px #000;
 
 	text-align: center;
-
-	transform: matrix3d(1, 0, 0, 0, -0.1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 
 	${breakpoints.small`
 		width: 62%;

@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import Waves from "../../assets/icons/waves.inline.svg";
-
 export const CardHeader = styled.h3`
 	margin: 0;
 	font-weight: 100;
@@ -47,15 +45,10 @@ export const Right = styled.div`
 	justify-content: center;
 `;
 
-export const WavyBottom = styled(Waves)`
-	margin-bottom: -5px;
-	margin-top: -200px;
-`;
-
 export const CardsContainer = styled.div`
 	position: relative;
 
-	margin-bottom: -300px;
+	/* margin-bottom: -300px; */
 `;
 
 export const PopupsSection = styled.section`

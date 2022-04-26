@@ -1,3 +1,5 @@
+const config = require("./config");
+
 module.exports = {
 	siteMetadata: {
 		siteUrl: "https://www.yourdomain.tld",
@@ -15,15 +17,15 @@ module.exports = {
 		"gatsby-plugin-image",
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-sitemap",
-		{
-			resolve: "gatsby-plugin-manifest",
-			options: {
-				icon: "src/images/icon.svg",
-				icon_options: {
-					purpose: "maskable",
-				},
-			},
-		},
+		// {
+		// 	resolve: "gatsby-plugin-manifest",
+		// 	options: {
+		// 		icon: "src/images/icon.svg",
+		// 		icon_options: {
+		// 			purpose: "maskable",
+		// 		},
+		// 	},
+		// },
 		"gatsby-plugin-sharp",
 		"gatsby-transformer-sharp",
 		{
@@ -40,6 +42,16 @@ module.exports = {
 				rule: {
 					include: /\.inline\.svg$/,
 				},
+			},
+		},
+
+		// S3 Deploy
+		{
+			resolve: "gatsby-plugin-s3",
+			options: {
+				bucketName: config.aws.s3BucketName,
+				protocol: "https",
+				hostname: config.aws.url,
 			},
 		},
 	],

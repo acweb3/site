@@ -29,8 +29,6 @@ export const Body = () => {
 					</S.SectionContent>
 				</S.ParagraphWrapper>
 			</S.BodyContent>
-
-			<S.WavyBottom />
 		</S.BodySection>
 	);
 };

@@ -43,7 +43,7 @@ export const WorkContent = styled(ViewScroll)`
 `;
 
 export const WorkContainer = styled.div`
-	margin-top: 300px;
+	/* margin-top: 300px; */
 	padding: 50px 0 0;
 
 	background: #f0f0f0;

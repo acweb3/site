@@ -1,12 +1,50 @@
 import styled from "styled-components";
 
 import { breakpoints } from "../../styles/breakpoints";
+import Logo from "../../assets/icons/logo--black.inline.svg";
+
+export const FixedLogo = styled(Logo)`
+	position: sticky;
+	top: 0;
+
+	width: 350px;
+
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
+	z-index: 3;
+`;
+
+export const Blurb = styled.div`
+	font-size: 1.175rem;
+	font-weight: 500;
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-top: -50px;
+	margin-bottom: 32px;
+
+	text-align: center;
+`;
+
+export const Column = styled.div`
+	display: flex;
+	flex-direction: column;
+
+	margin-top: ${(props) => (props.isOffset ? 128 : 0)}px;
+`;
+
+export const Columns = styled.div`
+	display: flex;
+	justify-content: space-between;
+`;
 
 export const DealContainer = styled.section`
-	min-height: 700px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	min-height: 800px;
+
+	position: relative;
 
 	font-weight: 100;
 	padding: 32px 32px;

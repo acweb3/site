@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { ViewScroll } from "../ViewScroll";
 import { breakpoints } from "../../styles/breakpoints";
 
-import Waves from "../../assets/icons/waves.inline.svg";
-
 export const Paragraph = styled.p`
 	font-size: 2.4rem;
 	line-height: 3rem;
@@ -64,11 +62,6 @@ export const BodyContent = styled.div`
 	${breakpoints.small`
 		padding: 112px 32px;
 	`}
-`;
-
-export const WavyBottom = styled(Waves)`
-	margin-top: -200px;
-	margin-bottom: -5px;
 `;
 
 export const BodySection = styled.section`
