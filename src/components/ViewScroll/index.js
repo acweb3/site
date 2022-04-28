@@ -1,7 +1,6 @@
+import * as S from "components/ViewScroll/ViewScroll.styled";
 import React, { useEffect, useRef, useState } from "react";
 import { useInViewport } from "react-in-viewport";
-
-import * as S from "./styled";
 
 export const ViewScroll = ({ className, children }) => {
 	const bodyRef = useRef();

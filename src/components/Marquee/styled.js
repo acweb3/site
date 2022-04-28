@@ -7,6 +7,7 @@ export const MarqueeContainer = styled.div`
 	height: 3rem;
 	position: fixed;
 	align-items: center;
+	border-bottom: 1px solid #fff;
 
 	z-index: 999;
 

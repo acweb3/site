@@ -6,6 +6,8 @@ module.exports = {
 		title: "a⚡️c",
 	},
 	plugins: [
+		"gatsby-plugin-root-import",
+		"gatsby-plugin-provide-react",
 		{
 			resolve: "gatsby-source-sanity",
 			options: {
@@ -17,22 +19,13 @@ module.exports = {
 		"gatsby-plugin-image",
 		"gatsby-plugin-react-helmet",
 		"gatsby-plugin-sitemap",
-		// {
-		// 	resolve: "gatsby-plugin-manifest",
-		// 	options: {
-		// 		icon: "src/images/icon.svg",
-		// 		icon_options: {
-		// 			purpose: "maskable",
-		// 		},
-		// 	},
-		// },
 		"gatsby-plugin-sharp",
 		"gatsby-transformer-sharp",
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
 				name: "images",
-				path: "./src/images/",
+				path: "./src/assets/",
 			},
 			__key: "images",
 		},

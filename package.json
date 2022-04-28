@@ -17,6 +17,8 @@
 	},
 	"dependencies": {
 		"@carbon/icons-react": "^10.44.0",
+		"@fontsource/ibm-plex-mono": "^4.5.7",
+		"@fontsource/ibm-plex-sans": "^4.5.7",
 		"babel-plugin-styled-components": "^2.0.2",
 		"gatsby": "^4.4.0",
 		"gatsby-plugin-image": "^2.4.0",
@@ -38,9 +40,11 @@
 		"react-dom": "^17.0.1",
 		"react-helmet": "^6.1.0",
 		"react-in-viewport": "^1.0.0-alpha.20",
-		"styled-components": "^5.3.3"
+		"styled-components": "^5.3.3",
+		"three": "0.105.0"
 	},
 	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
 		"prettier": "^2.5.1"
 	}
 }
