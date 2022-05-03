@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const blink = keyframes`
+	0% {opacity: 0}
+	49%{opacity: 0}
+	50% {opacity: 1}
+`;
+
+export const ClockBlink = styled.span`
+	animation: ${blink} 1s infinite;
+`;
 
 export const ClockAttribute = styled.div`
 	text-transform: lowercase;

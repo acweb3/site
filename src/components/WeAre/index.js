@@ -12,8 +12,8 @@ export const WeAre = () => {
 				`}
 			>
 				<S.ColumnHeader main>
-					we are a development studio specializing in nfts, crypto,
-					and web3
+					we are a digital studio specializing in nfts, crypto, and
+					web3
 				</S.ColumnHeader>
 				<S.ColumnText>
 					we create communities, write smart contracts, and develop

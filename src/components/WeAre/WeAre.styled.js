@@ -34,14 +34,14 @@ export const Column = styled.div`
 			position: absolute;
 			bottom: 64px;
 			width: 100%;
-			border-bottom: 1px solid #fff;
+			border-bottom: 1px solid ${props.theme.colors.black[0]};
 		}
 	`}
 `;
 
 export const WeAre = styled.div`
-	color: #fff;
-	background: #000;
+	color: ${(props) => props.theme.colors.black[0]};
+	background: ${(props) => props.theme.colors.white[0]};
 
 	padding: 32px 32px 48px;
 

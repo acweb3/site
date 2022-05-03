@@ -104,17 +104,17 @@ function init(container, gltfPath) {
 	// dummyScene.add(zmesh2);
 
 	const gridHelper = new THREE.GridHelper(1000, 10);
-	gridHelper.material.color.setHex(0xffffff);
+	gridHelper.material.color.setHex(0x000000);
 	console.log({ gridHelper });
 	gridScene.add(gridHelper);
 
-	var light = new THREE.AmbientLight(0xffffff);
-	// const light = new THREE.PointLight(0xffffff, 200, 1000);
+	var light = new THREE.AmbientLight(0x000000);
+	// const light = new THREE.PointLight(0x000000, 200, 1000);
 	scene.add(light);
 
 	renderer = new THREE.WebGLRenderer();
 	//				renderer.setPixelRatio( 0.2 );
-	renderer.setClearColor(0x000000);
+	renderer.setClearColor(0xffffff);
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	renderer.autoClear = false;
 
@@ -127,7 +127,7 @@ function init(container, gltfPath) {
 			gltf.scene.position.set(0, 100, 0);
 			gltf.scene.traverse((child) => {
 				if (child.material) {
-					child.material.color.setHex(0xffffff);
+					child.material.color.setHex(0x000000);
 				}
 			});
 			gltf.scene.rotation.x = 0;
@@ -150,7 +150,7 @@ function init(container, gltfPath) {
 	// 		gltf.scene.position.set(-100, 100, 0);
 	// 		// gltf.scene.traverse((child) => {
 	// 		// 	if (child.material) {
-	// 		// 		child.material.color.setHex(0xffffff);
+	// 		// 		child.material.color.setHex(0x000000);
 	// 		// 	}
 	// 		// });
 	// 		// gltf.scene.rotation.x = 0;
@@ -202,6 +202,7 @@ const render = () => {
 	renderer.render(dummyScene, dummyCamera);
 
 	// Render full screen quad with generated texture
+	renderer.setRenderTarget(null);
 	renderer.render(gridScene, gridCamera);
 };
 
@@ -214,8 +215,8 @@ export const Waves = ({ gltfPath }) => {
 		() => {
 			if (refState && !hasMountedRefState.current) {
 				hasMountedRefState.current = true;
-				init(refState, gltfPath);
-				animate();
+				// init(refState, gltfPath);
+				// animate();
 			}
 		},
 		[refState],
