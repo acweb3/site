@@ -1,7 +1,9 @@
 import { CallToAction } from "components/CallToAction";
 import { Clocks } from "components/Clocks";
+import { Footer } from "components/Footer";
 import { Marquee } from "components/Marquee";
 import { Nav } from "components/Nav";
+import { Process } from "components/Process";
 import { RecentWork } from "components/RecentWork";
 import { SiteWrapper } from "components/SiteWrapper";
 import { Waves } from "components/Waves";
@@ -36,8 +38,10 @@ const IndexPage = () => {
 				<Waves gltfPath={publicURL} />
 				<WeAre />
 
-				<RecentWork />
+				<Process />
 				<CallToAction />
+				<RecentWork />
+				<Footer />
 			</SiteWrapper>
 		</Contexts>
 	);
