@@ -16,8 +16,11 @@ export const Nav = () => {
 
 	const throttleScroll = useCallback(
 		throttle(() => {
+			// # TODO => Fix this for multiple viewports
 			setIsVisible(
-				window.scrollY < 100 || scrollRef.current > window.scrollY
+				(window.scrollY < 100 || scrollRef.current > window.scrollY) &&
+					window.scrollY <
+						window.document.documentElement.scrollHeight - 1200
 			);
 			setHasShadow(window.scrollY > 100);
 
@@ -65,7 +68,7 @@ export const Nav = () => {
 					<S.NavLinks>
 						<S.NavLink href="#the-process">the process</S.NavLink>
 						<S.NavLink href="#our-work">our work</S.NavLink>
-						<S.NavLink href="#">our team</S.NavLink>
+						<S.NavLink href="#the-team">the team</S.NavLink>
 					</S.NavLinks>
 					<NavAction isActive={isVisible}>
 						<FaceSatisfied16 />

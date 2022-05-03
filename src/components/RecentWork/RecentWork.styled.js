@@ -1,3 +1,4 @@
+import { ViewScroll } from "components/ui/ViewScroll";
 import styled, { css } from "styled-components";
 
 export const RecentWorkSup = styled.div`
@@ -65,7 +66,7 @@ export const RecentWorkRibbon = styled.div`
 	);
 `;
 
-export const RecentWorkProject = styled.div`
+export const RecentWorkProject = styled(ViewScroll)`
 	position: relative;
 
 	display: flex;

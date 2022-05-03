@@ -1,4 +1,4 @@
-import Logo from "assets/icons/logo--white.inline.svg";
+import Logo from "assets/icons/logo.inline.svg";
 import styled from "styled-components";
 
 export const CallToActionLogo = styled(Logo)`

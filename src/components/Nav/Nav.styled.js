@@ -1,4 +1,4 @@
-import Logo from "assets/icons/logo--white.inline.svg";
+import Logo from "assets/icons/logo.inline.svg";
 import styled, { css } from "styled-components";
 
 export const NavLink = styled.a`

@@ -7,7 +7,7 @@ export const WeAre = () => {
 			<S.Column
 				css={`
 					${(props) => props.theme.breakpoints.small`
-						flex: 0 0 300px;
+						flex: 0 0 320px;
 					`}
 				`}
 			>

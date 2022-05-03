@@ -5,8 +5,10 @@ import { Nav } from "components/Nav";
 import { Process } from "components/Process";
 import { RecentWork } from "components/RecentWork";
 import { SiteWrapper } from "components/SiteWrapper";
+import { Team } from "components/Team";
 import { Waves } from "components/Waves";
 import { WeAre } from "components/WeAre";
+import { ShadowWrapper } from "components/ui/ShadowWrapper/ShadowWrapper.styled";
 import { Contexts } from "contexts";
 import { useModelQuery } from "graphql/queries/useModelQuery";
 import { useState } from "react";
@@ -27,16 +29,19 @@ const IndexPage = () => {
 	return (
 		<Contexts>
 			<SiteWrapper isMarqueeShowing={isMarqueeShowing}>
-				<Nav />
-				<Clocks />
-				<Waves gltfPath={publicURL} />
-				<WeAre />
+				<ShadowWrapper>
+					<Nav />
+					<Clocks />
+					<Waves gltfPath={publicURL} />
+					<WeAre />
 
-				<Process />
-				<CallToAction />
-				<RecentWork />
-				<Footer />
+					<Process />
+					<CallToAction />
+					<RecentWork />
+					<Team />
+				</ShadowWrapper>
 			</SiteWrapper>
+			<Footer />
 		</Contexts>
 	);
 };

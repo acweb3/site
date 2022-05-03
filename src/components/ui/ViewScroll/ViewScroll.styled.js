@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const ViewScroll = styled.div`
 	opacity: 0;
-	transform: translateY(20%);
+	transform: translateY(-100px);
 
-	transition: opacity 700ms, transform 200ms;
+	transition: opacity 700ms, transform 100ms;
 
 	${(props) =>
 		props.isInView &&

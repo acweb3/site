@@ -44,11 +44,11 @@ export const RecentWork = () => {
 						</S.RecentWorkProject>
 					</S.RecentWorkProjects>
 					<S.RecentWorkProjects>
-						<S.RecentWorkProject width={500}>
+						<S.RecentWorkProject width={480}>
 							<StaticImage
 								src="../../assets/images/highrises.webp"
 								alt="highrises"
-								width={500}
+								width={480}
 							/>
 							<S.RecentWorkHeader>
 								highrises
@@ -64,12 +64,12 @@ export const RecentWork = () => {
 								consequat.
 							</S.RecentWorkCopy>
 						</S.RecentWorkProject>
-						<S.RecentWorkProject width={500}>
+						<S.RecentWorkProject width={480}>
 							<StaticImage
 								src="../../assets/images/e11even.jpg"
 								alt="mirrored"
-								width={600}
-								height={500}
+								width={560}
+								height={480}
 							/>
 							<S.RecentWorkHeader>
 								e11even
@@ -86,12 +86,12 @@ export const RecentWork = () => {
 						</S.RecentWorkProject>
 					</S.RecentWorkProjects>
 					<S.RecentWorkProjects isRight>
-						<S.RecentWorkProject width={900}>
+						<S.RecentWorkProject width={880}>
 							<StaticImage
 								src="../../assets/images/linksdao.png"
 								alt="mirrored"
-								width={900}
-								height={500}
+								width={880}
+								height={480}
 							/>
 							{/* <S.RecentWorkRibbon>new</S.RecentWorkRibbon> */}
 							<S.RecentWorkSpreadCopy>

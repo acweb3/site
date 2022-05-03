@@ -2,7 +2,7 @@ import * as S from "components/ui/ViewScroll/ViewScroll.styled";
 import React, { useEffect, useRef, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 
-export const ViewScroll = ({ className, children, threshold = 0.7 }) => {
+export const ViewScroll = ({ className, children, threshold = 0.2 }) => {
 	const bodyRef = useRef();
 	const { inViewport } = useInViewport(bodyRef, { threshold });
 	const [isInView, setIsInview] = useState(false);
@@ -14,12 +14,7 @@ export const ViewScroll = ({ className, children, threshold = 0.7 }) => {
 	}, [inViewport]);
 
 	return (
-		<S.ViewScroll
-			className={className}
-			isInView={isInView}
-			ref={bodyRef}
-			{...animation}
-		>
+		<S.ViewScroll className={className} isInView={isInView} ref={bodyRef}>
 			{children}
 		</S.ViewScroll>
 	);
