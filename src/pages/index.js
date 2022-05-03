@@ -1,7 +1,6 @@
 import { CallToAction } from "components/CallToAction";
 import { Clocks } from "components/Clocks";
 import { Footer } from "components/Footer";
-import { Marquee } from "components/Marquee";
 import { Nav } from "components/Nav";
 import { Process } from "components/Process";
 import { RecentWork } from "components/RecentWork";
@@ -27,11 +26,6 @@ const IndexPage = () => {
 
 	return (
 		<Contexts>
-			<Marquee
-				isMarqueeShowing={isMarqueeShowing}
-				close={() => setIsMarqueeShowing(false)}
-			/>
-
 			<SiteWrapper isMarqueeShowing={isMarqueeShowing}>
 				<Nav />
 				<Clocks />

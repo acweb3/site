@@ -2,11 +2,13 @@ import { Code16, FaceSatisfied16 } from "@carbon/icons-react";
 import { useWindowListener } from "common/hooks/useWindowListener";
 import * as S from "components/Nav/Nav.styled";
 import { NavAction } from "components/Nav/NavAction";
+import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
 import throttle from "lodash.throttle";
 import React, { useEffect } from "react";
 import { useCallback, useRef, useState } from "react";
 
 export const Nav = () => {
+	const { activeRecentWork } = useActiveRecentWorkContext();
 	const scrollRef = useRef(0);
 	const [isVisible, setIsVisible] = useState(true);
 	const [hasShadow, setHasShadow] = useState(false);
@@ -47,7 +49,7 @@ export const Nav = () => {
 					setIsVisible(true);
 					setHasShadow(window.scrollY > 100);
 				}}
-				isVisible={isVisible}
+				isVisible={!activeRecentWork && isVisible}
 				hasShadow={hasShadow}
 			>
 				<S.NavLogoContainer
@@ -61,8 +63,8 @@ export const Nav = () => {
 
 				<S.NavLinkContainer>
 					<S.NavLinks>
+						<S.NavLink href="#the-process">the process</S.NavLink>
 						<S.NavLink href="#our-work">our work</S.NavLink>
-						<S.NavLink href="#our-work">the process</S.NavLink>
 						<S.NavLink href="#">our team</S.NavLink>
 					</S.NavLinks>
 					<NavAction isActive={isVisible}>

@@ -1,8 +1,14 @@
+import { RecentWorkSidePanel } from "components/RecentWork/RecentWorkSidePanel";
+import { BlurWrapper } from "components/SiteWrapper/BlurWrapper";
 import * as S from "components/SiteWrapper/SiteWrapper.styled";
+import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
 import React from "react";
 import { Helmet } from "react-helmet";
 
 export const SiteWrapper = ({ isMarqueeShowing, children }) => {
+	const { activeRecentWork, setActiveRecentWork } =
+		useActiveRecentWorkContext();
+
 	return (
 		<>
 			<Helmet>
@@ -10,7 +16,10 @@ export const SiteWrapper = ({ isMarqueeShowing, children }) => {
 				<title>aboltc</title>
 			</Helmet>
 			<S.Global />
-			<S.Main isMarqueeShowing={isMarqueeShowing}>{children}</S.Main>
+			<BlurWrapper>
+				<S.Main isMarqueeShowing={isMarqueeShowing}>{children}</S.Main>
+			</BlurWrapper>
+			{activeRecentWork && <RecentWorkSidePanel />}
 		</>
 	);
 };

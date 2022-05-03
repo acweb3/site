@@ -92,6 +92,11 @@ export const RecentWorkProjects = styled.div`
 		props.isRight &&
 		css`
 			margin-left: auto;
+			margin-right: 0;
+
+			& > ${RecentWorkProject} {
+				margin-right: 0;
+			}
 		`}
 `;
 
