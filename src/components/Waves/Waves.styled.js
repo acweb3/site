@@ -10,5 +10,5 @@ export const Waves = styled.div`
 	margin: 48px 80px 0;
 	box-sizing: border-box;
 	border-radius: 0 0 32px 32px;
-	border-bottom: 1px solid ${(props) => props.theme.colors.black[0]}; ;
+	border-bottom: 1px solid ${(props) => props.theme.colors.black[0]};
 `;

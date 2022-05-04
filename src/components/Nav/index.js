@@ -55,30 +55,34 @@ export const Nav = () => {
 				isVisible={!activeRecentWork && isVisible}
 				hasShadow={hasShadow}
 			>
-				<S.NavLogoContainer
-					onClick={() => {
-						window.scrollTo(0, 0);
-						document.activeElement.blur();
-					}}
-				>
-					<S.NavLogo />
-				</S.NavLogoContainer>
+				<S.NavContent>
+					<S.NavLogoContainer
+						onClick={() => {
+							window.scrollTo(0, 0);
+							document.activeElement.blur();
+						}}
+					>
+						<S.NavLogo />
+					</S.NavLogoContainer>
 
-				<S.NavLinkContainer>
-					<S.NavLinks>
-						<S.NavLink href="#the-process">the process</S.NavLink>
-						<S.NavLink href="#our-work">our work</S.NavLink>
-						<S.NavLink href="#the-team">the team</S.NavLink>
-					</S.NavLinks>
-					<NavAction isActive={isVisible}>
-						<FaceSatisfied16 />
-						community
-					</NavAction>
-					<NavAction isActive={isVisible}>
-						<Code16 />
-						code
-					</NavAction>
-				</S.NavLinkContainer>
+					<S.NavLinkContainer>
+						<S.NavLinks>
+							<S.NavLink href="#the-process">
+								the process
+							</S.NavLink>
+							<S.NavLink href="#our-work">our work</S.NavLink>
+							<S.NavLink href="#the-team">the team</S.NavLink>
+						</S.NavLinks>
+						<NavAction isActive={isVisible}>
+							<FaceSatisfied16 />
+							community
+						</NavAction>
+						<NavAction isActive={isVisible}>
+							<Code16 />
+							code
+						</NavAction>
+					</S.NavLinkContainer>
+				</S.NavContent>
 			</S.Nav>
 		</>
 	);

@@ -1,6 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const TeamDescription = styled.div`
+export const Header = styled.header`
+	padding: 32px 120px 32px;
 	color: ${(props) => props.theme.colors.black[0]};
 	background: ${(props) => props.theme.colors.white[0]};
 
@@ -8,8 +9,4 @@ export const TeamDescription = styled.div`
 	flex-direction: row;
 
 	margin-bottom: 64px;
-`;
-
-export const Team = styled.div`
-	padding: 120px 120px 80px;
 `;

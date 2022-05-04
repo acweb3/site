@@ -3,7 +3,7 @@ import * as S from "components/Footer/FooterContent/FooterContent.styled";
 import { BaseLink } from "components/ui/BaseLink";
 import React from "react";
 
-export const FooterContent = () => {
+export const FooterContent = ({ isVisible }) => {
 	return (
 		<S.FooterContent>
 			<S.FooterContentColumn>
@@ -21,6 +21,7 @@ export const FooterContent = () => {
 						href="https://twitter.com/aboltc_"
 						target="_blank"
 						rel="noopener noreferrer"
+						tabIndex={isVisible ? 0 : -1}
 					>
 						<LogoTwitter32 />
 					</BaseLink>
@@ -29,6 +30,7 @@ export const FooterContent = () => {
 						href="https://github.com/acweb3"
 						target="_blank"
 						rel="noopener noreferrer"
+						tabIndex={isVisible ? 0 : -1}
 					>
 						<LogoGithub24 />
 					</BaseLink>

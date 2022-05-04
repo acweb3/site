@@ -1,27 +1,28 @@
 import * as S from "components/WeAre/WeAre.styled";
+import { Column } from "components/ui/Column";
 import React from "react";
 
 export const WeAre = () => {
 	return (
 		<S.WeAre>
-			<S.Column
+			<Column
 				css={`
 					${(props) => props.theme.breakpoints.small`
 						flex: 0 0 320px;
 					`}
 				`}
 			>
-				<S.ColumnHeader main>
+				<Column.Header main>
 					we are a digital studio specializing in nfts, crypto, and
 					web3
-				</S.ColumnHeader>
-				<S.ColumnText>
+				</Column.Header>
+				<Column.Text>
 					we create communities, write smart contracts, and develop
 					websites for web3.
-				</S.ColumnText>
-			</S.Column>
+				</Column.Text>
+			</Column>
 
-			<S.Column
+			<Column
 				css={`
 					flex: 1;
 					flex-direction: column;
@@ -40,7 +41,7 @@ export const WeAre = () => {
 					`}
 				`}
 			>
-				<S.Column
+				<Column
 					hasAfter
 					css={`
 						flex: 1;
@@ -51,16 +52,16 @@ export const WeAre = () => {
 						`}
 					`}
 				>
-					<S.ColumnHeader>
+					<Column.Header>
 						we are a decentralized team with a physical presence in
 						philadelphia and paris
-					</S.ColumnHeader>
-					<S.ColumnText>
+					</Column.Header>
+					<Column.Text>
 						if you're in the city and want to jam, please reach out.
-					</S.ColumnText>
-				</S.Column>
+					</Column.Text>
+				</Column>
 
-				<S.Column
+				<Column
 					hasAfter
 					css={`
 						flex: 1;
@@ -71,16 +72,16 @@ export const WeAre = () => {
 						`}
 					`}
 				>
-					<S.ColumnHeader>
+					<Column.Header>
 						we've been doing this crypto thing for a minute&hellip;
-					</S.ColumnHeader>
-					<S.ColumnText>
+					</Column.Header>
+					<Column.Text>
 						we have been holding crypto assets since 2013 and have
 						held out for two crypto winters.
-					</S.ColumnText>
-				</S.Column>
+					</Column.Text>
+				</Column>
 
-				<S.Column
+				<Column
 					hasAfter
 					css={`
 						flex: 1;
@@ -91,13 +92,13 @@ export const WeAre = () => {
 						`}
 					`}
 				>
-					<S.ColumnHeader>let's get in touch</S.ColumnHeader>
-					<S.ColumnText>
+					<Column.Header>let's get in touch</Column.Header>
+					<Column.Text>
 						feel free to reach out about any questions regarding
 						what we can do for you, what we charge, and past work.
-					</S.ColumnText>
-				</S.Column>
-			</S.Column>
+					</Column.Text>
+				</Column>
+			</Column>
 		</S.WeAre>
 	);
 };

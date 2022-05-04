@@ -1,6 +1,7 @@
 import { CallToAction } from "components/CallToAction";
 import { Clocks } from "components/Clocks";
 import { Footer } from "components/Footer";
+import { Header } from "components/Header";
 import { Nav } from "components/Nav";
 import { Process } from "components/Process";
 import { RecentWork } from "components/RecentWork";
@@ -24,13 +25,13 @@ const IndexPage = () => {
 			],
 		},
 	} = useModelQuery();
-	const [isMarqueeShowing, setIsMarqueeShowing] = useState(false);
 
 	return (
 		<Contexts>
-			<SiteWrapper isMarqueeShowing={isMarqueeShowing}>
+			<SiteWrapper>
 				<ShadowWrapper>
 					<Nav />
+					<Header />
 					<Clocks />
 					<Waves gltfPath={publicURL} />
 					<WeAre />

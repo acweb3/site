@@ -5,9 +5,8 @@ import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export const SiteWrapper = ({ isMarqueeShowing, children }) => {
-	const { activeRecentWork, setActiveRecentWork } =
-		useActiveRecentWorkContext();
+export const SiteWrapper = ({ children }) => {
+	const { activeRecentWork } = useActiveRecentWorkContext();
 
 	return (
 		<>
@@ -17,7 +16,7 @@ export const SiteWrapper = ({ isMarqueeShowing, children }) => {
 			</Helmet>
 			<S.Global />
 			<BlurWrapper>
-				<S.Main isMarqueeShowing={isMarqueeShowing}>{children}</S.Main>
+				<S.Main>{children}</S.Main>
 			</BlurWrapper>
 			{activeRecentWork && <RecentWorkSidePanel />}
 		</>

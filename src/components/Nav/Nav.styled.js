@@ -21,6 +21,8 @@ export const NavLink = styled.a`
 		border-bottom: 1px solid ${(props) => props.theme.colors.black[0]};
 	}
 
+	&:active,
+	&:hover,
 	&:focus {
 		outline: none;
 		color: ${(props) => props.theme.colors.blue[0]};
@@ -33,6 +35,7 @@ export const NavLink = styled.a`
 
 export const NavLogo = styled(Logo)`
 	height: 66px;
+	background: ${(props) => props.theme.colors.white[0]};
 `;
 
 export const NavLogoContainer = styled.button`
@@ -72,6 +75,13 @@ export const NavOffset = styled.div`
 	height: ${NAV_HEIGHT}px;
 `;
 
+export const NavContent = styled.div`
+	z-index: 2;
+	width: 100%;
+	display: flex;
+	align-items: center;
+`;
+
 export const Nav = styled.nav`
 	height: ${NAV_HEIGHT}px;
 
@@ -80,7 +90,7 @@ export const Nav = styled.nav`
 	padding: 0 32px 0 64px;
 
 	position: fixed;
-	background: ${(props) => props.theme.colors.white[0]};
+
 	z-index: 999;
 	top: 0;
 
@@ -95,4 +105,16 @@ export const Nav = styled.nav`
 		css`
 			box-shadow: ${props.theme.shadows.medium};
 		`}
+
+	&::after {
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+
+		background: #fff;
+		opacity: 0.9;
+	}
 `;

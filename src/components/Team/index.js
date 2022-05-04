@@ -1,11 +1,12 @@
 import * as S from "components/Team/Team.styled";
-import { StaticImage } from "gatsby-plugin-image";
+import { TeamMembers } from "components/Team/TeamMembers";
+import { Column } from "components/ui/Column";
 
 export const Team = () => {
 	return (
 		<S.Team>
 			<S.TeamDescription>
-				<S.Column
+				<Column
 					css={`
 						flex: 0 0 320px;
 						border-top: 1px solid
@@ -13,17 +14,17 @@ export const Team = () => {
 						padding-top: 48px;
 					`}
 				>
-					<S.ColumnHeader main>
+					<Column.Header main>
 						we are a best in industry tiger team lorem ipsum io
-					</S.ColumnHeader>
-					<S.ColumnText>
+					</Column.Header>
+					<Column.Text>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 						sed do eiusmod tempor incididunt ut labore et dolore
 						magna aliqua. Ut enim ad minim veniam.
-					</S.ColumnText>
-				</S.Column>
+					</Column.Text>
+				</Column>
 
-				<S.Column
+				<Column
 					css={`
 						flex: 1;
 						flex-direction: column;
@@ -41,72 +42,26 @@ export const Team = () => {
 						}
 					`}
 				>
-					<S.Column
-						hasAfter
+					<Column
 						css={`
 							flex: 0 0 400px;
 						`}
 					>
-						<S.ColumnHeader main>
+						<Column.Header main>
 							yada yada yada more bs
-						</S.ColumnHeader>
-						<S.ColumnText>
+						</Column.Header>
+						<Column.Text>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et
 							dolore magna aliqua. Ut enim ad minim veniam, quis
 							nostrud exercitation ullamco laboris nisi ut aliquip
 							ex ea commodo consequat.
-						</S.ColumnText>
-					</S.Column>
-				</S.Column>
+						</Column.Text>
+					</Column>
+				</Column>
 			</S.TeamDescription>
 
-			<S.TeamMembers>
-				<S.Column
-					hasAfter
-					css={`
-						flex: 0 0 320px;
-					`}
-				>
-					<StaticImage
-						src="../../assets/images/team/cooper.jpg"
-						alt="mirrored"
-						width={320}
-						height={400}
-					/>
-					<S.ColumnHeader main>cooper sherwin</S.ColumnHeader>
-					<S.ColumnText>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea
-						commodo consequat.
-					</S.ColumnText>
-				</S.Column>
-
-				<S.Column
-					hasAfter
-					css={`
-						flex: 0 0 320px;
-						margin-left: 120px;
-					`}
-				>
-					<StaticImage
-						src="../../assets/images/team/andy.jpg"
-						alt="mirrored"
-						width={320}
-						height={480}
-					/>
-					<S.ColumnHeader main>andy gallagher</S.ColumnHeader>
-					<S.ColumnText>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea
-						commodo consequat.
-					</S.ColumnText>
-				</S.Column>
-			</S.TeamMembers>
+			<TeamMembers />
 		</S.Team>
 	);
 };
