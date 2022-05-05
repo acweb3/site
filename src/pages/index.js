@@ -7,25 +7,12 @@ import { Process } from "components/Process";
 import { RecentWork } from "components/RecentWork";
 import { SiteWrapper } from "components/SiteWrapper";
 import { Team } from "components/Team";
-import { Waves } from "components/Waves";
 import { WeAre } from "components/WeAre";
 import { ShadowWrapper } from "components/ui/ShadowWrapper/ShadowWrapper.styled";
 import { Contexts } from "contexts";
-import { useModelQuery } from "graphql/queries/useModelQuery";
-import { useState } from "react";
 import "styles/typography.css";
 
 const IndexPage = () => {
-	const {
-		allFile: {
-			edges: [
-				{
-					node: { publicURL },
-				},
-			],
-		},
-	} = useModelQuery();
-
 	return (
 		<Contexts>
 			<SiteWrapper>
@@ -33,10 +20,10 @@ const IndexPage = () => {
 					<Nav />
 					<Header />
 					<Clocks />
-					<Waves gltfPath={publicURL} />
-					<WeAre />
+					{/* <Waves gltfPath={publicURL} /> */}
 
 					<Process />
+					<WeAre />
 					<CallToAction />
 					<RecentWork />
 					<Team />

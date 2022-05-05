@@ -23,13 +23,11 @@ export const ProcessBannerCopy = styled.div`
 `;
 
 export const ProcessBanner = styled.div`
-	display: flex;
-	justify-content: end;
 	position: relative;
-	border-left: 1px solid ${(props) => props.theme.colors.black[0]};
-	margin-left: 64px;
+	border-right: 1px solid ${(props) => props.theme.colors.black[0]};
+	margin-right: 64px;
 	width: 48px;
-	padding-bottom: 150px;
+	padding-bottom: 160px;
 `;
 
 export const Process = styled.div`
@@ -37,5 +35,5 @@ export const Process = styled.div`
 
 	display: flex;
 	flex-direction: row;
-	padding: 144px 72px 48px 120px;
+	padding: 144px 120px 48px 72px;
 `;

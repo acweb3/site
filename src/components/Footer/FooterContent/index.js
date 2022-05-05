@@ -19,8 +19,6 @@ export const FooterContent = ({ isVisible }) => {
 				<S.FooterContentLogoWrapper>
 					<BaseLink
 						href="https://twitter.com/aboltc_"
-						target="_blank"
-						rel="noopener noreferrer"
 						tabIndex={isVisible ? 0 : -1}
 					>
 						<LogoTwitter32 />
@@ -28,8 +26,6 @@ export const FooterContent = ({ isVisible }) => {
 
 					<BaseLink
 						href="https://github.com/acweb3"
-						target="_blank"
-						rel="noopener noreferrer"
 						tabIndex={isVisible ? 0 : -1}
 					>
 						<LogoGithub24 />

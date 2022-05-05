@@ -1,4 +1,7 @@
+import { Phone16, Email16 } from "@carbon/icons-react";
 import * as S from "components/WeAre/WeAre.styled";
+import { BaseButton } from "components/ui/BaseButton";
+import { BaseLink } from "components/ui/BaseLink";
 import { Column } from "components/ui/Column";
 import React from "react";
 
@@ -82,7 +85,6 @@ export const WeAre = () => {
 				</Column>
 
 				<Column
-					hasAfter
 					css={`
 						flex: 1;
 
@@ -97,6 +99,18 @@ export const WeAre = () => {
 						feel free to reach out about any questions regarding
 						what we can do for you, what we charge, and past work.
 					</Column.Text>
+
+					<BaseLink
+						css={`
+							margin-top: auto;
+							width: calc(100% - 40px);
+						`}
+						href="tel:12157765485"
+					>
+						<BaseButton>
+							<Phone16 /> hit us up
+						</BaseButton>
+					</BaseLink>
 				</Column>
 			</Column>
 		</S.WeAre>

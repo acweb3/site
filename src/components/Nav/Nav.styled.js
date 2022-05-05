@@ -46,6 +46,8 @@ export const NavLogoContainer = styled.button`
 	border: none;
 	cursor: pointer;
 
+	&:active,
+	&:hover,
 	&:focus {
 		outline: none;
 		color: ${(props) => props.theme.colors.blue[0]};
@@ -114,7 +116,7 @@ export const Nav = styled.nav`
 		height: 100%;
 		width: 100%;
 
-		background: #fff;
+		background: ${(props) => props.theme.colors.white[0]};
 		opacity: 0.9;
 	}
 `;

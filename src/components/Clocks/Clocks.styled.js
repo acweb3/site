@@ -22,14 +22,14 @@ export const Clock = styled.div`
 	justify-content: center;
 	margin-right: 48px;
 	height: 0px;
-	width: 120px;
+	width: 144px;
 `;
 
 export const Clocks = styled.div`
 	font-family: ${(props) => props.theme.fontFamily.mono};
 	position: absolute;
-	top: 256px;
-	right: -112px;
+	top: 288px;
+	right: -124px;
 	transform: rotate(90deg);
 
 	display: flex;

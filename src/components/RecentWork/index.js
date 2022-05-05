@@ -22,7 +22,7 @@ export const RecentWork = () => {
 						>
 							<StaticImage
 								src="../../assets/images/batCowls.webp"
-								alt="mirrored"
+								alt="bat cowls"
 								width={800}
 								height={400}
 							/>
@@ -67,7 +67,7 @@ export const RecentWork = () => {
 						<S.RecentWorkProject width={480}>
 							<StaticImage
 								src="../../assets/images/e11even.jpg"
-								alt="mirrored"
+								alt="e11even"
 								width={560}
 								height={480}
 							/>
@@ -89,7 +89,7 @@ export const RecentWork = () => {
 						<S.RecentWorkProject width={880}>
 							<StaticImage
 								src="../../assets/images/linksdao.png"
-								alt="mirrored"
+								alt="linksdao"
 								width={880}
 								height={480}
 							/>

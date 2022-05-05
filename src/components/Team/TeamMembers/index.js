@@ -12,7 +12,7 @@ export const TeamMembers = () => {
 			>
 				<StaticImage
 					src="../../assets/images/team/cooper.jpg"
-					alt="mirrored"
+					alt="cooper"
 					width={320}
 					height={400}
 				/>
@@ -33,7 +33,7 @@ export const TeamMembers = () => {
 			>
 				<StaticImage
 					src="../../assets/images/team/andy.jpg"
-					alt="mirrored"
+					alt="andy"
 					width={320}
 					height={480}
 				/>

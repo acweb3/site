@@ -4,7 +4,7 @@ import { Column } from "components/ui/Column";
 
 export const Team = () => {
 	return (
-		<S.Team>
+		<S.Team id="the-team">
 			<S.TeamDescription>
 				<Column
 					css={`
