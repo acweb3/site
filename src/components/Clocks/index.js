@@ -42,14 +42,14 @@ export const Clocks = () => {
 	return (
 		<S.Clocks>
 			<S.Clock>
-				<S.ClockAttribute>Philadelphia</S.ClockAttribute>
+				<S.ClockAttribute>philadelphia</S.ClockAttribute>
 				<S.ClockAttribute>
 					{hoursEST} <S.ClockBlink>:</S.ClockBlink> {minutesEST}
 				</S.ClockAttribute>
 			</S.Clock>
 
 			<S.Clock>
-				<S.ClockAttribute>Paris</S.ClockAttribute>
+				<S.ClockAttribute>milan</S.ClockAttribute>
 				<S.ClockAttribute>
 					{hoursCEST} <S.ClockBlink>:</S.ClockBlink> {minutesCEST}
 				</S.ClockAttribute>

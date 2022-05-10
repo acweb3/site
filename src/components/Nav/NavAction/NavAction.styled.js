@@ -4,6 +4,8 @@ import { BaseTextArea } from "components/ui/BaseTextArea";
 import styled, { css } from "styled-components";
 
 export const NavActionButton = styled(BaseButton)`
+	background-color: transparent;
+
 	${(props) =>
 		props.isActive &&
 		css`

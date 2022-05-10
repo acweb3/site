@@ -57,7 +57,7 @@ export const WeAre = () => {
 				>
 					<Column.Header>
 						we are a decentralized team with a physical presence in
-						philadelphia and paris
+						philadelphia and milan
 					</Column.Header>
 					<Column.Text>
 						if you're in the city and want to jam, please reach out.

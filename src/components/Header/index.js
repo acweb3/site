@@ -1,4 +1,3 @@
-import { Waves } from "../Waves";
 import * as S from "components/Header/Header.styled";
 import { HeaderLogo } from "components/Header/HeaderLogo";
 import { Column } from "components/ui/Column";
@@ -14,7 +13,11 @@ export const Header = () => {
 				`}
 			>
 				<S.HeaderBigAssHeader>
-					code, community, cool stuff.
+					code,{" "}
+					<S.HeaderLogoBoltWrapper>
+						<S.HeaderLogoBolt />
+					</S.HeaderLogoBoltWrapper>{" "}
+					community, cool stuff
 				</S.HeaderBigAssHeader>
 				<Column.Text
 					css={`
@@ -33,7 +36,7 @@ export const Header = () => {
 					margin-left: 120px;
 				`}
 			>
-				<Column.Header main>web3 enabled web development</Column.Header>
+				<Column.Header main>web3 enabled development</Column.Header>
 				<Column.Text>
 					we write everything from smart contracts to marketplaces to
 					auction sites. we can help you to truly own your crypto
@@ -47,7 +50,7 @@ export const Header = () => {
 				<Column.Text>
 					craft experiences for your community that are as unique as
 					you are, along with tools like custom discord community hubs
-					and informed strategy consulting
+					and informed strategy consulting.
 				</Column.Text>
 			</Column>
 

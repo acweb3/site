@@ -7,6 +7,7 @@ import { Process } from "components/Process";
 import { RecentWork } from "components/RecentWork";
 import { SiteWrapper } from "components/SiteWrapper";
 import { Team } from "components/Team";
+import { ValueProp } from "components/ValueProp";
 import { WeAre } from "components/WeAre";
 import { ShadowWrapper } from "components/ui/ShadowWrapper/ShadowWrapper.styled";
 import { Contexts } from "contexts";
@@ -20,8 +21,7 @@ const IndexPage = () => {
 					<Nav />
 					<Header />
 					<Clocks />
-					{/* <Waves gltfPath={publicURL} /> */}
-
+					<ValueProp />
 					<Process />
 					<WeAre />
 					<CallToAction />

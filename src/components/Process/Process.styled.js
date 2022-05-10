@@ -35,5 +35,5 @@ export const Process = styled.div`
 
 	display: flex;
 	flex-direction: row;
-	padding: 144px 120px 48px 72px;
+	padding: 72px 120px 48px 72px;
 `;

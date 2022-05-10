@@ -36,7 +36,10 @@ export const CallToActionBox = styled.div`
 `;
 
 export const CallToAction = styled.div`
-	padding: 160px 120px 144px;
+	position: relative;
+	overflow: hidden;
+	padding: 168px 120px 144px;
 	margin: 32px auto 0;
 	text-align: center;
+	background-color: ${(props) => props.theme.colors.black[0]};
 `;

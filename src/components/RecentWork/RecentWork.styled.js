@@ -104,7 +104,7 @@ export const RecentWorkProjects = styled.div`
 export const RecentWorkPortfolio = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	/* width: 100%; */
 
 	& > ${RecentWorkProjects} {
 		margin-bottom: 64px;

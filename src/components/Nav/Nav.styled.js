@@ -35,7 +35,7 @@ export const NavLink = styled.a`
 
 export const NavLogo = styled(Logo)`
 	height: 66px;
-	background: ${(props) => props.theme.colors.white[0]};
+	background: transparent;
 `;
 
 export const NavLogoContainer = styled.button`
