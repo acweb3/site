@@ -12,7 +12,7 @@ const rotate = keyframes`
 `;
 
 export const HeaderLogoOrbit = styled(Logo)`
-	width: 56px;
+	width: 128px;
 	transform: rotate(-49deg);
 `;
 
@@ -35,12 +35,10 @@ export const HeaderLogoOrbits = styled.div`
 `;
 
 export const HeaderLogoContent = styled.div`
-	position: absolute;
-	top: -120px;
-	right: -60px;
+	position: relative;
 
-	width: 240px;
-	height: 240px;
+	width: 640px;
+	height: 100px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -49,15 +47,17 @@ export const HeaderLogoContent = styled.div`
 `;
 
 export const HeaderLogo = styled.div`
-	position: relative;
-	height: 240px;
-	width: 320px;
+	color: ${(props) => props.theme.colors.blue[0]};
+	opacity: 0.08;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflow: hidden;
 	box-sizing: border-box;
 	padding-bottom: 48px;
-	border-top: 1px solid ${(props) => props.theme.colors.black[0]};
-	border-right: 1px solid ${(props) => props.theme.colors.black[0]};
 `;

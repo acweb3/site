@@ -1,5 +1,4 @@
 import { CallToAction } from "components/CallToAction";
-import { Clocks } from "components/Clocks";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { Nav } from "components/Nav";
@@ -20,7 +19,6 @@ const IndexPage = () => {
 				<ShadowWrapper>
 					<Nav />
 					<Header />
-					<Clocks />
 					<ValueProp />
 					<Process />
 					<WeAre />
