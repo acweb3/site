@@ -73,15 +73,29 @@ export const Nav = () => {
 							<S.NavLink href="#our-work">our work</S.NavLink>
 							<S.NavLink href="#the-team">the team</S.NavLink>
 						</S.NavLinks>
-						<NavAction isActive={isVisible}>
-							<FaceSatisfied16 />
+					</S.NavLinkContainer>
+
+					<S.NavActionsContainer>
+						<NavAction
+							isActive={isVisible}
+							buttonProps={{
+								icon: <FaceSatisfied16 />,
+								style: {
+									borderRadius: "0 0 0 16px",
+								},
+							}}
+						>
 							community
 						</NavAction>
-						<NavAction isActive={isVisible}>
-							<Code16 />
+						<NavAction
+							isActive={isVisible}
+							buttonProps={{
+								icon: <Code16 />,
+							}}
+						>
 							code
 						</NavAction>
-					</S.NavLinkContainer>
+					</S.NavActionsContainer>
 				</S.NavContent>
 			</S.Nav>
 		</>

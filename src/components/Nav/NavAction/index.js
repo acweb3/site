@@ -1,10 +1,8 @@
 import { Email16 } from "@carbon/icons-react";
-import { useWindowListener } from "common/hooks/useWindowListener";
 import * as S from "components/Nav/NavAction/NavAction.styled";
-import { BaseButton } from "components/ui/BaseButton";
 import { useEffect, useRef, useState } from "react";
 
-export const NavAction = ({ children, isActive }) => {
+export const NavAction = ({ children, isActive, buttonProps }) => {
 	const [isPopoverActive, setIsPopoverActive] = useState(false);
 	const navActionRef = useRef();
 
@@ -27,7 +25,7 @@ export const NavAction = ({ children, isActive }) => {
 			}
 			onBlur={() => setIsPopoverActive(false)}
 		>
-			<S.NavActionButton isActive={isPopoverActive}>
+			<S.NavActionButton isActive={isPopoverActive} {...buttonProps}>
 				{children}
 			</S.NavActionButton>
 			<S.NavActionPopover

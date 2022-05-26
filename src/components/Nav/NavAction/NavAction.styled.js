@@ -10,7 +10,7 @@ export const NavActionButton = styled(BaseButton)`
 		props.isActive &&
 		css`
 			color: ${(props) => props.theme.colors.white[0]};
-			background-color: ${(props) => props.theme.colors.blue[0]};
+			background-color: ${(props) => props.theme.colors.black[0]};
 		`}
 `;
 
@@ -113,6 +113,8 @@ export const NavActionPopover = styled.div`
 export const NavAction = styled.div`
 	position: relative;
 	text-decoration: none;
+
+	height: min-content;
 
 	margin-right: 16px;
 

@@ -27,9 +27,9 @@ export const HeaderLogoBoltWrapper = styled.div`
 
 export const HeaderBigAssHeader = styled.h1`
 	font-family: ${(props) => props.theme.fontFamily.serif};
-	font-size: 7rem;
-	line-height: 6rem;
-	font-weight: 600;
+	font-size: 120px;
+	line-height: 96px;
+	font-weight: 500;
 
 	margin: 32px 0 16px;
 `;
@@ -37,15 +37,14 @@ export const HeaderBigAssHeader = styled.h1`
 export const HeaderInfo = styled.div`
 	position: relative;
 
-	padding: 80px 120px 96px;
+	padding: 104px 128px 96px;
 	color: ${(props) => props.theme.colors.black[0]};
 
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 
 	border-radius: 64px 64px 0 0;
 	margin-top: -64px;
-	box-shadow: ${(props) => props.theme.shadows.high};
 	opacity: 0;
 
 	transition: opacity 1000ms;
@@ -57,20 +56,13 @@ export const HeaderInfo = styled.div`
 		`}
 `;
 
-export const HeaderInfoGradient = styled.div`
+export const HeaderInfoOffset = styled.div`
 	position: relative;
 
 	background: ${(props) => props.theme.colors.white[0]};
-	background: linear-gradient(
-		180deg,
-		${(props) => props.theme.colors.white[0]} 0%,
-		${(props) => props.theme.colors.white[0]} 45%,
-		rgba(146, 142, 212, 1) calc(100% - 64px)
-	);
-
 	border-radius: 64px 64px 0 0;
 	margin-top: -64px;
-	box-shadow: ${(props) => props.theme.shadows.high};
+	box-shadow: ${(props) => props.theme.shadows.inverse.high};
 `;
 
 export const Header = styled.header``;

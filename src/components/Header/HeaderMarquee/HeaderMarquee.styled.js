@@ -1,3 +1,4 @@
+import textureSrc from "assets/images/texture/topographical--black--1.jpg";
 import styled, { css, keyframes } from "styled-components";
 
 const bounce = keyframes`
@@ -17,47 +18,35 @@ const bounce = keyframes`
 
 export const HeaderMarqueeLetter = styled.span`
 	display: inline-block;
-	transform: translateY(400px);
-	animation: ${bounce} 1000ms ease-out;
+	transform: translateY(500px);
+	animation: ${bounce} 700ms ease-out;
 	animation-delay: ${(props) => props.delay}ms;
 	animation-fill-mode: forwards;
 `;
 
 export const HeaderMarqueeLetters = styled.div`
-	/* color: rgba(120, 126, 233, 1);
-	opacity: 0.6; */
+	color: ${(props) => props.theme.colors.white[0]};
 	font-family: ${(props) => props.theme.fontFamily.serif};
-	font-weight: 600;
-	font-size: 28rem;
-	margin-top: 48px;
-	letter-spacing: -10px;
-	transform: scaleX(1.7);
+	font-size: 600px;
 `;
 
 export const HeaderMarquee = styled.div`
 	position: relative;
 
-	display: flex;
 	width: 100%;
+
+	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	height: 320px;
-	max-height: 320px;
+	height: 400px;
+	max-height: 400px;
 	overflow: hidden;
 
-	background: ${(props) => props.theme.colors.blue[0]};
-	background: radial-gradient(
-		circle,
-		rgba(177, 181, 242, 1) 0%,
-		rgba(177, 181, 242, 1) 18%,
-		rgba(177, 181, 242, 1) 20%,
-		rgba(177, 181, 242, 1) 65%,
-		rgba(120, 126, 233, 1) 45%,
-		${(props) => props.theme.colors.white[0]} 100%
-	);
+	background: ${(props) => props.theme.colors.black[0]};
+	background: url(${textureSrc});
 
-	transition: max-height 1000ms;
+	transition: max-height 400ms ease-in;
 
 	${(props) =>
 		props.isCollapsed &&

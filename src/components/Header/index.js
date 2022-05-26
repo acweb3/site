@@ -1,8 +1,10 @@
+import { useWindowListener } from "common/hooks/useWindowListener";
 import { Clocks } from "components/Clocks";
 import * as S from "components/Header/Header.styled";
-import { HeaderLogo } from "components/Header/HeaderLogo";
 import { HeaderMarquee } from "components/Header/HeaderMarquee";
+import { Bolts } from "components/ui/Bolts";
 import { Column } from "components/ui/Column";
+import { CoolCircle } from "components/ui/CoolCircle";
 import { useEffect, useState } from "react";
 
 export const Header = () => {
@@ -11,39 +13,57 @@ export const Header = () => {
 	useEffect(() => {
 		const sto = setTimeout(() => {
 			setIsCollapsed(true);
-		}, 2000);
+		}, 8000);
 
 		return () => {
 			clearTimeout(sto);
 		};
 	}, []);
 
+	useWindowListener(
+		"scroll",
+		(e) => {
+			e.preventDefault();
+
+			if (!isCollapsed) {
+				setIsCollapsed(true);
+			}
+		},
+		[isCollapsed]
+	);
+
 	return (
 		<S.Header>
 			<HeaderMarquee isCollapsed={isCollapsed} />
-			<S.HeaderInfoGradient>
+			<S.HeaderInfoOffset>
 				<S.HeaderInfo isCollapsed={isCollapsed}>
+					<Bolts
+						css={`
+							margin-bottom: 32px;
+						`}
+					/>
 					<Clocks />
 					<Column
 						css={`
 							margin-left: auto;
 							margin-right: auto;
-							flex: 0 0 480px;
-							padding-bottom: 72px;
+							max-width: 880px;
 							text-align: center;
 						`}
 					>
 						<S.HeaderBigAssHeader>
-							code,{" "}
-							<S.HeaderLogoBoltWrapper>
-								<S.HeaderLogoBolt />
-							</S.HeaderLogoBoltWrapper>{" "}
-							community, cool stuff
+							<CoolCircle>we create</CoolCircle>
+							code,
+							<br />
+							community,
+							<br />
+							and cool stuff
 						</S.HeaderBigAssHeader>
 						<Column.Text
 							css={`
 								font-size: ${(props) =>
 									props.theme.fontSize.h4};
+								line-height: 0.95;
 							`}
 						>
 							we're a full-service web3 studio. we build discords,
@@ -51,39 +71,13 @@ export const Header = () => {
 							projects.
 						</Column.Text>
 					</Column>
-
-					{/* <Column
+					<Bolts
 						css={`
-							flex: 0 0 360px;
-							padding-bottom: 48px;
-							margin-left: 120px;
-							margin-right: auto;
+							margin-top: 32px;
 						`}
-					>
-						<Column.Header main>
-							web3 enabled development
-						</Column.Header>
-						<Column.Text>
-							we write everything from smart contracts to
-							marketplaces to auction sites. we can help you to
-							truly own your crypto project and present it to the
-							world in a way that matches your brand excellence.
-						</Column.Text>
-
-						<Column.Header main>
-							community development activations
-						</Column.Header>
-						<Column.Text>
-							craft experiences for your community that are as
-							unique as you are, along with tools like custom
-							discord community hubs and informed strategy
-							consulting.
-						</Column.Text>
-					</Column> */}
-
-					<HeaderLogo />
+					/>
 				</S.HeaderInfo>
-			</S.HeaderInfoGradient>
+			</S.HeaderInfoOffset>
 		</S.Header>
 	);
 };

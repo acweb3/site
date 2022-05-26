@@ -28,7 +28,7 @@ export const Clock = styled.div`
 export const Clocks = styled.div`
 	font-family: ${(props) => props.theme.fontFamily.mono};
 	position: absolute;
-	top: 288px;
+	top: 304px;
 	right: -124px;
 	transform: rotate(90deg);
 

@@ -3,33 +3,18 @@ import styled, { css } from "styled-components";
 
 export const NavLink = styled.a`
 	font-size: 1rem;
-	color: ${(props) => props.theme.colors.black[0]};
+	color: ${(props) => props.theme.colors.white[0]};
 	text-decoration: none;
 	position: relative;
 	height: 24px;
-	margin: auto 0;
 
-	&:after {
-		content: " ";
-		display: block;
-		position: absolute;
-		left: 0;
-		bottom: -6px;
-		width: 100%;
-		height: 2px;
-		height: 2px;
-		border-bottom: 1px solid ${(props) => props.theme.colors.black[0]};
-	}
+	padding-right: 12px;
+	border-right: 1px solid;
 
 	&:active,
 	&:hover,
 	&:focus {
 		outline: none;
-		color: ${(props) => props.theme.colors.blue[0]};
-
-		&:after {
-			border-color: ${(props) => props.theme.colors.blue[0]};
-		}
 	}
 `;
 
@@ -56,19 +41,34 @@ export const NavLogoContainer = styled.button`
 
 export const NavLinks = styled.div`
 	display: flex;
+	justify-content: space-between;
+	background-color: ${(props) => props.theme.colors.black[0]};
+
+	padding: 8px 24px;
+	border-radius: 8px;
 
 	& > ${NavLink} {
-		margin-right: 24px;
-
 		&:last-of-type {
-			margin-right: 40px;
+			margin-right: 0;
+			padding-right: 0px;
+			border-right: none;
 		}
 	}
 `;
 
 export const NavLinkContainer = styled.div`
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 308px;
+`;
+
+export const NavActionsContainer = styled.div`
 	display: flex;
 	margin-left: auto;
+	align-items: center;
 `;
 
 const NAV_HEIGHT = 66;
@@ -89,7 +89,7 @@ export const Nav = styled.nav`
 
 	display: flex;
 	align-items: center;
-	padding: 0 32px 0 64px;
+	padding: 0 64px;
 
 	position: fixed;
 

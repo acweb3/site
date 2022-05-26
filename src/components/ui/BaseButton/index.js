@@ -1,5 +1,10 @@
 import * as S from "components/ui/BaseButton/BaseButton.styled";
 
-export const BaseButton = ({ ...props }) => {
-	return <S.BaseButton {...props}></S.BaseButton>;
+export const BaseButton = ({ icon, children, ...props }) => {
+	return (
+		<S.BaseButton {...props}>
+			{icon && <S.BaseButtonIcon>{icon}</S.BaseButtonIcon>}
+			<S.BaseButtonContent>{children}</S.BaseButtonContent>
+		</S.BaseButton>
+	);
 };
