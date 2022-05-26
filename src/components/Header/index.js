@@ -64,6 +64,7 @@ export const Header = () => {
 								font-size: ${(props) =>
 									props.theme.fontSize.h4};
 								line-height: 0.95;
+								width: 640px;
 							`}
 						>
 							we're a full-service web3 studio. we build discords,

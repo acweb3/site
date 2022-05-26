@@ -63,6 +63,16 @@ export const HeaderInfoOffset = styled.div`
 	border-radius: 64px 64px 0 0;
 	margin-top: -64px;
 	box-shadow: ${(props) => props.theme.shadows.inverse.high};
+
+	&::after {
+		content: " ";
+		position: absolute;
+		left: 0;
+		bottom: -24px;
+		height: 32px;
+		width: 100%;
+		background: ${(props) => props.theme.colors.white[0]};
+	}
 `;
 
 export const Header = styled.header``;

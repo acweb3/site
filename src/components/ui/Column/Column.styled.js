@@ -1,15 +1,16 @@
 import styled, { css } from "styled-components";
 
 export const ColumnText = styled.p`
-	margin-bottom: 24px;
+	line-height: 1;
 `;
 
 export const ColumnHeader = styled.h4`
 	font-family: ${(props) => props.theme.fontFamily.serif};
-	font-size: ${(props) => props.theme.fontSize.h4};
+	font-size: ${(props) => props.theme.fontSize.h5};
+	line-height: 1;
 	font-weight: 600;
 
-	margin: 32px 0 0;
+	margin: 0 0 16px;
 
 	${(props) =>
 		props.main &&
@@ -23,18 +24,4 @@ export const Column = styled.div`
 	flex-direction: column;
 
 	position: relative;
-
-	${(props) =>
-		props.hasAfter &&
-		`
-            &::after {
-                content: " ";
-                display: block;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                border-bottom: 1px solid ${props.theme.colors.black[0]};
-            }
-    `}
 `;
