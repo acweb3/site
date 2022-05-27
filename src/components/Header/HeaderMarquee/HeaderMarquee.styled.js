@@ -1,4 +1,4 @@
-import textureSrc from "assets/images/texture/topographical--black--1.jpg";
+// import textureSrc from "assets/images/texture/topographical--black--1.jpg";
 import styled, { css, keyframes } from "styled-components";
 
 const bounce = keyframes`
@@ -44,7 +44,7 @@ export const HeaderMarquee = styled.div`
 	overflow: hidden;
 
 	background: ${(props) => props.theme.colors.black[0]};
-	background: url(${textureSrc});
+	/* background: url(${textureSrc}); */
 
 	transition: max-height 400ms ease-in;
 

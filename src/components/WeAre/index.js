@@ -1,4 +1,5 @@
-import { Phone16, Email16 } from "@carbon/icons-react";
+import { CoolCircle } from "../ui/CoolCircle";
+import { Phone16, Email16, PhoneFilled16 } from "@carbon/icons-react";
 import * as S from "components/WeAre/WeAre.styled";
 import { BaseButton } from "components/ui/BaseButton";
 import { BaseLink } from "components/ui/BaseLink";
@@ -46,7 +47,12 @@ export const WeAre = () => {
 					margin-left: 48px;
 				`}
 			>
-				<Column.Header>let's get in touch</Column.Header>
+				<Column.Header>
+					<CoolCircle isSmall isInverted>
+						<PhoneFilled16 /> call today
+					</CoolCircle>
+					let's get in touch — we're a phonecall away
+				</Column.Header>
 				<Column.Text>
 					feel free to reach out about any questions regarding what we
 					can do for you, what we charge, and past work.

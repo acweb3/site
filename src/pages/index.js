@@ -17,8 +17,8 @@ const IndexPage = () => {
 				<Nav />
 				<Header />
 				<WeAre />
-				<Process />
-				<CallToAction />
+				{/* <Process />
+				<CallToAction /> */}
 				<RecentWork />
 				<Team />
 				<Footer />

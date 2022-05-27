@@ -138,5 +138,5 @@ export const RecentWork = styled.div`
 
 	display: flex;
 	flex-direction: row;
-	padding: 144px 120px 48px 72px;
+	padding: 88px 0 0;
 `;

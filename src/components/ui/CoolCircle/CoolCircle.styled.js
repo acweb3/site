@@ -24,6 +24,12 @@ export const CoolCircleEllipsis = styled.div`
 	opacity: 0;
 
 	${(props) =>
+		props.isPlaceholder &&
+		css`
+			max-height: 0;
+		`}
+
+	${(props) =>
 		props.isVisible &&
 		css`
 			padding: 40px 55px 54px 38px;
@@ -32,6 +38,42 @@ export const CoolCircleEllipsis = styled.div`
 			left: 0;
 			opacity: 1;
 		`}
+
+	${(props) =>
+		props.isSmall &&
+		css`
+			font-size: 16px;
+			padding: 9px 28px 11px 23px;
+			box-shadow: 8px 6px;
+			top: -24px;
+
+			& > svg {
+				margin-right: 4px;
+				margin-top: 2px;
+			}
+		`}
+
+	${(props) =>
+		props.isInverted &&
+		css`
+			color: ${(props) => props.theme.colors.white[0]};
+			background-color: ${(props) => props.theme.colors.black[0]};
+			box-shadow: none;
+		`}
+
+	${(props) =>
+		props.isShadow &&
+		css`
+			color: ${(props) => props.theme.colors.white[0]};
+			background-color: ${(props) => props.theme.colors.white[0]};
+
+			border: 1px solid ${(props) => props.theme.colors.black[0]};
+
+			opacity: 1;
+			position: absolute;
+			top: -19px;
+			right: -6px;
+		`}
 `;
 
 export const CoolCircle = styled.span`
@@ -39,4 +81,10 @@ export const CoolCircle = styled.span`
 	height: 1px;
 	overflow: visible;
 	margin-right: 24px;
+
+	${(props) =>
+		props.isSmall &&
+		css`
+			margin-right: 12px;
+		`}
 `;

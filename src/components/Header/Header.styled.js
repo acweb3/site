@@ -31,7 +31,7 @@ export const HeaderBigAssHeader = styled.h1`
 	line-height: 96px;
 	font-weight: 500;
 
-	margin: 32px 0 16px;
+	margin: 32px 0;
 `;
 
 export const HeaderInfo = styled.div`
