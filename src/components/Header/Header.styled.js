@@ -45,15 +45,6 @@ export const HeaderInfo = styled.div`
 
 	border-radius: 64px 64px 0 0;
 	margin-top: -64px;
-	opacity: 0;
-
-	transition: opacity 1000ms;
-
-	${(props) =>
-		props.isCollapsed &&
-		css`
-			opacity: 1;
-		`}
 `;
 
 export const HeaderInfoOffset = styled.div`

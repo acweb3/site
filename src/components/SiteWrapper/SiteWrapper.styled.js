@@ -40,7 +40,7 @@ export const Global = createGlobalStyle`
         5. Improve text rendering
     */
     body {
-        line-height: 1.5;
+        line-height: 1;
         -webkit-font-smoothing: antialiased;
     }
     /*

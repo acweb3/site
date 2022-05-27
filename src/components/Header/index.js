@@ -13,7 +13,7 @@ export const Header = () => {
 	useEffect(() => {
 		const sto = setTimeout(() => {
 			setIsCollapsed(true);
-		}, 8000);
+		}, 2777);
 
 		return () => {
 			clearTimeout(sto);
@@ -36,7 +36,7 @@ export const Header = () => {
 		<S.Header>
 			<HeaderMarquee isCollapsed={isCollapsed} />
 			<S.HeaderInfoOffset>
-				<S.HeaderInfo isCollapsed={isCollapsed}>
+				<S.HeaderInfo>
 					<Bolts
 						css={`
 							margin-bottom: 32px;

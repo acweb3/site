@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 export const NavLink = styled.a`
 	font-size: 1rem;
+	line-height: 1.35;
 	color: ${(props) => props.theme.colors.white[0]};
 	text-decoration: none;
 	position: relative;

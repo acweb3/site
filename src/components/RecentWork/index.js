@@ -1,4 +1,6 @@
 import * as S from "components/RecentWork/RecentWork.styled";
+import { RecentWorkMarquee } from "components/RecentWork/RecentWorkMarquee";
+import { CoolStar } from "components/ui/CoolStar";
 import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -7,6 +9,7 @@ export const RecentWork = () => {
 
 	return (
 		<>
+			<RecentWorkMarquee />
 			<S.RecentWork id="our-work">
 				<S.RecentWorkBanner>
 					<S.RecentWorkBannerCopy>
@@ -26,7 +29,17 @@ export const RecentWork = () => {
 								width={800}
 								height={400}
 							/>
-							{/* <S.RecentWorkRibbon>new</S.RecentWorkRibbon> */}
+							<CoolStar
+								css={`
+									position: absolute;
+									top: -40px;
+									right: -40px;
+									width: 100px;
+									height: 100px;
+								`}
+							>
+								new
+							</CoolStar>
 							<S.RecentWorkSpreadCopy>
 								<S.RecentWorkHeader>
 									bat cowls

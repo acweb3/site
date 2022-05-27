@@ -16,7 +16,6 @@ export const RecentWorkCopy = styled.div`
 	max-width: 480px;
 
 	padding-bottom: 48px;
-	border-bottom: 1px solid ${(props) => props.theme.colors.black[0]};
 
 	${(props) =>
 		props.isRight &&
@@ -37,33 +36,6 @@ export const RecentWorkHeader = styled.h4`
 export const RecentWorkSpreadCopy = styled.div`
 	display: flex;
 	justify-content: space-between;
-`;
-
-export const RecentWorkRibbon = styled.div`
-	position: absolute;
-	top: -56px;
-	right: -56px;
-
-	background: #98d11d;
-	height: 140px;
-	width: 140px;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	clip-path: polygon(
-		50% 0%,
-		61% 35%,
-		98% 35%,
-		68% 57%,
-		79% 91%,
-		50% 70%,
-		21% 91%,
-		32% 57%,
-		2% 35%,
-		39% 35%
-	);
 `;
 
 export const RecentWorkProject = styled(ViewScroll)`
@@ -104,11 +76,6 @@ export const RecentWorkProjects = styled.div`
 export const RecentWorkPortfolio = styled.div`
 	display: flex;
 	flex-direction: column;
-	/* width: 100%; */
-
-	& > ${RecentWorkProjects} {
-		margin-bottom: 64px;
-	}
 `;
 
 export const RecentWorkBannerCopy = styled.div`
@@ -138,5 +105,5 @@ export const RecentWork = styled.div`
 
 	display: flex;
 	flex-direction: row;
-	padding: 88px 0 0;
+	padding: 88px 120px 48px 72px;
 `;
