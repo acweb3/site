@@ -17,10 +17,10 @@ const IndexPage = () => {
 				<Nav />
 				<Header />
 				<WeAre />
-				{/* <Process />
-				<CallToAction /> */}
+				{/* <Process /> */}
 				<RecentWork />
 				<Team />
+				<CallToAction />
 				<Footer />
 			</SiteWrapper>
 		</Contexts>

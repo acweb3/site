@@ -1,19 +1,13 @@
 import * as S from "components/CallToAction/CallToAction.styled";
-import { StaticImage } from "gatsby-plugin-image";
+import { Bolts } from "components/ui/Bolts";
 
 export const CallToAction = () => {
 	return (
 		<S.CallToAction>
-			<StaticImage
-				style={{
-					position: "absolute",
-					opacity: "0.4",
-					top: "0",
-					left: "0",
-					height: "100%",
-					width: "100%",
-				}}
-				src={"../../assets/images/texture/topographical--black--1.jpg"}
+			<Bolts
+				css={`
+					margin-bottom: 32px;
+				`}
 			/>
 			<S.CallToActionBox>
 				<S.CallToActionLogoBox>
@@ -26,6 +20,11 @@ export const CallToAction = () => {
 					discord builds shouldn't be either.
 				</S.CallToActionCopy>
 			</S.CallToActionBox>
+			<Bolts
+				css={`
+					margin-top: 32px;
+				`}
+			/>
 		</S.CallToAction>
 	);
 };

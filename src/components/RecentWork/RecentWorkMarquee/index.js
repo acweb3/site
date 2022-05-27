@@ -1,25 +1,8 @@
-import { useWindowListener } from "common/hooks/useWindowListener";
+import { useScrollHeight } from "common/hooks/useScrollHeight";
 import * as S from "components/RecentWork/RecentWorkMarquee/RecentWorkMarquee.styled";
-import throttle from "lodash.throttle";
-import { useCallback, useState } from "react";
 
 export const RecentWorkMarquee = () => {
-	const [scrollHeight, setScrollHeight] = useState(0);
-
-	const throttleScroll = useCallback(
-		throttle(() => {
-			setScrollHeight(window.scrollY);
-		}, 100),
-		[]
-	);
-
-	useWindowListener(
-		"scroll",
-		() => {
-			throttleScroll();
-		},
-		[]
-	);
+	const { scrollHeight } = useScrollHeight();
 
 	return (
 		<S.RecentWorkMarquee>

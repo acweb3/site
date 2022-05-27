@@ -12,6 +12,17 @@ export const TeamMembersLinks = styled.div`
 	}
 `;
 
-export const TeamMembers = styled(ViewScroll)`
+export const TeamMembersViewScroll = styled(ViewScroll)``;
+
+export const TeamMembers = styled.div.attrs((attrs) => {
+	return {
+		style: {
+			transform: `translate3D(0px, ${attrs.offsetY}px, 0px)`,
+		},
+	};
+})`
+	padding-top: 32px;
 	display: flex;
+	transition: transform 200ms linear;
+	padding-bottom: 80px;
 `;

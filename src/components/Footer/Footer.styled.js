@@ -47,13 +47,7 @@ export const FooterContentGradient = styled.div`
 	height: 100%;
 
 	z-index: 2;
-	background: rgb(0, 0, 0);
-	background: linear-gradient(
-		270deg,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 1) 66%,
-		rgba(0, 0, 0, 1) 100%
-	);
+	background: ${(props) => props.theme.colors.black[0]};
 `;
 
 export const FooterContent = styled.div`
@@ -67,7 +61,4 @@ export const FooterContent = styled.div`
 	flex-direction: row;
 `;
 
-export const Footer = styled.div`
-	padding-top: 32px;
-	padding-bottom: 0;
-`;
+export const Footer = styled.div``;

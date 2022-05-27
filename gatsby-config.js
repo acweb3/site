@@ -37,6 +37,15 @@ module.exports = {
 				},
 			},
 		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				start_url: `/`,
+				background_color: `#FAF7F3`,
+				theme_color: `#000`,
+				icon: `src/assets/images/favicon.png`,
+			},
+		},
 
 		// S3 Deploy
 		{

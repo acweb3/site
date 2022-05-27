@@ -29,7 +29,7 @@ export const RecentWorkHeader = styled.h4`
 	font-family: ${(props) => props.theme.fontFamily.serif};
 	font-size: ${(props) => props.theme.fontSize.h1};
 	font-weight: 600;
-	margin: 32px 0;
+	margin: 16px 0;
 	display: flex;
 `;
 

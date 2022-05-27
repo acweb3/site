@@ -63,6 +63,17 @@ export const RecentWork = () => {
 								alt="highrises"
 								width={480}
 							/>
+							<CoolStar
+								css={`
+									position: absolute;
+									top: -40px;
+									right: -40px;
+									width: 100px;
+									height: 100px;
+								`}
+							>
+								new
+							</CoolStar>
 							<S.RecentWorkHeader>
 								highrises
 								<S.RecentWorkSup>code</S.RecentWorkSup>
@@ -106,7 +117,6 @@ export const RecentWork = () => {
 								width={880}
 								height={480}
 							/>
-							{/* <S.RecentWorkRibbon>new</S.RecentWorkRibbon> */}
 							<S.RecentWorkSpreadCopy>
 								<S.RecentWorkHeader>
 									linksdao

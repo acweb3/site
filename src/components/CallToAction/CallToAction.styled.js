@@ -32,14 +32,18 @@ export const CallToActionBox = styled.div`
 	max-width: 800px;
 	margin: 0 auto;
 	box-sizing: border-box;
+	color: ${(props) => props.theme.colors.black[0]};
 	background: ${(props) => props.theme.colors.white[0]};
 `;
 
 export const CallToAction = styled.div`
+	border-radius: 64px 64px 0 0;
 	position: relative;
 	overflow: hidden;
-	padding: 168px 120px 144px;
-	margin: 32px auto 0;
+	padding: 104px 120px 80px;
+	margin: 0 auto 0;
 	text-align: center;
+	color: ${(props) => props.theme.colors.white[0]};
 	background-color: ${(props) => props.theme.colors.black[0]};
+	box-shadow: ${(props) => props.theme.shadows.inverse.high};
 `;

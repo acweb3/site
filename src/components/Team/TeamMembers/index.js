@@ -4,21 +4,38 @@ import {
 	LogoLinkedin24,
 	Wikis24,
 } from "@carbon/icons-react";
+import { useScrollHeight } from "common/hooks/useScrollHeight";
 import * as S from "components/Team/TeamMembers/TeamMembers.styled";
 import { BaseLink } from "components/ui/BaseLink";
 import { Column } from "components/ui/Column";
 import { StaticImage } from "gatsby-plugin-image";
+import { useEffect, useRef, useState } from "react";
 
 export const TeamMembers = () => {
+	const { scrollHeight } = useScrollHeight();
+	const teamRef = useRef();
+	const [offsetY, setOffsetY] = useState(0);
+
+	useEffect(() => {
+		setOffsetY(
+			Math.max(
+				0,
+				window.scrollY -
+					teamRef.current.offsetTop -
+					teamRef.current.offsetHeight * 0.3
+			) * 0.5
+		);
+	}, [scrollHeight]);
+
 	return (
-		<S.TeamMembers>
+		<S.TeamMembers ref={teamRef} offsetY={offsetY}>
 			<Column
 				css={`
 					flex: 0 0 320px;
 				`}
 			>
 				<StaticImage
-					src="../../assets/images/team/cooper.jpg"
+					src="../../../assets/images/team/cooper.jpg"
 					alt="cooper"
 					width={320}
 					height={400}
@@ -56,7 +73,7 @@ export const TeamMembers = () => {
 				`}
 			>
 				<StaticImage
-					src="../../assets/images/team/andy.jpg"
+					src="../../../assets/images/team/andy.jpg"
 					alt="andy"
 					width={320}
 					height={480}
