@@ -54,6 +54,17 @@ export const CoolCircleEllipsis = styled.div`
 		`}
 
 	${(props) =>
+		props.isScript &&
+		css`
+			font-size: 80px;
+			font-family: ${props.theme.fontFamily.script};
+			font-weight: 100;
+			text-decoration: underline;
+			letter-spacing: 0;
+			padding: 42px 51px 50px 38px;
+		`}
+
+	${(props) =>
 		props.isInverted &&
 		css`
 			color: ${(props) => props.theme.colors.white[0]};
@@ -73,6 +84,13 @@ export const CoolCircleEllipsis = styled.div`
 			position: absolute;
 			top: -19px;
 			right: -6px;
+		`}
+
+	${(props) =>
+		!(props.isVisible || props.isShadow) &&
+		css`
+			padding-top: 0;
+			padding-bottom: 0;
 		`}
 `;
 

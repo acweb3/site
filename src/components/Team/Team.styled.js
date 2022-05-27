@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const TeamDescription = styled.div`
 	color: ${(props) => props.theme.colors.black[0]};
@@ -11,5 +11,5 @@ export const TeamDescription = styled.div`
 `;
 
 export const Team = styled.div`
-	padding: 120px 120px 80px;
+	padding: 80px 120px 80px;
 `;

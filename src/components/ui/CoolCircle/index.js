@@ -5,6 +5,7 @@ export const CoolCircle = ({
 	children,
 	isSmall,
 	isInverted,
+	isScript,
 	...props
 }) => {
 	return (
@@ -18,6 +19,7 @@ export const CoolCircle = ({
 				<S.CoolCircleEllipsis
 					isSmall={isSmall}
 					isInverted={isInverted}
+					isScript={isScript}
 					isShadow
 				>
 					{children}
@@ -26,6 +28,7 @@ export const CoolCircle = ({
 			<S.CoolCircleEllipsis
 				isSmall={isSmall}
 				isInverted={isInverted}
+				isScript={isScript}
 				isVisible
 			>
 				{children}
@@ -34,6 +37,7 @@ export const CoolCircle = ({
 			<S.CoolCircleEllipsis
 				isSmall={isSmall}
 				isInverted={isInverted}
+				isScript={isScript}
 				isPlaceholder
 			>
 				{children}

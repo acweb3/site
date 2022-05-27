@@ -8,6 +8,5 @@ export const BaseLink = styled.a`
 	&:focus,
 	&:hover {
 		outline: none;
-		color: ${(props) => props.theme.colors.blue[0]};
 	}
 `;

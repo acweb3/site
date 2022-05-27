@@ -2,3 +2,8 @@
 	font-family: "Margo";
 	src: url("../assets/fonts/margo.woff2");
 }
+
+@font-face {
+	font-family: "Sloop Script";
+	src: url("../assets/fonts/sloopscript.ttf");
+}

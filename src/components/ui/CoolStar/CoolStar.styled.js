@@ -8,10 +8,12 @@ export const CoolStarShape = styled(Star)`
 `;
 
 export const CoolStarCopy = styled.div`
-	font-family: ${(props) => props.theme.fontFamily.mono};
+	font-size: 32px;
+	font-weight: 100;
+	font-family: ${(props) => props.theme.fontFamily.script};
 	position: absolute;
-	top: 39px;
-	left: 33px;
+	top: 35px;
+	left: 32px;
 	letter-spacing: 3.2px;
 
 	font-weight: 600;

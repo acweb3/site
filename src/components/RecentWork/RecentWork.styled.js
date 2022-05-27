@@ -97,6 +97,7 @@ export const RecentWorkBanner = styled.div`
 	border-right: 1px solid ${(props) => props.theme.colors.black[0]};
 	margin-right: 64px;
 	width: 48px;
+	min-width: 48px;
 	padding-bottom: 160px;
 `;
 
@@ -105,5 +106,5 @@ export const RecentWork = styled.div`
 
 	display: flex;
 	flex-direction: row;
-	padding: 88px 120px 48px 72px;
+	padding: 88px 120px 32px 72px;
 `;

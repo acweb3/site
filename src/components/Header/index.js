@@ -36,7 +36,7 @@ export const Header = () => {
 		<S.Header>
 			<HeaderMarquee isCollapsed={isCollapsed} />
 			<S.HeaderInfoOffset>
-				<S.HeaderInfo>
+				<S.HeaderInfo isCollapsed={isCollapsed}>
 					<Bolts
 						css={`
 							margin-bottom: 32px;
@@ -52,7 +52,7 @@ export const Header = () => {
 						`}
 					>
 						<S.HeaderBigAssHeader>
-							<CoolCircle>we create</CoolCircle>
+							<CoolCircle isScript>we create</CoolCircle>
 							code,
 							<br />
 							community,
