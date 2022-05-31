@@ -14,7 +14,11 @@ export const Team = () => {
 					<Column.Header main>
 						we are a best in industry tiger team for nft projects
 					</Column.Header>
-					<Column.Text>our team</Column.Text>
+					<Column.Text>
+						lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ut enim ad minim veniam.
+					</Column.Text>
 				</Column>
 			</S.TeamDescription>
 

@@ -3,7 +3,7 @@ const config = require("./config");
 module.exports = {
 	siteMetadata: {
 		siteUrl: "https://www.yourdomain.tld",
-		title: "a⚡️c",
+		title: "aboltc",
 	},
 	plugins: [
 		"gatsby-plugin-root-import",

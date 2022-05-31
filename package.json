@@ -8,12 +8,14 @@
 		"gatsby"
 	],
 	"scripts": {
-		"develop": "gatsby develop",
-		"start": "gatsby develop",
-		"build": "gatsby build",
-		"serve": "gatsby serve",
+		"develop": "ENV_TARGET=\"development\" gatsby develop",
+		"start": "ENV_TARGET=\"development\" gatsby develop",
+		"build:dev": "ENV_TARGET=\"development\" gatsby build",
+		"build:prod": "ENV_TARGET=\"production\" gatsby build",
+		"serve": "ENV_TARGET=\"development\" gatsby serve",
 		"clean": "gatsby clean",
-		"deploy": "gatsby-plugin-s3 deploy"
+		"deploy:dev": "ENV_TARGET=\"development\" gatsby-plugin-s3 deploy",
+		"deploy:prod": "ENV_TARGET=\"production\" gatsby-plugin-s3 deploy"
 	},
 	"dependencies": {
 		"@carbon/icons-react": "^10.44.0",
