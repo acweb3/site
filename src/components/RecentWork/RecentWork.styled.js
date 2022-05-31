@@ -45,6 +45,8 @@ export const RecentWorkProject = styled(ViewScroll)`
 	width: ${(props) => props.width}px;
 	margin-bottom: 96px;
 
+	background: ${(props) => props.theme.colors.white[0]};
+
 	${(props) =>
 		props.isRight &&
 		css`

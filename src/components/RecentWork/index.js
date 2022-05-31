@@ -28,6 +28,10 @@ export const RecentWork = () => {
 								alt="bat cowls"
 								width={800}
 								height={400}
+								imgStyle={{
+									filter: "grayscale(100%)",
+									mixBlendMode: "multiply",
+								}}
 							/>
 							<CoolStar
 								css={`
@@ -62,6 +66,10 @@ export const RecentWork = () => {
 								src="../../assets/images/highrises.webp"
 								alt="highrises"
 								width={480}
+								imgStyle={{
+									filter: "grayscale(100%)",
+									mixBlendMode: "multiply",
+								}}
 							/>
 							<CoolStar
 								css={`
@@ -94,6 +102,10 @@ export const RecentWork = () => {
 								alt="e11even"
 								width={560}
 								height={480}
+								imgStyle={{
+									filter: "grayscale(100%)",
+									mixBlendMode: "multiply",
+								}}
 							/>
 							<S.RecentWorkHeader>
 								e11even
@@ -116,6 +128,10 @@ export const RecentWork = () => {
 								alt="linksdao"
 								width={880}
 								height={480}
+								imgStyle={{
+									filter: "grayscale(100%)",
+									mixBlendMode: "multiply",
+								}}
 							/>
 							<S.RecentWorkSpreadCopy>
 								<S.RecentWorkHeader>

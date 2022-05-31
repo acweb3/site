@@ -32,6 +32,7 @@ export const TeamMembers = () => {
 			<Column
 				css={`
 					flex: 0 0 320px;
+					background: ${(props) => props.theme.colors.white[0]};
 				`}
 			>
 				<StaticImage
@@ -39,6 +40,10 @@ export const TeamMembers = () => {
 					alt="cooper"
 					width={320}
 					height={400}
+					imgStyle={{
+						filter: "grayscale(100%)",
+						mixBlendMode: "multiply",
+					}}
 				/>
 				<Column.Header
 					main
@@ -70,6 +75,7 @@ export const TeamMembers = () => {
 				css={`
 					flex: 0 0 320px;
 					margin-left: 48px;
+					background: ${(props) => props.theme.colors.white[0]};
 				`}
 			>
 				<StaticImage
@@ -77,6 +83,10 @@ export const TeamMembers = () => {
 					alt="andy"
 					width={320}
 					height={480}
+					imgStyle={{
+						filter: "grayscale(100%)",
+						mixBlendMode: "multiply",
+					}}
 				/>
 				<Column.Header
 					main
