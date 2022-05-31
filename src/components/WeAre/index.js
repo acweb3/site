@@ -1,4 +1,5 @@
 import { Phone16, Email16, PhoneFilled16 } from "@carbon/icons-react";
+import { useWindowSize } from "common/hooks/useWindowSize";
 import * as S from "components/WeAre/WeAre.styled";
 import { BaseButton } from "components/ui/BaseButton";
 import { BaseLink } from "components/ui/BaseLink";
@@ -7,11 +8,14 @@ import { CoolCircle } from "components/ui/CoolCircle";
 import React from "react";
 
 export const WeAre = () => {
+	const { isMobile } = useWindowSize();
 	return (
 		<S.WeAre>
 			<Column
 				css={`
-					flex: 0 0 320px;
+					${(props) => props.theme.breakpoints.extraSmall`
+						flex: 0 0 320px;
+					`}
 				`}
 			>
 				<Column.Header>
@@ -28,8 +32,12 @@ export const WeAre = () => {
 
 			<Column
 				css={`
-					flex: 0 0 280px;
-					margin-left: 64px;
+					margin-bottom: 64px;
+
+					${(props) => props.theme.breakpoints.extraSmall`
+						flex: 0 0 280px;
+						margin-left: 64px;
+					`}
 				`}
 			>
 				<Column.Header>
@@ -43,12 +51,34 @@ export const WeAre = () => {
 
 			<Column
 				css={`
-					flex: 0 0 280px;
-					margin-left: 48px;
+					${(props) => props.theme.breakpoints.extraSmall`
+						flex: 0 0 280px;
+						margin-left: 48px;
+					`}
 				`}
 			>
 				<Column.Header>
-					<CoolCircle isSmall isInverted>
+					<CoolCircle
+						isSmall
+						isInverted
+						css={`
+							color: ${(props) => props.theme.colors.black[0]};
+
+							& > * {
+								border: 1px solid
+									${(props) => props.theme.colors.white[0]};
+							}
+
+							${(props) => props.theme.breakpoints.extraSmall`
+								color: ${(props) => props.theme.colors.white[0]};
+
+								& > * {
+									border: 1px solid
+										${(props) => props.theme.colors.black[0]};
+								}
+							`}
+						`}
+					>
 						<PhoneFilled16 /> call today
 					</CoolCircle>
 					let's get in touch — we're a phone call away
@@ -64,6 +94,12 @@ export const WeAre = () => {
 							icon={<Phone16 />}
 							css={`
 								border-radius: 0 0 0 16px;
+
+								border: 1px solid
+									${(props) => props.theme.colors.white[0]};
+								${(props) =>
+									props.theme.breakpoints
+										.extraSmall`border: 1px solid ${props.theme.colors.black[0]};`}
 							`}
 						>
 							call
@@ -74,6 +110,12 @@ export const WeAre = () => {
 							icon={<Email16 />}
 							css={`
 								border-radius: 0 16px 0 0;
+
+								border: 1px solid
+									${(props) => props.theme.colors.white[0]};
+								${(props) =>
+									props.theme.breakpoints
+										.extraSmall`border: 1px solid ${props.theme.colors.black[0]};`}
 							`}
 						>
 							email

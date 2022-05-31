@@ -12,6 +12,10 @@ export const Process = styled.div`
 
 	display: flex;
 	flex-direction: row;
-	padding: 64px 112px 0px;
+	padding: 0px 32px;
 	width: 100%;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 64px 112px 0px;
+	`}
 `;

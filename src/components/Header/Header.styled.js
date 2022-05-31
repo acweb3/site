@@ -42,7 +42,7 @@ export const HeaderBigAssHeader = styled.h1`
 export const HeaderInfo = styled.div`
 	position: relative;
 
-	padding: 80px 16px 96px;
+	padding: 80px 16px 48px;
 	color: ${(props) => props.theme.colors.black[0]};
 
 	display: flex;
@@ -73,15 +73,17 @@ export const HeaderInfoOffset = styled.div`
 	margin-top: -64px;
 	box-shadow: ${(props) => props.theme.shadows.inverse.high};
 
-	&::after {
-		content: " ";
-		position: absolute;
-		left: 0;
-		bottom: -24px;
-		height: 32px;
-		width: 100%;
-		background: ${(props) => props.theme.colors.white[0]};
-	}
+	${(props) => props.theme.breakpoints.extraSmall`
+		&::after {
+			content: " ";
+			position: absolute;
+			left: 0;
+			bottom: -24px;
+			height: 32px;
+			width: 100%;
+			background: ${(props) => props.theme.colors.white[0]};
+		}
+	`}
 `;
 
 export const Header = styled.header``;

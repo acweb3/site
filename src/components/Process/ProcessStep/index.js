@@ -1,4 +1,5 @@
 import { useScrollHeight } from "common/hooks/useScrollHeight";
+import { useWindowSize } from "common/hooks/useWindowSize";
 import * as S from "components/Process/ProcessStep/ProcessStep.styled";
 import { Bolts } from "components/ui/Bolts";
 import { Column } from "components/ui/Column";
@@ -8,8 +9,11 @@ import { useEffect, useRef, useState } from "react";
 
 export const ProcessStep = ({ isFinal, processStep }) => {
 	const { scrollHeight } = useScrollHeight();
+	const { isMobile } = useWindowSize();
 	const processStepRef = useRef();
 	const [offsetY, setOffsetY] = useState(0);
+
+	console.log({ isMobile });
 
 	useEffect(() => {
 		const parentMaxScroll =
@@ -30,13 +34,21 @@ export const ProcessStep = ({ isFinal, processStep }) => {
 	}, [scrollHeight]);
 
 	return (
-		<S.ProcessStep ref={processStepRef} offsetY={offsetY} isFinal={isFinal}>
+		<S.ProcessStep
+			isMobile={isMobile}
+			ref={processStepRef}
+			offsetY={offsetY}
+			isFinal={isFinal}
+		>
 			<S.ProcessCaption>
 				<Column
 					css={`
-						flex: 0 0 360px;
 						height: 100%;
 						padding-bottom: 48px;
+
+						${(props) => props.theme.breakpoints.extraSmall`
+							flex: 0 0 360px;
+						`}
 					`}
 				>
 					<Column.Header>
@@ -76,6 +88,8 @@ export const ProcessStep = ({ isFinal, processStep }) => {
 						style={{
 							width: 360,
 							height: 320,
+							filter: "grayscale(100%)",
+							mixBlendMode: "multiply",
 						}}
 						objectFit="contain"
 						alt="#TODO"

@@ -13,11 +13,8 @@ const getWindowSize = (size) => {
 	if (size >= breakpointsMap.small) {
 		return breakpointsMap.small;
 	}
-	if (size >= breakpointsMap.extraSmall) {
-		return breakpointsMap.extraSmall;
-	}
 
-	return breakpointsMap.mobile;
+	return breakpointsMap.extraSmall;
 };
 
 export const useWindowSize = () => {
@@ -38,7 +35,7 @@ export const useWindowSize = () => {
 
 	return {
 		windowSize: debouncedWindowSize || windowSize,
-		isMobile: debouncedWindowSize === breakpointsMap.mobile,
+		isMobile: debouncedWindowSize <= breakpointsMap.extraSmall,
 		isLoaded: debouncedWindowSize !== undefined,
 	};
 };

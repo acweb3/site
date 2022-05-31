@@ -1,9 +1,9 @@
 import { css } from "styled-components";
 
-export const breakpointExtraSmall = "634px";
-export const breakpointSmall = "768px";
-export const breakpointMedium = "1024px";
-export const breakpointLarge = "1280px";
+export const breakpointExtraSmall = 634;
+export const breakpointSmall = 768;
+export const breakpointMedium = 1024;
+export const breakpointLarge = 1280;
 
 export const breakpointsMap = {
 	extraSmall: breakpointExtraSmall,
@@ -17,7 +17,7 @@ export const breakpoints = Object.entries(breakpointsMap).reduce(
 		...acc,
 		[key]: (...args) =>
 			css`
-				@media (min-width: ${breakpoint}) {
+				@media (min-width: ${breakpoint}px) {
 					${css(args[0], ...args.slice(1))}
 				}
 			`,

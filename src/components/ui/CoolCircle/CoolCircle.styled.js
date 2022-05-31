@@ -95,42 +95,68 @@ export const CoolCircleEllipsis = styled.div`
 
 	${(props) => props.theme.breakpoints.extraSmall`
 		box-shadow: 16px 12px;
-			
+		${(props) =>
+			props.isPlaceholder &&
+			css`
+				max-height: 0;
+			`}
 
-			${(props) =>
-				props.isVisible &&
-				css`
-					padding: 40px 55px 54px 38px;
-					position: absolute;
-					top: -32px;
-					left: 0;
-					opacity: 1;
-				`}
+		${(props) =>
+			props.isVisible &&
+			css`
+				padding: 40px 55px 54px 38px;
+				position: absolute;
+				top: -32px;
+				left: 0;
+				opacity: 1;
+			`}
 
-			${(props) =>
-				props.isScript &&
-				css`
-					font-size: 80px;
-					font-family: ${props.theme.fontFamily.script};
-					font-weight: 100;
-					text-decoration: underline;
-					letter-spacing: 0;
-					padding: 42px 51px 50px 38px;
-				`}
+		${(props) =>
+			props.isSmall &&
+			css`
+				font-size: 16px;
+				padding: 9px 28px 11px 23px;
+				box-shadow: 8px 6px;
+				top: -24px;
 
-			${(props) =>
-				props.isShadow &&
-				css`
-					color: ${(props) => props.theme.colors.white[0]};
-					background-color: ${(props) => props.theme.colors.white[0]};
+				& > svg {
+					margin-right: 4px;
+					margin-top: 2px;
+				}
+			`}
 
-					border: 1px solid ${(props) => props.theme.colors.black[0]};
+		${(props) =>
+			props.isScript &&
+			css`
+				font-size: 80px;
+				font-family: ${props.theme.fontFamily.script};
+				font-weight: 100;
+				text-decoration: underline;
+				letter-spacing: 0;
+				padding: 42px 51px 50px 38px;
+			`}
 
-					opacity: 1;
-					position: absolute;
-					top: -20px;
-					right: -6px;
-				`}
+		${(props) =>
+			props.isInverted &&
+			css`
+				color: ${(props) => props.theme.colors.white[0]};
+				background-color: ${(props) => props.theme.colors.black[0]};
+				box-shadow: none;
+			`}
+
+		${(props) =>
+			props.isShadow &&
+			css`
+				color: ${(props) => props.theme.colors.white[0]};
+				background-color: ${(props) => props.theme.colors.white[0]};
+
+				border: 1px solid ${(props) => props.theme.colors.black[0]};
+
+				opacity: 1;
+				position: absolute;
+				top: -20px;
+				right: -6px;
+			`}
 
 		${(props) =>
 			!(props.isVisible || props.isShadow) &&

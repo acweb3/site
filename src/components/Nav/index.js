@@ -83,7 +83,7 @@ export const Nav = () => {
 								},
 							}}
 						>
-							talk to aboltc
+							talk to sales
 						</NavAction>
 					</S.NavActionsContainer>
 				</S.NavContent>

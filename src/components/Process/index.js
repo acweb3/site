@@ -17,7 +17,7 @@ const PROCESS_STEPS = [
 	{
 		bubble: (
 			<>
-				<FaceSatisfied16 />1 — reach out
+				<FaceSatisfied16 />1 — say hi
 			</>
 		),
 		header: "reach out — tell us what you're thinking",
@@ -59,7 +59,7 @@ const PROCESS_STEPS = [
 	{
 		bubble: (
 			<>
-				<Checkmark16 />4 — we jam
+				<Checkmark16 />4 — jamming
 			</>
 		),
 		header: "we get the job done",

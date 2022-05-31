@@ -2,8 +2,10 @@ import { ViewScroll } from "components/ui/ViewScroll";
 import styled from "styled-components";
 
 export const ProcessCaption = styled(ViewScroll)`
-	width: 360px;
-	margin-right: auto;
+	${(props) => props.theme.breakpoints.extraSmall`
+		width: 360px;
+		margin-right: auto;
+	`}
 `;
 
 export const ProcessStepImage = styled.div`
@@ -16,7 +18,7 @@ export const ProcessStepVisual = styled.div`
 `;
 
 export const ProcessStep = styled.div.attrs((attrs) => {
-	if (attrs.isFinal)
+	if (attrs.isFinal || attrs.isMobile)
 		return {
 			style: {
 				transform: "translate3D(0px, 0px, 0px)",
@@ -31,14 +33,18 @@ export const ProcessStep = styled.div.attrs((attrs) => {
 })`
 	background: ${(props) => props.theme.colors.white[0]};
 	display: flex;
+	flex-direction: column;
 
 	position: relative;
 
-	padding: 72px 0 168px;
 	transition: transform 200ms linear;
 	will-change: transform;
-	padding: 80px 80px 80px;
+	padding: 80px 0px 80px;
 	border-top: 1px solid;
+
+	&:first-of-type {
+		border-top: none;
+	}
 
 	&:last-of-type {
 		border-bottom: none;
@@ -52,4 +58,14 @@ export const ProcessStep = styled.div.attrs((attrs) => {
 			background: ${(props) => props.theme.colors.white[0]};
 		}
 	}
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 80px 32px 80px 80px;
+
+		flex-direction: row;
+
+		&:first-of-type {
+			border-top: 1px solid;
+		}
+	`}
 `;
