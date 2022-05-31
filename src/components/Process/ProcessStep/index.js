@@ -35,8 +35,6 @@ export const ProcessStep = ({ isFinal, processStep }) => {
 		setOffsetY(Math.min(refScroll, parentMaxScroll));
 	}, [scrollHeight]);
 
-	console.log(processStep);
-
 	return (
 		<S.ProcessStep ref={processStepRef} offsetY={offsetY} isFinal={isFinal}>
 			<S.ProcessCaption>
