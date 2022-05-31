@@ -19,7 +19,7 @@ exports.createPages = async function ({ actions, graphql }) {
 	`);
 
 	const fullyAccessibleURL =
-		process.env.ENV_TARGET === "production"
+		process.env.ENV_TARGET === "development"
 			? "https://dev.aboltc.com"
 			: "https://www.aboltc.com";
 

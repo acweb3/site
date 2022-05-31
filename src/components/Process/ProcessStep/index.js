@@ -12,12 +12,6 @@ export const ProcessStep = ({ isFinal, processStep }) => {
 	const [offsetY, setOffsetY] = useState(0);
 
 	useEffect(() => {
-		// current offset with 45px buffer
-		const maxScroll =
-			processStepRef.current.offsetTop +
-			processStepRef.current.offsetHeight * 2 +
-			0;
-
 		const parentMaxScroll =
 			processStepRef.current.parentElement.offsetTop +
 			processStepRef.current.parentElement.offsetHeight -
