@@ -6,14 +6,13 @@ import { Column } from "components/ui/Column";
 import { CoolCircle } from "components/ui/CoolCircle";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useEffect, useRef, useState } from "react";
+import { imageTintObj } from "styles/util";
 
 export const ProcessStep = ({ isFinal, processStep }) => {
 	const { scrollHeight } = useScrollHeight();
 	const { isMobile } = useWindowSize();
 	const processStepRef = useRef();
 	const [offsetY, setOffsetY] = useState(0);
-
-	console.log({ isMobile });
 
 	useEffect(() => {
 		const parentMaxScroll =
@@ -86,10 +85,9 @@ export const ProcessStep = ({ isFinal, processStep }) => {
 				<S.ProcessStepImage>
 					<GatsbyImage
 						style={{
-							width: 360,
-							height: 320,
-							filter: "grayscale(100%)",
-							mixBlendMode: "multiply",
+							width: 240,
+							height: 240,
+							...imageTintObj,
 						}}
 						objectFit="contain"
 						alt="#TODO"

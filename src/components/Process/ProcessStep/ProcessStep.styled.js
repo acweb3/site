@@ -1,5 +1,5 @@
 import { ViewScroll } from "components/ui/ViewScroll";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ProcessCaption = styled(ViewScroll)`
 	${(props) => props.theme.breakpoints.extraSmall`
@@ -9,12 +9,20 @@ export const ProcessCaption = styled(ViewScroll)`
 `;
 
 export const ProcessStepImage = styled.div`
-	padding: 16px 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 0px 32px;
+	`}
 `;
 
 export const ProcessStepVisual = styled.div`
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 `;
 
 export const ProcessStep = styled.div.attrs((attrs) => {
@@ -39,24 +47,11 @@ export const ProcessStep = styled.div.attrs((attrs) => {
 
 	transition: transform 200ms linear;
 	will-change: transform;
-	padding: 80px 0px 80px;
+	padding: 80px 0px 32px;
 	border-top: 1px solid;
 
 	&:first-of-type {
 		border-top: none;
-	}
-
-	&:last-of-type {
-		border-bottom: none;
-		&::after {
-			content: " ";
-			position: absolute;
-			left: -8px;
-			bottom: -5px;
-			height: 85px;
-			width: calc(100% + 16px);
-			background: ${(props) => props.theme.colors.white[0]};
-		}
 	}
 
 	${(props) => props.theme.breakpoints.extraSmall`

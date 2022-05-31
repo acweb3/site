@@ -3,6 +3,7 @@ import { RecentWorkMarquee } from "components/RecentWork/RecentWorkMarquee";
 import { CoolStar } from "components/ui/CoolStar";
 import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
 import { StaticImage } from "gatsby-plugin-image";
+import { imageTintObj } from "styles/util";
 
 export const RecentWork = () => {
 	const { setActiveRecentWork } = useActiveRecentWorkContext();
@@ -29,8 +30,7 @@ export const RecentWork = () => {
 								width={800}
 								height={400}
 								imgStyle={{
-									filter: "grayscale(100%)",
-									mixBlendMode: "multiply",
+									...imageTintObj,
 								}}
 							/>
 							<CoolStar
@@ -67,8 +67,7 @@ export const RecentWork = () => {
 								alt="highrises"
 								width={480}
 								imgStyle={{
-									filter: "grayscale(100%)",
-									mixBlendMode: "multiply",
+									...imageTintObj,
 								}}
 							/>
 							<CoolStar
@@ -103,8 +102,7 @@ export const RecentWork = () => {
 								width={560}
 								height={480}
 								imgStyle={{
-									filter: "grayscale(100%)",
-									mixBlendMode: "multiply",
+									...imageTintObj,
 								}}
 							/>
 							<S.RecentWorkHeader>
@@ -119,34 +117,6 @@ export const RecentWork = () => {
 								ullamco laboris nisi ut aliquip ex ea commodo
 								consequat.
 							</S.RecentWorkCopy>
-						</S.RecentWorkProject>
-					</S.RecentWorkProjects>
-					<S.RecentWorkProjects>
-						<S.RecentWorkProject width={880}>
-							<StaticImage
-								src="../../assets/images/linksdao.png"
-								alt="linksdao"
-								width={880}
-								height={480}
-								imgStyle={{
-									filter: "grayscale(100%)",
-									mixBlendMode: "multiply",
-								}}
-							/>
-							<S.RecentWorkSpreadCopy>
-								<S.RecentWorkHeader>
-									linksdao
-									<S.RecentWorkSup>community</S.RecentWorkSup>
-								</S.RecentWorkHeader>
-								<S.RecentWorkCopy isRight>
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip
-									ex ea commodo consequat.
-								</S.RecentWorkCopy>
-							</S.RecentWorkSpreadCopy>
 						</S.RecentWorkProject>
 					</S.RecentWorkProjects>
 				</S.RecentWorkPortfolio>

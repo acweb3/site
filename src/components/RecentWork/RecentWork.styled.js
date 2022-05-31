@@ -15,12 +15,15 @@ export const RecentWorkSup = styled.div`
 export const RecentWorkCopy = styled.div`
 	max-width: 480px;
 
-	${(props) =>
-		props.isRight &&
-		css`
-			text-align: right;
-			margin-top: 32px;
-		`}
+	${(props) => props.theme.breakpoints.extraSmall`
+		${
+			props.isRight &&
+			css`
+				text-align: right;
+				margin-top: 32px;
+			`
+		}
+	`}
 `;
 
 export const RecentWorkHeader = styled.h4`
@@ -33,7 +36,12 @@ export const RecentWorkHeader = styled.h4`
 
 export const RecentWorkSpreadCopy = styled.div`
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		flex-direction: row;
+		justify-content: space-between;
+	`}
 `;
 
 export const RecentWorkProject = styled(ViewScroll)`
@@ -42,25 +50,18 @@ export const RecentWorkProject = styled(ViewScroll)`
 	display: flex;
 	flex-direction: column;
 
-	width: ${(props) => props.width}px;
 	margin-bottom: 96px;
 
 	background: ${(props) => props.theme.colors.white[0]};
 
-	${(props) =>
-		props.isRight &&
-		css`
-			margin-left: auto;
-		`}
+	${(props) => props.theme.breakpoints.extraSmall`
+		width: ${(props) => props.width}px;
+	`}
 `;
 
 export const RecentWorkProjects = styled.div`
 	display: flex;
-	flex-direction: row;
-
-	& > ${RecentWorkProject} {
-		margin-right: 64px;
-	}
+	flex-direction: column;
 
 	&:last-of-type {
 		& > ${RecentWorkProject} {
@@ -68,16 +69,13 @@ export const RecentWorkProjects = styled.div`
 		}
 	}
 
-	${(props) =>
-		props.isRight &&
-		css`
-			margin-left: auto;
-			margin-right: 0;
+	${(props) => props.theme.breakpoints.extraSmall`
+		flex-direction: row;
 
-			& > ${RecentWorkProject} {
-				margin-right: 0;
-			}
-		`}
+		& > ${RecentWorkProject} {
+			margin-right: 64px;
+		}
+	`}
 `;
 
 export const RecentWorkPortfolio = styled.div`
@@ -106,6 +104,12 @@ export const RecentWorkBanner = styled.div`
 	width: 48px;
 	min-width: 48px;
 	padding-bottom: 160px;
+
+	display: none;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		display: block;
+	`}
 `;
 
 export const RecentWork = styled.div`
@@ -113,5 +117,11 @@ export const RecentWork = styled.div`
 
 	display: flex;
 	flex-direction: row;
-	padding: 88px 120px 32px 72px;
+	padding: 48px 32px 32px 32px;
+
+	overflow: hidden;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 88px 120px 32px 72px;
+	`}
 `;

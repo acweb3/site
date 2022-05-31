@@ -9,6 +9,7 @@ export const Bolt = styled(LogoBolt)`
 export const Bolts = styled.div`
 	display: flex;
 	height: 32px;
+	max-height: 32px;
 	width: 100%;
 	flex: 1;
 	justify-content: space-between;
