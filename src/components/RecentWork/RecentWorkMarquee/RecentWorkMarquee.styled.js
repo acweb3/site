@@ -15,6 +15,6 @@ export const RecentWorkMarqueeCopy = styled.div.attrs((attrs) => {
 
 export const RecentWorkMarquee = styled.div`
 	width: 100%;
-	padding-top: 48px;
-    overflow: hidden;
-x`;
+	overflow: hidden;
+	padding-top: 16px;
+`;

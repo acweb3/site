@@ -1,64 +1,95 @@
 import Logo from "assets/icons/logo.inline.svg";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-export const FooterContentLogoWrapper = styled.div`
+export const FooterRightColumns = styled.div`
+	display: flex;
+	margin-left: auto;
+`;
+
+export const FooterColumnButtons = styled.div`
+	display: flex;
+	margin-top: 24px;
+
+	& > * {
+		margin-right: 16px;
+	}
+`;
+
+export const FooterLogoWrapper = styled.div`
 	display: flex;
 	align-items: center;
+
+	margin-top: 16px;
 
 	& > * {
 		margin-right: 8px;
 	}
 `;
 
-export const FooterContentLogo = styled(Logo)`
+export const FooterLogo = styled(Logo)`
 	width: 120px;
 	margin-left: -16px;
-	margin-bottom: -32px;
+	margin-bottom: 0px;
 `;
 
-export const FooterContentText = styled.p`
-	margin-bottom: 24px;
+export const FooterText = styled.p`
+	margin-bottom: 16px;
 `;
 
-export const FooterContentHeader = styled.h4`
+export const FooterHeader = styled.h4`
 	font-family: ${(props) => props.theme.fontFamily.serif};
-	font-size: ${(props) => props.theme.fontSize.h4};
+	font-size: ${(props) => props.theme.fontSize.h5};
 	font-weight: 600;
 
-	margin: 32px 0 0;
+	margin: 32px 0 16px;
 `;
 
-export const FooterContentColumn = styled.div`
-	z-index: 3;
+export const FooterColumn = styled.div`
 	display: flex;
 	flex-direction: column;
 
 	position: relative;
 	flex: 0 0 320px;
-
-	padding-top: 48px;
-`;
-
-export const FooterContentGradient = styled.div`
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-
-	z-index: 2;
-	background: ${(props) => props.theme.colors.black[0]};
 `;
 
 export const FooterContent = styled.div`
 	position: relative;
-	color: ${(props) => props.theme.colors.white[0]};
-	background: ${(props) => props.theme.colors.black[0]};
-
-	padding: 16px 120px 64px;
 
 	display: flex;
 	flex-direction: row;
 `;
 
-export const Footer = styled.div``;
+const marquee = keyframes`
+	0% { left: 0; }
+  100% { left: -100%; }
+`;
+
+export const FooterMarqueeSpan = styled.span`
+	width: 50%;
+`;
+
+export const FooterMarquee = styled.div`
+	position: absolute;
+	bottom: -120px;
+
+	min-width: 200%;
+
+	overflow: hidden;
+
+	animation: ${marquee} 60s linear infinite;
+
+	font-size: 240px;
+	height: 240px;
+	font-family: ${(props) => props.theme.fontFamily.serif};
+	overflow: hidden;
+`;
+
+export const Footer = styled.div`
+	width: 100%;
+	color: ${(props) => props.theme.colors.white[0]};
+	background: ${(props) => props.theme.colors.black[0]};
+	padding: 32px 120px 200px;
+
+	position: relative;
+	overflow: hidden;
+`;

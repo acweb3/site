@@ -21,7 +21,6 @@ export const TeamMembers = styled.div.attrs((attrs) => {
 		},
 	};
 })`
-	padding-top: 32px;
 	display: flex;
 	transition: transform 200ms linear;
 	padding-bottom: 80px;

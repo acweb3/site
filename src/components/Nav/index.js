@@ -18,9 +18,7 @@ export const Nav = () => {
 		throttle(() => {
 			// # TODO => Fix this for multiple viewports
 			setIsVisible(
-				(window.scrollY < 100 || scrollRef.current > window.scrollY) &&
-					window.scrollY <
-						window.document.documentElement.scrollHeight - 1200
+				window.scrollY < 100 || scrollRef.current > window.scrollY
 			);
 			setHasShadow(window.scrollY > 100);
 

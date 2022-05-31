@@ -36,7 +36,7 @@ export const NavLogoContainer = styled.button`
 	&:hover,
 	&:focus {
 		outline: none;
-		color: ${(props) => props.theme.colors.blue[0]};
+		color: ${(props) => props.theme.colors.black[0]};
 	}
 `;
 

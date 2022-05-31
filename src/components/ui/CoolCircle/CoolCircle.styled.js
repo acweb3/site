@@ -82,7 +82,7 @@ export const CoolCircleEllipsis = styled.div`
 
 			opacity: 1;
 			position: absolute;
-			top: -19px;
+			top: -20px;
 			right: -6px;
 		`}
 

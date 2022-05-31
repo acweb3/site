@@ -109,7 +109,7 @@ export const RecentWork = () => {
 							</S.RecentWorkCopy>
 						</S.RecentWorkProject>
 					</S.RecentWorkProjects>
-					<S.RecentWorkProjects isRight>
+					<S.RecentWorkProjects>
 						<S.RecentWorkProject width={880}>
 							<StaticImage
 								src="../../assets/images/linksdao.png"

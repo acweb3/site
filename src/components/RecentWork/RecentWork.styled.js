@@ -15,8 +15,6 @@ export const RecentWorkSup = styled.div`
 export const RecentWorkCopy = styled.div`
 	max-width: 480px;
 
-	padding-bottom: 48px;
-
 	${(props) =>
 		props.isRight &&
 		css`
@@ -45,6 +43,7 @@ export const RecentWorkProject = styled(ViewScroll)`
 	flex-direction: column;
 
 	width: ${(props) => props.width}px;
+	margin-bottom: 96px;
 
 	${(props) =>
 		props.isRight &&
@@ -59,6 +58,12 @@ export const RecentWorkProjects = styled.div`
 
 	& > ${RecentWorkProject} {
 		margin-right: 64px;
+	}
+
+	&:last-of-type {
+		& > ${RecentWorkProject} {
+			margin-bottom: 0px;
+		}
 	}
 
 	${(props) =>

@@ -6,17 +6,18 @@ export const Process = () => {
 	const {
 		allFile: { edges },
 	} = useProcessStepsQuery();
-	const processStepsSrc = edges.map(({ node }) => node);
-	const processSteps = processStepsSrc;
+	const processSteps = edges.map(({ node }) => node);
 
 	return (
 		<S.Process id="the-process">
-			<S.ProcessBanner>
-				<S.ProcessBannerCopy>the process →</S.ProcessBannerCopy>
-			</S.ProcessBanner>
 			<S.ProcessSteps>
 				{processSteps.map((processStep, i) => (
-					<ProcessStep key={i} processStep={{ ...processStep }} />
+					<ProcessStep
+						key={i}
+						words={i}
+						isFinal={i === processSteps.length - 1}
+						processStep={{ ...processStep }}
+					/>
 				))}
 			</S.ProcessSteps>
 		</S.Process>

@@ -1,4 +1,5 @@
 import { CallToAction } from "components/CallToAction";
+import { FAQ } from "components/FAQ";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
 import { Nav } from "components/Nav";
@@ -17,10 +18,11 @@ const IndexPage = () => {
 				<Nav />
 				<Header />
 				<WeAre />
-				{/* <Process /> */}
+				<Process />
 				<RecentWork />
 				<Team />
 				<CallToAction />
+				<FAQ />
 				<Footer />
 			</SiteWrapper>
 		</Contexts>
