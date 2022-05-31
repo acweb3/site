@@ -18,6 +18,7 @@ export const ColumnHeader = styled.h4`
 	font-size: ${(props) => props.theme.fontSize.h5};
 	line-height: 1;
 	font-weight: 600;
+	letter-spacing: 1.75px;
 
 	margin: 0 0 16px;
 

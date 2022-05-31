@@ -51,7 +51,7 @@ export const WeAre = () => {
 					<CoolCircle isSmall isInverted>
 						<PhoneFilled16 /> call today
 					</CoolCircle>
-					let's get in touch — we're a phonecall away
+					let's get in touch — we're a phone call away
 				</Column.Header>
 				<Column.Text>
 					feel free to reach out about any questions regarding what we
