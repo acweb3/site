@@ -6,15 +6,6 @@ export const FooterRightColumns = styled.div`
 	margin-left: auto;
 `;
 
-export const FooterColumnButtons = styled.div`
-	display: flex;
-	margin-top: 24px;
-
-	& > * {
-		margin-right: 16px;
-	}
-`;
-
 export const FooterLogoWrapper = styled.div`
 	display: flex;
 	align-items: center;

@@ -4,7 +4,6 @@ export const ProcessSteps = styled.div`
 	flex-direction: column;
 
 	flex: 1;
-	border: 1px solid;
 	width: 100%;
 `;
 

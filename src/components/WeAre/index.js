@@ -58,7 +58,7 @@ export const WeAre = () => {
 					can do for you, what we charge, and past work.
 				</Column.Text>
 
-				<S.WeAreColumnButtons>
+				<Column.Actions>
 					<BaseLink href="tel:12157765485">
 						<BaseButton
 							icon={<Phone16 />}
@@ -79,7 +79,7 @@ export const WeAre = () => {
 							email
 						</BaseButton>
 					</BaseLink>
-				</S.WeAreColumnButtons>
+				</Column.Actions>
 			</Column>
 		</S.WeAre>
 	);

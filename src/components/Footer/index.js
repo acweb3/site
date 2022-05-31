@@ -43,7 +43,7 @@ export const Footer = () => {
 				<S.FooterRightColumns>
 					<Column
 						css={`
-							flex: 0 0 360px;
+							flex: 0 0 320px;
 							margin-left: auto;
 						`}
 					>
@@ -59,7 +59,7 @@ export const Footer = () => {
 
 					<Column
 						css={`
-							flex: 0 0 280px;
+							flex: 0 0 320px;
 							margin-left: 48px;
 						`}
 					>
@@ -88,7 +88,7 @@ export const Footer = () => {
 							work.
 						</Column.Text>
 
-						<S.FooterColumnButtons>
+						<Column.Actions>
 							<BaseLink href="tel:12157765485">
 								<BaseButton
 									icon={<Phone16 />}
@@ -112,7 +112,7 @@ export const Footer = () => {
 									email
 								</BaseButton>
 							</BaseLink>
-						</S.FooterColumnButtons>
+						</Column.Actions>
 					</Column>
 				</S.FooterRightColumns>
 			</S.FooterContent>

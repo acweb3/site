@@ -26,7 +26,6 @@ export const ProcessStep = styled.div.attrs((attrs) => {
 	return {
 		style: {
 			transform: `translate3D(0px, ${attrs.offsetY}px, 0px)`,
-			opacity: !attrs.isVisible && !attrs.isFinal ? 0 : 1,
 		},
 	};
 })`
@@ -40,10 +39,6 @@ export const ProcessStep = styled.div.attrs((attrs) => {
 	will-change: transform;
 	padding: 80px 80px 80px;
 	border-top: 1px solid;
-
-	&:first-of-type {
-		border-top: none;
-	}
 
 	&:last-of-type {
 		border-bottom: none;

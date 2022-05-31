@@ -1,5 +1,14 @@
 import styled, { css } from "styled-components";
 
+export const ColumnActions = styled.div`
+	display: flex;
+	margin-top: 24px;
+
+	& > * {
+		margin-right: 16px;
+	}
+`;
+
 export const ColumnText = styled.p`
 	line-height: 1;
 `;

@@ -1,4 +1,3 @@
-import { FaceSatisfied16 } from "@carbon/icons-react";
 import { useScrollHeight } from "common/hooks/useScrollHeight";
 import * as S from "components/Process/ProcessStep/ProcessStep.styled";
 import { Bolts } from "components/ui/Bolts";
@@ -7,10 +6,10 @@ import { CoolCircle } from "components/ui/CoolCircle";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useEffect, useRef, useState } from "react";
 
-export const ProcessStep = ({ isFinal, processStep, words }) => {
+export const ProcessStep = ({ isFinal, processStep }) => {
 	const { scrollHeight } = useScrollHeight();
 	const processStepRef = useRef();
-	const [offset, setOffset] = useState({ offsetY: 0, isVisible: true });
+	const [offsetY, setOffsetY] = useState(0);
 
 	useEffect(() => {
 		// current offset with 45px buffer
@@ -33,30 +32,24 @@ export const ProcessStep = ({ isFinal, processStep, words }) => {
 					processStepRef.current.offsetHeight)
 		);
 
-		setOffset({
-			offsetY: Math.min(refScroll, parentMaxScroll),
-			isVisible: window.scrollY < maxScroll,
-		});
+		setOffsetY(Math.min(refScroll, parentMaxScroll));
 	}, [scrollHeight]);
 
+	console.log(processStep);
+
 	return (
-		<S.ProcessStep
-			ref={processStepRef}
-			offsetY={offset.offsetY}
-			// isVisible={offset.isVisible}
-			isVisible
-			isFinal={isFinal}
-		>
+		<S.ProcessStep ref={processStepRef} offsetY={offsetY} isFinal={isFinal}>
 			<S.ProcessCaption>
 				<Column
 					css={`
 						flex: 0 0 360px;
+						height: 100%;
+						padding-bottom: 48px;
 					`}
 				>
 					<Column.Header>
 						<CoolCircle isSmall isInverted>
-							<FaceSatisfied16 />
-							you call us!
+							{processStep.bubble}
 						</CoolCircle>
 					</Column.Header>
 					<Column.Header
@@ -66,7 +59,7 @@ export const ProcessStep = ({ isFinal, processStep, words }) => {
 								props.theme.fontFamily.mono};
 						`}
 					>
-						get us on a phonecall — tell us what you need
+						{processStep.header}
 					</Column.Header>
 					<Column.Text
 						css={`
@@ -75,9 +68,13 @@ export const ProcessStep = ({ isFinal, processStep, words }) => {
 							margin-top: auto;
 						`}
 					>
-						feel free to reach out about any questions regarding
-						what we can do for you, what we charge, and past work.
+						{processStep.body}
 					</Column.Text>
+
+					<Column.Actions>
+						{/* {JSON.stringify(processStep.action)} */}
+						{processStep.action}
+					</Column.Actions>
 				</Column>
 			</S.ProcessCaption>
 			<S.ProcessStepVisual>
@@ -85,8 +82,10 @@ export const ProcessStep = ({ isFinal, processStep, words }) => {
 				<S.ProcessStepImage>
 					<GatsbyImage
 						style={{
-							height: 360,
+							width: 360,
+							height: 320,
 						}}
+						objectFit="contain"
 						alt="#TODO"
 						image={
 							processStep.childrenImageSharp[0].gatsbyImageData
