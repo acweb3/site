@@ -1,4 +1,4 @@
-import * as S from "components/Clocks/Clocks.styled";
+import * as S from "components/Header/Clocks/Clocks.styled";
 import { useEffect, useState } from "react";
 
 export const Clocks = () => {

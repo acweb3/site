@@ -44,7 +44,8 @@
 		"react-helmet": "^6.1.0",
 		"react-in-viewport": "^1.0.0-alpha.20",
 		"styled-components": "^5.3.3",
-		"three": "0.105.0"
+		"three": "0.105.0",
+		"use-debounce": "^8.0.1"
 	},
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^3.2.0",

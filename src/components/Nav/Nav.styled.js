@@ -64,6 +64,12 @@ export const NavLinkContainer = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 	width: 308px;
+
+	display: none;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		display: initial;
+	`}
 `;
 
 export const NavActionsContainer = styled.div`
@@ -90,7 +96,7 @@ export const Nav = styled.nav`
 
 	display: flex;
 	align-items: center;
-	padding: 0 64px;
+	padding: 0 16px;
 
 	position: fixed;
 
@@ -120,4 +126,8 @@ export const Nav = styled.nav`
 		background: ${(props) => props.theme.colors.white[0]};
 		opacity: 0.9;
 	}
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 0 64px;
+	`}
 `;

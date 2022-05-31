@@ -5,7 +5,7 @@ export const breakpointSmall = "768px";
 export const breakpointMedium = "1024px";
 export const breakpointLarge = "1280px";
 
-const breakpointsMap = {
+export const breakpointsMap = {
 	extraSmall: breakpointExtraSmall,
 	small: breakpointSmall,
 	medium: breakpointMedium,

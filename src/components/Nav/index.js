@@ -83,15 +83,7 @@ export const Nav = () => {
 								},
 							}}
 						>
-							community
-						</NavAction>
-						<NavAction
-							isActive={isVisible}
-							buttonProps={{
-								icon: <Code16 />,
-							}}
-						>
-							code
+							talk to aboltc
 						</NavAction>
 					</S.NavActionsContainer>
 				</S.NavContent>

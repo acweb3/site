@@ -1,5 +1,6 @@
 import { useWindowListener } from "common/hooks/useWindowListener";
-import { Clocks } from "components/Clocks";
+import { useWindowSize } from "common/hooks/useWindowSize";
+import { Clocks } from "components/Header/Clocks";
 import * as S from "components/Header/Header.styled";
 import { HeaderMarquee } from "components/Header/HeaderMarquee";
 import { Bolts } from "components/ui/Bolts";
@@ -9,6 +10,7 @@ import { useEffect, useState } from "react";
 
 export const Header = () => {
 	const [isCollapsed, setIsCollapsed] = useState(false);
+	const { isMobile } = useWindowSize();
 
 	useEffect(() => {
 		const sto = setTimeout(() => {
@@ -42,7 +44,7 @@ export const Header = () => {
 							margin-bottom: 32px;
 						`}
 					/>
-					<Clocks />
+					{!isMobile && <Clocks />}
 					<Column
 						css={`
 							margin-left: auto;
@@ -62,9 +64,17 @@ export const Header = () => {
 						<Column.Text
 							css={`
 								font-size: ${(props) =>
-									props.theme.fontSize.h4};
+									props.theme.fontSize.h5};
 								line-height: 0.95;
-								width: 640px;
+
+								padding: 0 16px;
+
+								${(props) => props.theme.breakpoints.extraSmall`
+									width: 640px;
+									padding: 0;
+
+									font-size: ${(props) => props.theme.fontSize.h4};
+								`}
 							`}
 						>
 							we're a full-service web3 studio. we build discords,

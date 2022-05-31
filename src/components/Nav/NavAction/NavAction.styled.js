@@ -62,8 +62,11 @@ export const NavActionPopover = styled.div`
 	position: absolute;
 	top: 60px;
 	right: 0;
+
 	padding: 32px;
-	min-width: 400px;
+
+	width: calc(100vw - 32px);
+
 	margin: 0 auto;
 	box-sizing: border-box;
 	color: ${(props) => props.theme.colors.white[0]};
@@ -108,6 +111,12 @@ export const NavActionPopover = styled.div`
 		height: 16px;
 		background: ${(props) => props.theme.colors.black[0]};
 	}
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		min-width: 400px;
+		width: min-content;
+		right: 0;
+	`}
 `;
 
 export const NavAction = styled.div`

@@ -27,17 +27,22 @@ export const HeaderLogoBoltWrapper = styled.div`
 
 export const HeaderBigAssHeader = styled.h1`
 	font-family: ${(props) => props.theme.fontFamily.serif};
-	font-size: 120px;
-	line-height: 96px;
+	font-size: 60px;
+	line-height: 48px;
 	font-weight: 500;
 
 	margin: 32px 0;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		font-size: 120px;
+		line-height: 96px;
+	`}
 `;
 
 export const HeaderInfo = styled.div`
 	position: relative;
 
-	padding: 104px 128px 96px;
+	padding: 80px 16px 96px;
 	color: ${(props) => props.theme.colors.black[0]};
 
 	display: flex;
@@ -54,6 +59,10 @@ export const HeaderInfo = styled.div`
 		css`
 			opacity: 1;
 		`}
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 104px 128px 96px;
+	`}
 `;
 
 export const HeaderInfoOffset = styled.div`

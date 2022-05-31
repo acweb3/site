@@ -56,7 +56,7 @@ export const NavAction = ({ children, isActive, buttonProps }) => {
 					<S.NavActionTextArea
 						id="nav-action-looking-for"
 						type="email"
-						placeholder="we're looking for a discord build"
+						placeholder="we're looking for a mint site and discord build"
 						rows={4}
 						onMouseDown={(e) => e.stopPropagation()}
 					/>
