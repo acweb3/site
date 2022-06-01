@@ -64,6 +64,7 @@ export const HeaderInfo = styled.div`
 	${(props) => props.theme.breakpoints.extraSmall`
 		transform: translate3D(0, 0, 0);
 		height: initial;
+		padding: 80px 128px 48px;
 	`}
 `;
 
@@ -88,6 +89,7 @@ export const HeaderInfoOffset = styled.div`
 			margin-bottom: -284px;
 			transform: translate3D(0, -284px, 0);
 		`}
+
 	${(props) => props.theme.breakpoints.extraSmall`
 		border-radius: 64px 64px 0 0;
 
