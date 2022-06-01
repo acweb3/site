@@ -4,17 +4,28 @@ import * as S from "components/Header/Header.styled";
 import { HeaderMarquee } from "components/Header/HeaderMarquee";
 import { Bolts } from "components/ui/Bolts";
 import { Column } from "components/ui/Column";
+import { CoolButton } from "components/ui/CoolButton";
 import { CoolCircle } from "components/ui/CoolCircle";
 import { useOpeningAnimationContext } from "contexts/OpeningAnimationContext";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
 	const { isMobile } = useWindowSize();
 	const { isCollapsed } = useOpeningAnimationContext();
 
+	const [resizeHeight, setResizeHeight] = useState(0);
+
+	useEffect(() => {
+		setResizeHeight(window.visualViewport.height);
+	}, []);
+
 	return (
 		<S.Header>
 			<HeaderMarquee />
-			<S.HeaderInfoOffset isCollapsed={isCollapsed}>
+			<S.HeaderInfoOffset
+				resizeHeight={resizeHeight}
+				isCollapsed={isCollapsed}
+			>
 				<S.HeaderInfo isCollapsed={isCollapsed}>
 					<Bolts
 						css={`
@@ -24,6 +35,8 @@ export const Header = () => {
 					{!isMobile && <Clocks />}
 					<Column
 						css={`
+							flex: 1;
+							justify-content: center;
 							margin-left: auto;
 							margin-right: auto;
 							max-width: 880px;
@@ -58,6 +71,17 @@ export const Header = () => {
 							write smart contracts, and develop websites for nft
 							projects.
 						</Column.Text>
+
+						<CoolButton
+							css={`
+								margin: 32px auto 88px;
+
+								${(props) => props.theme.breakpoints.extraSmall`
+									margin: 48px auto 32px;`}
+							`}
+						>
+							let's get started
+						</CoolButton>
 					</Column>
 					<Bolts
 						css={`

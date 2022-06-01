@@ -54,6 +54,8 @@ export const HeaderInfo = styled.div`
 
 	transition: opacity 1000ms;
 
+	height: calc(100% + 64px);
+
 	${(props) =>
 		props.isCollapsed &&
 		css`
@@ -62,6 +64,7 @@ export const HeaderInfo = styled.div`
 
 	${(props) => props.theme.breakpoints.extraSmall`
 		padding: 104px 128px 96px;
+		height: initial;
 	`}
 `;
 
@@ -75,15 +78,22 @@ export const HeaderInfoOffset = styled.div`
 
 	transition: transform 400ms;
 
+	height: ${(props) =>
+		props.resizeHeight ? `${props.resizeHeight + 64}px` : "100vh"};
+	min-height: ${(props) =>
+		props.resizeHeight ? `${props.resizeHeight + 64}px` : "100vh"};
+
 	${(props) =>
 		props.isCollapsed &&
 		css`
 			margin-bottom: -284px;
 			transform: translate3D(0, -284px, 0);
 		`}
-
 	${(props) => props.theme.breakpoints.extraSmall`
 		border-radius: 64px 64px 0 0;
+
+		height: initial;
+		min-height: initial;
 
 		&::after {
 			content: " ";
@@ -101,7 +111,7 @@ export const HeaderInfoOffset = styled.div`
 				margin-bottom: -464px;
 				transform: translate3D(0, -464px, 0);
 			`}
-	`}
+	`};
 `;
 
 export const Header = styled.header``;
