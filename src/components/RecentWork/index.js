@@ -33,17 +33,7 @@ export const RecentWork = () => {
 									...imageTintObj,
 								}}
 							/>
-							<CoolStar
-								css={`
-									position: absolute;
-									top: -40px;
-									right: -40px;
-									width: 100px;
-									height: 100px;
-								`}
-							>
-								new
-							</CoolStar>
+							<S.RecentWorkCoolStar>new</S.RecentWorkCoolStar>
 							<S.RecentWorkSpreadCopy>
 								<S.RecentWorkHeader>
 									bat cowls
@@ -70,17 +60,7 @@ export const RecentWork = () => {
 									...imageTintObj,
 								}}
 							/>
-							<CoolStar
-								css={`
-									position: absolute;
-									top: -40px;
-									right: -40px;
-									width: 100px;
-									height: 100px;
-								`}
-							>
-								new
-							</CoolStar>
+							<S.RecentWorkCoolStar>new</S.RecentWorkCoolStar>
 							<S.RecentWorkHeader>
 								highrises
 								<S.RecentWorkSup>code</S.RecentWorkSup>

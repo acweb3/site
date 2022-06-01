@@ -7,7 +7,7 @@ export const WeAre = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	padding: 48px 32px;
+	padding: 96px 32px;
 
 	& > * {
 		margin-bottom: 32px;

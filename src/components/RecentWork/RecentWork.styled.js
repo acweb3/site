@@ -1,5 +1,18 @@
+import { CoolStar } from "components/ui/CoolStar";
 import { ViewScroll } from "components/ui/ViewScroll";
 import styled, { css } from "styled-components";
+
+export const RecentWorkCoolStar = styled(CoolStar)`
+	position: absolute;
+	top: -40px;
+	right: -24px;
+	width: 100px;
+	height: 100px;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		right: -40px;
+	`}
+`;
 
 export const RecentWorkSup = styled.div`
 	font-size: 0.5rem;
@@ -14,8 +27,11 @@ export const RecentWorkSup = styled.div`
 
 export const RecentWorkCopy = styled.div`
 	max-width: 480px;
+	margin-bottom: 48px;
 
 	${(props) => props.theme.breakpoints.extraSmall`
+		margin-bottom: 0;
+
 		${
 			props.isRight &&
 			css`
@@ -50,12 +66,11 @@ export const RecentWorkProject = styled(ViewScroll)`
 	display: flex;
 	flex-direction: column;
 
-	margin-bottom: 96px;
-
 	background: ${(props) => props.theme.colors.white[0]};
 
 	${(props) => props.theme.breakpoints.extraSmall`
 		width: ${(props) => props.width}px;
+		margin-bottom: 96px;
 	`}
 `;
 
@@ -122,6 +137,7 @@ export const RecentWork = styled.div`
 	overflow: hidden;
 
 	${(props) => props.theme.breakpoints.extraSmall`
+		overflow: initial;
 		padding: 88px 120px 32px 72px;
 	`}
 `;

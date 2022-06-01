@@ -51,9 +51,11 @@ const IndexPage = ({ pageContext: { highrises, thumbnail } }) => {
 					<WeAre />
 					<Process />
 					<RecentWork />
-					{/* <RecentWork />
 					<Team />
 					<CallToAction />
+					{/* 
+					
+					
 					<FAQ />
 					<Footer /> */}
 				</SiteWrapper>

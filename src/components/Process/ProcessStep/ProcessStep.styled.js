@@ -26,12 +26,13 @@ export const ProcessStepVisual = styled.div`
 `;
 
 export const ProcessStep = styled.div.attrs((attrs) => {
-	if (attrs.isFinal || attrs.isMobile)
+	if (attrs.isFinal || attrs.isMobile) {
 		return {
 			style: {
 				transform: "translate3D(0px, 0px, 0px)",
 			},
 		};
+	}
 
 	return {
 		style: {
@@ -61,6 +62,10 @@ export const ProcessStep = styled.div.attrs((attrs) => {
 
 		&:first-of-type {
 			border-top: 1px solid;
+		}
+
+		&:last-of-type {
+			padding-bottom: 128px;
 		}
 	`}
 `;

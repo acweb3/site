@@ -22,6 +22,7 @@ export const NavLink = styled.a`
 export const NavLogo = styled(Logo)`
 	height: 66px;
 	background: transparent;
+	color: ${(props) => props.theme.colors.black[0]};
 `;
 
 export const NavLogoContainer = styled.button`
@@ -106,7 +107,8 @@ export const Nav = styled.nav`
 	width: 100%;
 	box-sizing: border-box;
 
-	transform: translateY(${(props) => (props.isVisible ? 0 : -100)}px);
+	will-change: transform;
+	transform: translate3D(0, ${(props) => (props.isVisible ? 0 : -100)}px, 0);
 	transition: transform 0.4s, box-shadow 0.4s;
 
 	${(props) =>

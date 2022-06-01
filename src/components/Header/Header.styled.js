@@ -69,11 +69,22 @@ export const HeaderInfoOffset = styled.div`
 	position: relative;
 
 	background: ${(props) => props.theme.colors.white[0]};
-	border-radius: 64px 64px 0 0;
 	margin-top: -64px;
+	padding-top: 128px;
 	box-shadow: ${(props) => props.theme.shadows.inverse.high};
 
+	transition: transform 400ms;
+
+	${(props) =>
+		props.isCollapsed &&
+		css`
+			margin-bottom: -284px;
+			transform: translate3D(0, -284px, 0);
+		`}
+
 	${(props) => props.theme.breakpoints.extraSmall`
+		border-radius: 64px 64px 0 0;
+
 		&::after {
 			content: " ";
 			position: absolute;
@@ -83,6 +94,13 @@ export const HeaderInfoOffset = styled.div`
 			width: 100%;
 			background: ${(props) => props.theme.colors.white[0]};
 		}
+		
+		${(props) =>
+			props.isCollapsed &&
+			css`
+				margin-bottom: -464px;
+				transform: translate3D(0, -464px, 0);
+			`}
 	`}
 `;
 

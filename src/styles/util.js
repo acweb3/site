@@ -6,6 +6,6 @@ export const imageTint = css`
 `;
 
 export const imageTintObj = {
-	filter: "grayscale(100%) brightness(1.75)",
+	filter: "grayscale(100%) brightness(1.4)",
 	mixBlendMode: "multiply",
 };

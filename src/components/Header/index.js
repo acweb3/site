@@ -1,4 +1,3 @@
-import { useWindowListener } from "common/hooks/useWindowListener";
 import { useWindowSize } from "common/hooks/useWindowSize";
 import { Clocks } from "components/Header/Clocks";
 import * as S from "components/Header/Header.styled";
@@ -6,38 +5,16 @@ import { HeaderMarquee } from "components/Header/HeaderMarquee";
 import { Bolts } from "components/ui/Bolts";
 import { Column } from "components/ui/Column";
 import { CoolCircle } from "components/ui/CoolCircle";
-import { useEffect, useState } from "react";
+import { useOpeningAnimationContext } from "contexts/OpeningAnimationContext";
 
 export const Header = () => {
-	const [isCollapsed, setIsCollapsed] = useState(false);
 	const { isMobile } = useWindowSize();
-
-	useEffect(() => {
-		const sto = setTimeout(() => {
-			setIsCollapsed(true);
-		}, 2777);
-
-		return () => {
-			clearTimeout(sto);
-		};
-	}, []);
-
-	useWindowListener(
-		"scroll",
-		(e) => {
-			e.preventDefault();
-
-			if (!isCollapsed) {
-				setIsCollapsed(true);
-			}
-		},
-		[isCollapsed]
-	);
+	const { isCollapsed } = useOpeningAnimationContext();
 
 	return (
 		<S.Header>
-			<HeaderMarquee isCollapsed={isCollapsed} />
-			<S.HeaderInfoOffset>
+			<HeaderMarquee />
+			<S.HeaderInfoOffset isCollapsed={isCollapsed}>
 				<S.HeaderInfo isCollapsed={isCollapsed}>
 					<Bolts
 						css={`

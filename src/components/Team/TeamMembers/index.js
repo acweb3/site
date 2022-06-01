@@ -5,6 +5,7 @@ import {
 	Wikis24,
 } from "@carbon/icons-react";
 import { useScrollHeight } from "common/hooks/useScrollHeight";
+import { useWindowSize } from "common/hooks/useWindowSize";
 import * as S from "components/Team/TeamMembers/TeamMembers.styled";
 import { BaseLink } from "components/ui/BaseLink";
 import { Column } from "components/ui/Column";
@@ -13,6 +14,7 @@ import { useEffect, useRef, useState } from "react";
 
 export const TeamMembers = () => {
 	const { scrollHeight } = useScrollHeight();
+	const { isMobile } = useWindowSize();
 	const teamRef = useRef();
 	const [offsetY, setOffsetY] = useState(0);
 
@@ -28,13 +30,8 @@ export const TeamMembers = () => {
 	}, [scrollHeight]);
 
 	return (
-		<S.TeamMembers ref={teamRef} offsetY={offsetY}>
-			<Column
-				css={`
-					flex: 0 0 320px;
-					background: ${(props) => props.theme.colors.white[0]};
-				`}
-			>
+		<S.TeamMembers ref={teamRef} isMobile={isMobile} offsetY={offsetY}>
+			<S.TeamMembersColumn>
 				<StaticImage
 					src="../../../assets/images/team/cooper.jpg"
 					alt="cooper"
@@ -69,15 +66,9 @@ export const TeamMembers = () => {
 						<LogoLinkedin24 />
 					</BaseLink>
 				</S.TeamMembersLinks>
-			</Column>
+			</S.TeamMembersColumn>
 
-			<Column
-				css={`
-					flex: 0 0 320px;
-					margin-left: 48px;
-					background: ${(props) => props.theme.colors.white[0]};
-				`}
-			>
+			<S.TeamMembersColumn>
 				<StaticImage
 					src="../../../assets/images/team/andy.jpg"
 					alt="andy"
@@ -120,7 +111,7 @@ export const TeamMembers = () => {
 						<Wikis24 />
 					</BaseLink>
 				</S.TeamMembersLinks>
-			</Column>
+			</S.TeamMembersColumn>
 		</S.TeamMembers>
 	);
 };

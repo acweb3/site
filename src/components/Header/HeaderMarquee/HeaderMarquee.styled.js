@@ -2,31 +2,40 @@ import styled, { css, keyframes } from "styled-components";
 
 const bounce = keyframes`
     0% {
-        transform: translateY(400px);
+        transform: translate3D(0, 400px, 0);
     }
     20% {
-        transform: translateY(100px);
+        transform: translate3D(0, 100px, 0);
     }
     60% {
-        transform: translateY(-30px);
+        transform: translate3D(0, -30px, 0);
     }
     100% {
-        transform: translateY(0px);
+        transform: translate3D(0, 0px, 0);
     }
 `;
 
 export const HeaderMarqueeLetter = styled.span`
+	will-change: transform;
 	display: inline-block;
-	transform: translateY(500px);
+	transform: translate3D(0, 500px, 0);
 	animation: ${bounce} 700ms ease-out;
 	animation-delay: ${(props) => props.delay}ms;
 	animation-fill-mode: forwards;
+	color: ${(props) => props.theme.colors.black[0]};
 `;
 
 export const HeaderMarqueeLetters = styled.div`
 	color: ${(props) => props.theme.colors.white[0]};
 	font-family: ${(props) => props.theme.fontFamily.serif};
-	font-size: 600px;
+	font-size: 180px;
+	margin-top: -24px;
+	white-space: nowrap;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		font-size: 600px;
+		margin-top: 0;
+	`}
 `;
 
 export const HeaderMarquee = styled.div`
@@ -38,17 +47,13 @@ export const HeaderMarquee = styled.div`
 	align-items: center;
 	justify-content: center;
 
-	height: 400px;
-	max-height: 400px;
+	height: 220px;
+
 	overflow: hidden;
 
-	background: ${(props) => props.theme.colors.black[0]};
+	background: ${(props) => props.theme.colors.white[0]};
 
-	transition: max-height 400ms ease-in;
-
-	${(props) =>
-		props.isCollapsed &&
-		css`
-			max-height: 0;
-		`}
+	${(props) => props.theme.breakpoints.extraSmall`
+		height: 400px;
+	`}
 `;

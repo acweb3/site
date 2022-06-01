@@ -3,6 +3,7 @@ import { useWindowListener } from "common/hooks/useWindowListener";
 import * as S from "components/Nav/Nav.styled";
 import { NavAction } from "components/Nav/NavAction";
 import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
+import { useOpeningAnimationContext } from "contexts/OpeningAnimationContext";
 import throttle from "lodash.throttle";
 import React, { useEffect } from "react";
 import { useCallback, useRef, useState } from "react";
@@ -11,8 +12,9 @@ export const Nav = () => {
 	const { activeRecentWork } = useActiveRecentWorkContext();
 	const scrollRef = useRef(0);
 	const [isVisible, setIsVisible] = useState(true);
-	const [hasShadow, setHasShadow] = useState(false);
+	const [hasShadow, setHasShadow] = useState(true);
 	const navRef = useRef();
+	const { isCollapsed } = useOpeningAnimationContext();
 
 	const throttleScroll = useCallback(
 		throttle(() => {
@@ -40,6 +42,12 @@ export const Nav = () => {
 			document.activeElement.blur();
 		}
 	}, [isVisible]);
+
+	useEffect(() => {
+		if (isCollapsed) {
+			setHasShadow(window.scrollY > 100);
+		}
+	}, [isCollapsed]);
 
 	return (
 		<>

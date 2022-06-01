@@ -8,7 +8,9 @@ export const Team = () => {
 			<S.TeamDescription>
 				<Column
 					css={`
-						flex: 0 0 360px;
+						${(props) => props.theme.breakpoints.extraSmall`
+							flex: 0 0 360px;
+						`}
 					`}
 				>
 					<Column.Header main>
