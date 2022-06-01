@@ -8,7 +8,7 @@ export const TeamDescription = styled.div`
 `;
 
 export const Team = styled.div`
-	padding: 80px 32px 80px;
+	padding: 80px 32px 0px;
 
 	color: ${(props) => props.theme.colors.white[0]};
 	background: ${(props) => props.theme.colors.black[0]};

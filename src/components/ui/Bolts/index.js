@@ -4,7 +4,11 @@ export const Bolts = ({ className }) => {
 	return (
 		<S.Bolts className={className}>
 			<S.Bolt />
-			<S.Bolt />
+			<S.Bolt
+				css={`
+					transform: rotateX(180deg);
+				`}
+			/>
 		</S.Bolts>
 	);
 };

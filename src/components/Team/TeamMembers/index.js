@@ -95,7 +95,7 @@ export const TeamMembers = () => {
 				</Column.Text>
 
 				<S.TeamMembersLinks>
-					<BaseLink href="https://twitter.com/aboltc_">
+					<BaseLink href="https://twitter.com/0x_reefer">
 						<LogoTwitter24 />
 					</BaseLink>
 
