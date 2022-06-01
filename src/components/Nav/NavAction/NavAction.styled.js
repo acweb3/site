@@ -1,8 +1,8 @@
+import { Signup } from "components/Signup";
 import { BaseButton } from "components/ui/BaseButton";
-import { BaseInput } from "components/ui/BaseInput";
-import { BaseTextArea } from "components/ui/BaseTextArea";
-import { transparentize } from "polished";
 import styled, { css } from "styled-components";
+
+export const NavActionSignup = styled(Signup)``;
 
 export const NavActionButton = styled(BaseButton)`
 	background-color: transparent;
@@ -13,61 +13,6 @@ export const NavActionButton = styled(BaseButton)`
 			color: ${(props) => props.theme.colors.white[0]};
 			background-color: ${(props) => props.theme.colors.black[0]};
 		`}
-`;
-
-export const NavActionSubmit = styled(BaseButton)`
-	color: ${(props) => props.theme.colors.white[0]};
-	border-color: ${(props) => props.theme.colors.white[0]};
-	background: ${(props) => props.theme.colors.black[0]};
-	margin: 24px 0 0 auto;
-	min-width: 80px;
-
-	&:active,
-	&:focus,
-	&:hover {
-		color: ${(props) => props.theme.colors.black[0]};
-		background: ${(props) => props.theme.colors.white[0]};
-	}
-`;
-
-export const NavActionInputLabel = styled.label`
-	display: flex;
-	align-items: center;
-
-	margin-top: 16px;
-
-	& > svg {
-		margin-left: 8px;
-	}
-
-	&:first-of-type {
-		margin-top: 0px;
-	}
-`;
-
-const inputCss = css`
-	width: 100%;
-	margin-top: 8px;
-
-	color: ${(props) => props.theme.colors.white[0]};
-	border-color: ${(props) => props.theme.colors.white[0]};
-	background: ${(props) => props.theme.colors.black[0]};
-
-	&::placeholder {
-		color: ${(props) => transparentize(0.4, props.theme.colors.white[0])};
-	}
-`;
-
-export const NavActionInput = styled(BaseInput)`
-	${inputCss}
-`;
-
-export const NavActionTextArea = styled(BaseTextArea)`
-	${inputCss}
-`;
-
-export const NavActionForm = styled.div`
-	overflow: hidden;
 `;
 
 export const NavActionPopover = styled.div`
@@ -92,7 +37,7 @@ export const NavActionPopover = styled.div`
 	box-shadow: ${(props) => props.theme.shadows.high};
 	z-index: 0;
 
-	& > ${NavActionForm} {
+	& > ${NavActionSignup} {
 		max-height: 0;
 		transition: max-height 0ms linear 200ms;
 	}
@@ -105,7 +50,7 @@ export const NavActionPopover = styled.div`
 			max-height: 4000px;
 			transform: translateY(0);
 
-			& > ${NavActionForm} {
+			& > ${NavActionSignup} {
 				max-height: 9999px;
 				transition: max-height 0ms linear 0ms;
 			}

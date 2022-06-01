@@ -1,13 +1,9 @@
 import * as S from "components/RecentWork/RecentWork.styled";
 import { RecentWorkMarquee } from "components/RecentWork/RecentWorkMarquee";
-import { CoolStar } from "components/ui/CoolStar";
-import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
 import { StaticImage } from "gatsby-plugin-image";
 import { imageTintObj } from "styles/util";
 
 export const RecentWork = () => {
-	const { setActiveRecentWork } = useActiveRecentWorkContext();
-
 	return (
 		<>
 			<RecentWorkMarquee />
@@ -19,11 +15,7 @@ export const RecentWork = () => {
 				</S.RecentWorkBanner>
 				<S.RecentWorkPortfolio>
 					<S.RecentWorkProjects>
-						{/** # TODO =>  set this to the actual project */}
-						<S.RecentWorkProject
-							onClick={() => setActiveRecentWork(true)}
-							width={800}
-						>
+						<S.RecentWorkProject width={800}>
 							<StaticImage
 								src="../../assets/images/batCowls.webp"
 								alt="bat cowls"

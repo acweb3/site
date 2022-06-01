@@ -1,20 +1,20 @@
 import * as S from "components/SiteWrapper/BlurWrapper/BlurWrapper.styled";
-import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
+import { useIsSignupContext } from "contexts/IsSignupContext";
 import React, { useEffect, useRef, useState } from "react";
 
 export const BlurWrapper = ({ children }) => {
-	const { activeRecentWork } = useActiveRecentWorkContext();
+	const { isSignup } = useIsSignupContext();
 	const [lock, setLock] = useState();
 	const lockRef = useRef();
 
 	useEffect(() => {
-		if (activeRecentWork !== undefined) {
+		if (isSignup) {
 			setLock(window.scrollY);
 			lockRef.current = window.scrollY;
 		} else {
 			setLock(undefined);
 		}
-	}, [activeRecentWork]);
+	}, [isSignup]);
 
 	useEffect(() => {
 		if (!lock && lockRef.current) {

@@ -4,11 +4,13 @@ import * as S from "components/Process/ProcessStep/ProcessStep.styled";
 import { Bolts } from "components/ui/Bolts";
 import { Column } from "components/ui/Column";
 import { CoolCircle } from "components/ui/CoolCircle";
+import { useIsSignupContext } from "contexts/IsSignupContext";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useEffect, useRef, useState } from "react";
 import { imageTintObj } from "styles/util";
 
 export const ProcessStep = ({ isFinal, processStep }) => {
+	const { setIsSignup } = useIsSignupContext();
 	const { scrollHeight } = useScrollHeight();
 	const { isMobile } = useWindowSize();
 	const processStepRef = useRef();
@@ -74,8 +76,7 @@ export const ProcessStep = ({ isFinal, processStep }) => {
 						{processStep.body}
 					</Column.Text>
 
-					<Column.Actions>
-						{/* {JSON.stringify(processStep.action)} */}
+					<Column.Actions onClick={() => setIsSignup(true)}>
 						{processStep.action}
 					</Column.Actions>
 				</Column>

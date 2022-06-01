@@ -1,5 +1,6 @@
 import { Code32, FaceSatisfied32, PaintBrush32 } from "@carbon/icons-react";
 import * as S from "components/ui/CoolButton/CoolButton.styled";
+import { useIsSignupContext } from "contexts/IsSignupContext";
 import { useEffect, useState } from "react";
 
 const ICONS = [
@@ -12,6 +13,7 @@ const ICONS = [
 ];
 
 export const CoolButton = ({ children, ...props }) => {
+	const { setIsSignup } = useIsSignupContext();
 	const [iconIndex, setIconIndex] = useState(0);
 
 	useEffect(() => {
@@ -25,7 +27,7 @@ export const CoolButton = ({ children, ...props }) => {
 	}, []);
 
 	return (
-		<S.CoolButton {...props}>
+		<S.CoolButton {...props} onClick={() => setIsSignup(true)}>
 			<S.CoolButtonIcon>{ICONS[iconIndex]}</S.CoolButtonIcon>
 			<S.CoolButtonContent>{children}</S.CoolButtonContent>
 		</S.CoolButton>

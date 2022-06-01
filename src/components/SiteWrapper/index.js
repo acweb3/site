@@ -1,19 +1,19 @@
-import { RecentWorkSidePanel } from "components/RecentWork/RecentWorkSidePanel";
+import { SignupModal } from "components/SignUpModal";
 import { BlurWrapper } from "components/SiteWrapper/BlurWrapper";
 import * as S from "components/SiteWrapper/SiteWrapper.styled";
-import { useActiveRecentWorkContext } from "contexts/ActiveRecentWorkContext";
+import { useIsSignupContext } from "contexts/IsSignupContext";
 import React from "react";
 
 export const SiteWrapper = ({ children }) => {
-	const { activeRecentWork } = useActiveRecentWorkContext();
+	const { isSignup } = useIsSignupContext();
 
 	return (
 		<>
 			<S.Global />
+			{isSignup && <SignupModal />}
 			<BlurWrapper>
 				<S.Main>{children}</S.Main>
 			</BlurWrapper>
-			{activeRecentWork && <RecentWorkSidePanel />}
 		</>
 	);
 };
