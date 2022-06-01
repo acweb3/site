@@ -3,7 +3,12 @@ import styled, { keyframes } from "styled-components";
 
 export const FooterRightColumns = styled.div`
 	display: flex;
-	margin-left: auto;
+
+	flex-direction: column;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		flex-direction: row;
+	`}
 `;
 
 export const FooterLogoWrapper = styled.div`
@@ -40,14 +45,24 @@ export const FooterColumn = styled.div`
 	flex-direction: column;
 
 	position: relative;
-	flex: 0 0 320px;
+
+	margin-bottom: 32px;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		flex: 0 0 320px;
+		margin-bottom: 0;
+	`}
 `;
 
 export const FooterContent = styled.div`
 	position: relative;
 
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		flex-direction: row;
+	`}
 `;
 
 const marquee = keyframes`
@@ -56,14 +71,14 @@ const marquee = keyframes`
 `;
 
 export const FooterMarqueeSpan = styled.span`
-	width: 50%;
+	width: 100%;
 `;
 
 export const FooterMarquee = styled.div`
 	position: absolute;
 	bottom: -120px;
 
-	min-width: 200%;
+	width: 200%;
 
 	overflow: hidden;
 
@@ -79,8 +94,12 @@ export const Footer = styled.div`
 	width: 100%;
 	color: ${(props) => props.theme.colors.white[0]};
 	background: ${(props) => props.theme.colors.black[0]};
-	padding: 32px 120px 200px;
+	padding: 0px 32px 200px;
 
 	position: relative;
 	overflow: hidden;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 32px 120px 200px;
+	`}
 `;

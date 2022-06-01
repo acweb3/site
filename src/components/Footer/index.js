@@ -43,8 +43,10 @@ export const Footer = () => {
 				<S.FooterRightColumns>
 					<Column
 						css={`
-							flex: 0 0 320px;
-							margin-left: auto;
+							${(props) => props.theme.breakpoints.extraSmall`
+								flex: 0 0 320px;
+								margin-left: auto;
+							`}
 						`}
 					>
 						<Column.Header>
@@ -59,8 +61,13 @@ export const Footer = () => {
 
 					<Column
 						css={`
-							flex: 0 0 320px;
-							margin-left: 48px;
+							margin-top: 48px;
+
+							${(props) => props.theme.breakpoints.extraSmall`
+								margin-top: 0;
+								flex: 0 0 320px;
+								margin-left: 48px;
+							`}
 						`}
 					>
 						<Column.Header>

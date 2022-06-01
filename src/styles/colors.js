@@ -5,6 +5,6 @@ export const colors = {
 
 	white: {
 		0: "#c2f7fc",
-		1: "#f5f5f5",
+		// 0: "#FAF7F3",
 	},
 };

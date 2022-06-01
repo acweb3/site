@@ -11,6 +11,9 @@ export const FAQQuestionExpand = styled(BaseButton)`
 	background-color: ${(props) => props.theme.colors.black[0]};
 	border: 1px solid;
 
+	min-width: 48px;
+	margin-left: 16px;
+
 	&:active,
 	&:focus,
 	&:hover {
@@ -24,6 +27,10 @@ export const FAQQuestionExpand = styled(BaseButton)`
 			color: ${(props) => props.theme.colors.black[0]};
 			background-color: ${(props) => props.theme.colors.white[0]};
 		`}
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		margin-left: 0;
+	`}
 `;
 
 export const FAQQuestionContent = styled.div`
@@ -35,7 +42,7 @@ export const FAQQuestion = styled.div`
 	user-select: none;
 
 	font-family: ${(props) => props.theme.fontFamily.mono};
-	font-size: ${(props) => props.theme.fontSize.h4};
+	font-size: ${(props) => props.theme.fontSize.body};
 
 	display: flex;
 	align-items: center;
@@ -47,19 +54,31 @@ export const FAQQuestion = styled.div`
 			background-color: ${(props) => props.theme.colors.white[0]};
 		}
 	}
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		font-size: ${(props) => props.theme.fontSize.h4};
+	`}
 `;
 
 export const FAQPoint = styled.div`
-	padding: 48px 32px 48px 0;
+	padding: 32px 0 48px;
 	border-bottom: 1px solid;
 
 	&:first-of-type {
 		border-top: 1px solid;
 	}
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 48px 32px 48px 0;
+	`}
 `;
 
 export const FAQ = styled.div`
 	color: ${(props) => props.theme.colors.white[0]};
 	background-color: ${(props) => props.theme.colors.black[0]};
-	padding: 40px 128px 48px;
+	padding: 0 32px 48px;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 40px 128px 48px;
+	`}
 `;
