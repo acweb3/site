@@ -7,4 +7,5 @@ export const BaseInput = styled.input`
 	box-sizing: border-box;
 	font-size: ${(props) => props.theme.fontSize.body};
 	font-family: ${(props) => props.theme.fontFamily.mono};
+	border-radius: 0;
 `;

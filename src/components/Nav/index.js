@@ -87,7 +87,7 @@ export const Nav = () => {
 							buttonProps={{
 								icon: <FaceSatisfied16 />,
 								style: {
-									borderRadius: "0 0 0 16px",
+									borderRadius: "0 16px 0 16px",
 								},
 							}}
 						>

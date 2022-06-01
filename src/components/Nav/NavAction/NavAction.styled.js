@@ -1,6 +1,7 @@
 import { BaseButton } from "components/ui/BaseButton";
 import { BaseInput } from "components/ui/BaseInput";
 import { BaseTextArea } from "components/ui/BaseTextArea";
+import { transparentize } from "polished";
 import styled, { css } from "styled-components";
 
 export const NavActionButton = styled(BaseButton)`
@@ -44,6 +45,10 @@ const inputCss = css`
 	color: ${(props) => props.theme.colors.white[0]};
 	border-color: ${(props) => props.theme.colors.white[0]};
 	background: ${(props) => props.theme.colors.black[0]};
+
+	&::placeholder {
+		color: ${(props) => transparentize(0.4, props.theme.colors.white[0])};
+	}
 `;
 
 export const NavActionInput = styled(BaseInput)`

@@ -3,21 +3,21 @@ import { ViewScroll } from "components/ui/ViewScroll";
 import styled from "styled-components";
 
 export const TeamMembersColumn = styled(Column)`
+	margin-left: 32px;
 	margin-bottom: 48px;
 
 	& .gatsby-image-wrapper {
 		background: ${(props) => props.theme.colors.white[0]};
 	}
 
-	${(props) => props.theme.breakpoints.extraSmall`
-		margin-bottom: 0;
+	&:first-of-type {
+		margin-left: 0;
+	}
 
+	${(props) => props.theme.breakpoints.extraSmall`
 		flex: 0 0 320px;
 		margin-left: 48px;
-
-		&:first-of-type {
-			margin-left: 0;
-		}
+		ma
 	`}
 `;
 
@@ -50,12 +50,9 @@ export const TeamMembers = styled.div.attrs((attrs) => {
 	};
 })`
 	display: flex;
-	flex-direction: column;
 	transition: transform 200ms linear;
 
 	${(props) => props.theme.breakpoints.extraSmall`
-		flex-direction: row;
 		padding-bottom: 80px;
-
 	`}
 `;

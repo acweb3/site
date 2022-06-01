@@ -23,7 +23,9 @@ export const NavAction = ({ children, isActive, buttonProps }) => {
 					  }
 					: undefined
 			}
+			onClick={() => setIsPopoverActive(true)}
 			onBlur={() => setIsPopoverActive(false)}
+			onTou
 		>
 			<S.NavActionButton isActive={isPopoverActive} {...buttonProps}>
 				{children}

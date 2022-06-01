@@ -43,30 +43,12 @@ export const Footer = () => {
 				<S.FooterRightColumns>
 					<Column
 						css={`
-							${(props) => props.theme.breakpoints.extraSmall`
-								flex: 0 0 320px;
-								margin-left: auto;
-							`}
-						`}
-					>
-						<Column.Header>
-							we are a decentralized team with a physical presence
-							in philadelphia and milan
-						</Column.Header>
-						<Column.Text>
-							if you're in the city and want to jam, please reach
-							out.
-						</Column.Text>
-					</Column>
-
-					<Column
-						css={`
 							margin-top: 48px;
 
 							${(props) => props.theme.breakpoints.extraSmall`
 								margin-top: 0;
-								flex: 0 0 320px;
 								margin-left: 48px;
+								flex: 0 0 320px;
 							`}
 						`}
 					>

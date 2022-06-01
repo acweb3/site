@@ -12,7 +12,7 @@ export const FAQQuestionExpand = styled(BaseButton)`
 	border: 1px solid;
 
 	min-width: 48px;
-	margin-left: 16px;
+	margin-left: 32px;
 
 	&:active,
 	&:focus,

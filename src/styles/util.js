@@ -9,3 +9,7 @@ export const imageTintObj = {
 	filter: "grayscale(100%) brightness(1.4)",
 	mixBlendMode: "multiply",
 };
+
+const util = {
+	imageTintObj,
+};
