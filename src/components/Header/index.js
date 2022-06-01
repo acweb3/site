@@ -74,7 +74,7 @@ export const Header = () => {
 
 						<CoolButton
 							css={`
-								margin: 32px auto 88px;
+								margin: 40px auto 88px;
 
 								${(props) => props.theme.breakpoints.extraSmall`
 									margin: 48px auto 32px;`}

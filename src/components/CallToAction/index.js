@@ -1,5 +1,6 @@
 import * as S from "components/CallToAction/CallToAction.styled";
 import { Bolts } from "components/ui/Bolts";
+import { CoolButton } from "components/ui/CoolButton";
 
 export const CallToAction = () => {
 	return (
@@ -19,6 +20,14 @@ export const CallToAction = () => {
 					product off the shelf — your website, smart contracts, and
 					discord builds shouldn't be either.
 				</S.CallToActionCopy>
+
+				<CoolButton
+					css={`
+						margin: 32px auto 0;
+					`}
+				>
+					sign up
+				</CoolButton>
 			</S.CallToActionBox>
 			<Bolts
 				css={`

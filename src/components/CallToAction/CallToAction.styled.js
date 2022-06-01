@@ -34,7 +34,7 @@ export const CallToActionCopy = styled.div`
 export const CallToActionBox = styled.div`
 	position: relative;
 	border: 1px solid ${(props) => props.theme.colors.black[0]};
-	padding: 80px 32px 48px;
+	padding: 80px 16px 48px;
 	font-size: ${(props) => props.theme.fontSize.h5};
 	max-width: 800px;
 	margin: 0 auto;
