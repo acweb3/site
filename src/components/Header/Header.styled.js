@@ -50,20 +50,19 @@ export const HeaderInfo = styled.div`
 
 	border-radius: 64px 64px 0 0;
 	margin-top: -64px;
-	opacity: 0;
-
-	transition: opacity 1000ms;
+	transition: transform 100ms;
+	transform: translate3D(0, -64px, 0);
 
 	height: calc(100% + 64px);
 
 	${(props) =>
 		props.isCollapsed &&
 		css`
-			opacity: 1;
+			transform: translate3D(0, 0, 0);
 		`}
 
 	${(props) => props.theme.breakpoints.extraSmall`
-		padding: 104px 128px 96px;
+		transform: translate3D(0, 0, 0);
 		height: initial;
 	`}
 `;

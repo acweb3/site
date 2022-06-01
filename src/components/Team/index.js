@@ -17,9 +17,9 @@ export const Team = () => {
 						we are a best in industry tiger team for nft projects
 					</Column.Header>
 					<Column.Text>
-						lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua. Ut enim ad minim veniam.
+						with what feels like a century of crypto and web3
+						experience, andrew and cooper bring a comprehensive
+						approach that integrates culture, strategy, and design.
 					</Column.Text>
 				</Column>
 			</S.TeamDescription>

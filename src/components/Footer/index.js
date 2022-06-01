@@ -1,9 +1,8 @@
 import {
 	Email16,
-	Phone16,
 	LogoGithub24,
 	LogoTwitter32,
-	PhoneFilled16,
+	Phone16,
 } from "@carbon/icons-react";
 import * as S from "components/Footer/Footer.styled";
 import { BaseButton } from "components/ui/BaseButton";
@@ -19,13 +18,13 @@ export const Footer = () => {
 				<S.FooterColumn>
 					<Column>
 						<Column.Header>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit.
+							we are a decentralized team with a physical presence
+							in philadelphia and milan
 						</Column.Header>
 						<Column.Text>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua.
+							if you're in the city and want to jam, please reach
+							out. we're always down to talk about new hotness in
+							web3.
 						</Column.Text>
 					</Column>
 
@@ -67,14 +66,13 @@ export const Footer = () => {
 								isSmall
 								isInverted
 							>
-								<PhoneFilled16 /> call today
+								<Phone16 /> say hi
 							</CoolCircle>
 							let's get in touch — we're a phonecall away
 						</Column.Header>
 						<Column.Text>
-							feel free to reach out about any questions regarding
-							what we can do for you, what we charge, and past
-							work.
+							it's always free to talk! we can help you hash out a
+							plan and see what would fit best for your project.
 						</Column.Text>
 
 						<Column.Actions>

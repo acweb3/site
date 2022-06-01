@@ -40,12 +40,10 @@ export const RecentWork = () => {
 									<S.RecentWorkSup>community</S.RecentWorkSup>
 								</S.RecentWorkHeader>
 								<S.RecentWorkCopy isRight>
-									Lorem ipsum dolor sit amet, consectetur
-									adipiscing elit, sed do eiusmod tempor
-									incididunt ut labore et dolore magna aliqua.
-									Ut enim ad minim veniam, quis nostrud
-									exercitation ullamco laboris nisi ut aliquip
-									ex ea commodo consequat.
+									we developed the community for warner
+									brother's batman nft project. we manage
+									engagement and security for a discord with
+									over 10,000 members.
 								</S.RecentWorkCopy>
 							</S.RecentWorkSpreadCopy>
 						</S.RecentWorkProject>
@@ -67,12 +65,11 @@ export const RecentWork = () => {
 								<S.RecentWorkSup>community</S.RecentWorkSup>
 							</S.RecentWorkHeader>
 							<S.RecentWorkCopy>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								we developed the mint site, smart contracts, and
+								discord for chris hytha's award-winning
+								highrises project. we managed nft metadata,
+								implemented mint mechanics, and handled sold-out
+								drops.
 							</S.RecentWorkCopy>
 						</S.RecentWorkProject>
 						<S.RecentWorkProject width={480}>
@@ -90,12 +87,11 @@ export const RecentWork = () => {
 								<S.RecentWorkSup>community</S.RecentWorkSup>
 							</S.RecentWorkHeader>
 							<S.RecentWorkCopy>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation
-								ullamco laboris nisi ut aliquip ex ea commodo
-								consequat.
+								we manage the community for miami's e11even
+								nightclub for the months leading up to project
+								sold-out mint. we handle community engagement
+								and are a communications liason between the
+								nightclub and horizen labs.
 							</S.RecentWorkCopy>
 						</S.RecentWorkProject>
 					</S.RecentWorkProjects>

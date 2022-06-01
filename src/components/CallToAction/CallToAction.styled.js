@@ -48,14 +48,23 @@ export const CallToActionBox = styled.div`
 	`}
 `;
 
+export const CallToActionContent = styled.div`
+	padding: 0 16px;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 0;
+	`}
+`;
+
 export const CallToAction = styled.div`
 	position: relative;
 	overflow: hidden;
 	margin: 0 auto 0;
-	padding: 48px 32px 80px;
 	text-align: center;
 	color: ${(props) => props.theme.colors.white[0]};
 	background-color: ${(props) => props.theme.colors.black[0]};
+
+	padding: 48px 16px 80px;
 
 	${(props) => props.theme.breakpoints.extraSmall`
 		border-radius: 64px 64px 0 0;

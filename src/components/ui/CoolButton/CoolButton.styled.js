@@ -118,7 +118,11 @@ export const CoolButton = styled.button`
 		transform: translate3D(-4px, -4px, 0);
 
 		&::after {
+			transform: translate3D(3px, 3px, 0);
+
+			${(props) => props.theme.breakpoints.extraSmall`
 			transform: translate3D(12px, 12px, 0);
+		`}
 		}
 	}
 `;

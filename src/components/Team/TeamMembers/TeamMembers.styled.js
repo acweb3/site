@@ -6,6 +6,8 @@ export const TeamMembersColumn = styled(Column)`
 	margin-left: 32px;
 	margin-bottom: 48px;
 
+	flex: 0 0 calc(50% - 16px);
+
 	& .gatsby-image-wrapper {
 		background: ${(props) => props.theme.colors.white[0]};
 	}
@@ -17,7 +19,6 @@ export const TeamMembersColumn = styled(Column)`
 	${(props) => props.theme.breakpoints.extraSmall`
 		flex: 0 0 320px;
 		margin-left: 48px;
-		ma
 	`}
 `;
 

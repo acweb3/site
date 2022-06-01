@@ -24,15 +24,14 @@ export const WeAre = () => {
 				</Column.Header>
 				<Column.Text>
 					we create communities, write smart contracts, and develop
-					websites for web3. write smart contracts, and develop
-					websites for web3. write smart contracts, and develop
-					websites for web3.
+					websites for web3. we have the technical range to make a
+					secure discord and elaborate mint for your nft project.
 				</Column.Text>
 			</Column>
 
 			<Column
 				css={`
-					margin-bottom: 64px;
+					margin-bottom: 48px;
 
 					${(props) => props.theme.breakpoints.extraSmall`
 						flex: 0 0 280px;
@@ -41,11 +40,14 @@ export const WeAre = () => {
 				`}
 			>
 				<Column.Header>
-					we are a decentralized team with a physical presence in
-					philadelphia and milan
+					we have taken projects from an idea into a name-brand
+					collection
 				</Column.Header>
 				<Column.Text>
-					if you're in the city and want to jam, please reach out.
+					we have developed smart contracts, mint sites, and community
+					for projects that have trended to the top of opensea. we are
+					a proven team with the experience to take your project there
+					too.
 				</Column.Text>
 			</Column>
 

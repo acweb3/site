@@ -10,25 +10,27 @@ export const CallToAction = () => {
 					margin-bottom: 32px;
 				`}
 			/>
-			<S.CallToActionBox>
-				<S.CallToActionLogoBox>
-					<S.CallToActionLogo />
-				</S.CallToActionLogoBox>
-				<S.CallToActionCopy>
-					artists, creators, and founders are driving a revolution in
-					expression and ownership. your work isn't just another
-					product off the shelf — your website, smart contracts, and
-					discord builds shouldn't be either.
-				</S.CallToActionCopy>
+			<S.CallToActionContent>
+				<S.CallToActionBox>
+					<S.CallToActionLogoBox>
+						<S.CallToActionLogo />
+					</S.CallToActionLogoBox>
+					<S.CallToActionCopy>
+						artists, creators, and founders are driving a revolution
+						in expression and ownership. your work isn't just
+						another product off the shelf — your website, smart
+						contracts, and discord builds shouldn't be either.
+					</S.CallToActionCopy>
 
-				<CoolButton
-					css={`
-						margin: 32px auto 0;
-					`}
-				>
-					sign up
-				</CoolButton>
-			</S.CallToActionBox>
+					<CoolButton
+						css={`
+							margin: 32px auto 0;
+						`}
+					>
+						sign up
+					</CoolButton>
+				</S.CallToActionBox>
+			</S.CallToActionContent>
 			<Bolts
 				css={`
 					margin-top: 32px;

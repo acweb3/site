@@ -21,6 +21,13 @@ export const NavActionSubmit = styled(BaseButton)`
 	background: ${(props) => props.theme.colors.black[0]};
 	margin: 24px 0 0 auto;
 	min-width: 80px;
+
+	&:active,
+	&:focus,
+	&:hover {
+		color: ${(props) => props.theme.colors.black[0]};
+		background: ${(props) => props.theme.colors.white[0]};
+	}
 `;
 
 export const NavActionInputLabel = styled.label`

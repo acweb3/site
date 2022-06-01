@@ -16,16 +16,15 @@ export const NavAction = ({ children, isActive, buttonProps }) => {
 	return (
 		<S.NavAction
 			ref={navActionRef}
-			onFocus={
+			onClick={
 				isActive
-					? () => {
-							setIsPopoverActive(true);
-					  }
+					? () =>
+							setIsPopoverActive(
+								(isPopoverActive) => !isPopoverActive
+							)
 					: undefined
 			}
-			onClick={() => setIsPopoverActive(true)}
 			onBlur={() => setIsPopoverActive(false)}
-			onTou
 		>
 			<S.NavActionButton isActive={isPopoverActive} {...buttonProps}>
 				{children}

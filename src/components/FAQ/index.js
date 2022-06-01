@@ -4,20 +4,16 @@ import { useState } from "react";
 
 const QUESTIONS_ANSWERS = [
 	[
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"what do you charge for a mint site? or a discord build?",
+		"it depends!  we handle projects big and small, but we typically take a flat, trivial deposit of eth of front followed by 5-8% of mint, depending on scope.",
 	],
 	[
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"will you be available on my project's mint day?",
+		"always.  we never schedule a project that has a conflicting launch date.",
 	],
 	[
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-	],
-	[
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		"what happens after the initial mint?",
+		"we still stick around!  as technical stewards, we're always down to offer technical support.  we're in the business of making sure that our clients come back for future builds.",
 	],
 ];
 

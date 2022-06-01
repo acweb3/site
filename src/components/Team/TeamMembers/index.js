@@ -25,7 +25,7 @@ export const TeamMembers = () => {
 				window.scrollY -
 					teamRef.current.offsetTop -
 					teamRef.current.offsetHeight * 0.3
-			) * 0.5
+			) * 0.8
 		);
 	}, [scrollHeight]);
 
@@ -51,10 +51,10 @@ export const TeamMembers = () => {
 					cooper sherwin
 				</Column.Header>
 				<Column.Text>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					cooper is a business developer specializing in nft strategy,
+					crypto culture, and discord design. he has led multiple
+					projects to OpenSea's #1 trending position, most notably
+					Rowhomes and LinksDAO.
 				</Column.Text>
 
 				<S.TeamMembersLinks>
@@ -88,10 +88,10 @@ export const TeamMembers = () => {
 					andy gallagher
 				</Column.Header>
 				<Column.Text>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					andrew is a software dev interested in creating beautiful
+					interactions for the web and crypto. andrew has developed
+					award-winning websites for fine arts institutions and
+					startups.
 				</Column.Text>
 
 				<S.TeamMembersLinks>

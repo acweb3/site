@@ -16,20 +16,23 @@ const bounce = keyframes`
 `;
 
 export const HeaderMarqueeLetter = styled.span`
-	will-change: transform;
 	display: inline-block;
-	transform: translate3D(0, 500px, 0);
-	animation: ${bounce} 700ms ease-out;
-	animation-delay: ${(props) => props.delay}ms;
-	animation-fill-mode: forwards;
 	color: ${(props) => props.theme.colors.black[0]};
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		will-change: transform;
+		transform: translate3D(0, 500px, 0);
+		animation: ${bounce} 700ms ease-out;
+		animation-delay: ${(props) => props.delay}ms;
+		animation-fill-mode: forwards;
+	`}
 `;
 
 export const HeaderMarqueeLetters = styled.div`
 	color: ${(props) => props.theme.colors.white[0]};
 	font-family: ${(props) => props.theme.fontFamily.serif};
-	font-size: 180px;
-	margin-top: -24px;
+	font-size: 200px;
+	margin-top: -18px;
 	white-space: nowrap;
 
 	${(props) => props.theme.breakpoints.extraSmall`

@@ -39,12 +39,12 @@ export const RecentWorkMarquee = styled.div`
 
 	width: 100%;
 	overflow: hidden;
-	padding-top: 16px;
+	padding-top: 8px;
 	height: 140px;
 
 	${(props) => props.theme.breakpoints.extraSmall`
 		padding-top: 0;
-		margin-top: -32px;
+		margin-top: -48px;
 		height: min-content;
 	`}
 `;
