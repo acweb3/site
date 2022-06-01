@@ -20,12 +20,15 @@ export const TeamMembers = () => {
 
 	useEffect(() => {
 		setOffsetY(
-			Math.max(
-				0,
-				window.scrollY -
-					teamRef.current.offsetTop -
-					teamRef.current.offsetHeight * 0.3
-			) * 0.8
+			Math.min(
+				Math.max(
+					0,
+					window.scrollY -
+						teamRef.current.offsetTop -
+						teamRef.current.offsetHeight * 0.3
+				) * 0.8,
+				1000
+			)
 		);
 	}, [scrollHeight]);
 

@@ -50,7 +50,8 @@ export const HeaderInfo = styled.div`
 
 	border-radius: 64px 64px 0 0;
 	margin-top: -64px;
-	transition: transform 100ms;
+	transition: transform 100ms, opacity 400ms;
+	opacity: 0;
 	transform: translate3D(0, -64px, 0);
 
 	height: calc(100% + 64px);
@@ -58,6 +59,7 @@ export const HeaderInfo = styled.div`
 	${(props) =>
 		props.isCollapsed &&
 		css`
+			opacity: 1;
 			transform: translate3D(0, 0, 0);
 		`}
 
