@@ -1,4 +1,5 @@
 import * as S from "components/Toasts/Toast/Toast.styled";
+import { Bolts } from "components/ui/Bolts";
 import { useEffect, useState } from "react";
 
 export const Toast = ({ toast }) => {
@@ -18,8 +19,12 @@ export const Toast = ({ toast }) => {
 
 	return (
 		<S.Toast isVisible={isVisible}>
-			<S.ToastTitle>{toast.title}</S.ToastTitle>
-			<S.ToastMessage>{toast.message}</S.ToastMessage>
+			<Bolts />
+			<S.ToastContent>
+				<S.ToastTitle>{toast.title}</S.ToastTitle>
+				<S.ToastMessage>{toast.message}</S.ToastMessage>
+			</S.ToastContent>
+			<Bolts />
 		</S.Toast>
 	);
 };

@@ -56,6 +56,7 @@ const IndexPage = ({ pageContext: { thumbnail } }) => {
 				<link rel="canonical" href={config.canonicalURL} />
 			</Helmet>
 			<Contexts>
+				<Toasts />
 				<SiteWrapper>
 					<Nav />
 					<Header />
@@ -66,7 +67,6 @@ const IndexPage = ({ pageContext: { thumbnail } }) => {
 					<CallToAction />
 					<FAQ />
 					<Footer />
-					<Toasts />
 				</SiteWrapper>
 			</Contexts>
 		</>

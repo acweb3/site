@@ -1,7 +1,7 @@
 import {
 	Email16,
 	LogoGithub24,
-	LogoTwitter32,
+	LogoTwitter24,
 	Phone16,
 } from "@carbon/icons-react";
 import * as S from "components/Footer/Footer.styled";
@@ -33,7 +33,7 @@ export const Footer = () => {
 							aria-label="aboltc twitter"
 							href="https://twitter.com/aboltc_"
 						>
-							<LogoTwitter32 />
+							<LogoTwitter24 />
 						</BaseLink>
 
 						<BaseLink

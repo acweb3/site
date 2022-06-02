@@ -47,6 +47,19 @@ module.exports = {
 			},
 		},
 
+		{
+			resolve: `gatsby-plugin-google-gtag`,
+			options: {
+				trackingIds: [
+					"G-PHDC0VYS8Z", // Google Analytics / GA
+				],
+				// This object is used for configuration specific to this plugin
+				pluginConfig: {
+					head: true,
+				},
+			},
+		},
+
 		// S3 Deploy
 		{
 			resolve: "gatsby-plugin-s3",

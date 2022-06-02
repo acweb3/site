@@ -11,6 +11,10 @@ export const ToastMessage = styled.div`
 	font-size: ${(props) => props.theme.fontSize.body};
 `;
 
+export const ToastContent = styled.div`
+	padding: 16px;
+`;
+
 export const Toast = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -19,7 +23,7 @@ export const Toast = styled.div`
 	border: 1px solid;
 	box-shadow: ${(props) => props.theme.shadows.high};
 
-	padding: 32px;
+	padding: 16px;
 
 	width: 320px;
 	min-width: 320px;

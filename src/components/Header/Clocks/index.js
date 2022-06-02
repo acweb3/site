@@ -18,7 +18,7 @@ export const Clocks = () => {
 	);
 
 	useEffect(() => {
-		setInterval(() => {
+		const sti = setInterval(() => {
 			setTimeEST(
 				new Date().toLocaleString("en-US", {
 					timeZone: "America/New_York",
@@ -34,6 +34,10 @@ export const Clocks = () => {
 				})
 			);
 		}, 3000);
+
+		return () => {
+			clearInterval(sti);
+		};
 	}, []);
 
 	const [hoursEST, minutesEST] = timeEST.split(":");

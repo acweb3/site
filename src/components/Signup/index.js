@@ -17,7 +17,8 @@ export const Signup = ({ className, onComplete }) => {
 		if (!Object.values(form).every(Boolean)) {
 			addToast({
 				title: "missing form fields",
-				message: "we're missing a bit of information",
+				message:
+					"we're missing a bit of information.  please include your name, email, project name, project description, and launch date.",
 			});
 
 			return false;
