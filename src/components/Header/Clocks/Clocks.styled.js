@@ -32,6 +32,10 @@ export const Clocks = styled.div`
 	right: -124px;
 	transform: rotate(90deg);
 
-	display: flex;
+	display: none;
 	justify-content: center;
+
+	${(props) => props.theme.breakpoints.extraSmall`
+		display: flex;
+	`}
 `;

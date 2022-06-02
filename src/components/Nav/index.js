@@ -61,6 +61,7 @@ export const Nav = () => {
 			>
 				<S.NavContent>
 					<S.NavLogoContainer
+						aria-label="aboltc logo"
 						onClick={() => {
 							window.scrollTo(0, 0);
 							document.activeElement.blur();

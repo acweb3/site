@@ -15,7 +15,16 @@ import "styles/typography.css";
 const IndexPage = ({ pageContext: { highrises, thumbnail } }) => {
 	return (
 		<>
-			<Helmet>
+			<Helmet
+				htmlAttributes={{
+					lang: "en",
+				}}
+			>
+				<meta charSet="utf-8" />
+				<meta
+					content="width=device-width, initial-scale=1.0"
+					name="viewport"
+				/>
 				<title>aboltc</title>
 				<meta name="title" content="aboltc" />
 				<meta

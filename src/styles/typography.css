@@ -1,9 +1,11 @@
 @font-face {
 	font-family: "Margo";
 	src: url("../assets/fonts/margo.woff2");
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Sloop Script";
 	src: url("../assets/fonts/sloopscript.ttf");
+	font-display: swap;
 }

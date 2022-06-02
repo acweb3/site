@@ -5,7 +5,7 @@ import { useState } from "react";
 const QUESTIONS_ANSWERS = [
 	[
 		"what do you charge for a mint site? or a discord build?",
-		"it depends!  we handle projects big and small, but we typically take a flat, trivial deposit of eth of front followed by 5-8% of mint, depending on scope.",
+		"it depends!  we handle projects big and small, but we typically take a flat, trivial deposit of eth up front, followed by 5-8% of mint, depending on scope.",
 	],
 	[
 		"will you be available on my project's mint day?",
@@ -37,6 +37,7 @@ export const FAQ = () => {
 							</S.FAQQuestionContent>
 
 							<S.FAQQuestionExpand
+								aria-label="expand button"
 								isActive={answerIndex === index}
 							>
 								<Add32 />

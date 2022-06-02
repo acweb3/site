@@ -29,11 +29,17 @@ export const Footer = () => {
 					</Column>
 
 					<S.FooterLogoWrapper>
-						<BaseLink href="https://twitter.com/aboltc_">
+						<BaseLink
+							aria-label="aboltc twitter"
+							href="https://twitter.com/aboltc_"
+						>
 							<LogoTwitter32 />
 						</BaseLink>
 
-						<BaseLink href="https://github.com/acweb3">
+						<BaseLink
+							aria-label="aboltc github"
+							href="https://github.com/acweb3"
+						>
 							<LogoGithub24 />
 						</BaseLink>
 					</S.FooterLogoWrapper>
@@ -68,7 +74,7 @@ export const Footer = () => {
 							>
 								<Phone16 /> say hi
 							</CoolCircle>
-							let's get in touch — we're a phonecall away
+							let's get in touch — we're a phone call away
 						</Column.Header>
 						<Column.Text>
 							it's always free to talk! we can help you hash out a

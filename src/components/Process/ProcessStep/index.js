@@ -12,7 +12,7 @@ import { imageTintObj } from "styles/util";
 export const ProcessStep = ({ isFinal, processStep }) => {
 	const { setIsSignup } = useIsSignupContext();
 	const { scrollHeight } = useScrollHeight();
-	const { isMobile } = useWindowSize();
+	const { isMobile, isLoaded } = useWindowSize();
 	const processStepRef = useRef();
 	const [offsetY, setOffsetY] = useState(0);
 
@@ -36,7 +36,7 @@ export const ProcessStep = ({ isFinal, processStep }) => {
 
 	return (
 		<S.ProcessStep
-			isMobile={isMobile}
+			isMobile={!isLoaded || isMobile}
 			ref={processStepRef}
 			offsetY={offsetY}
 			isFinal={isFinal}

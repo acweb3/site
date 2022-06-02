@@ -14,7 +14,7 @@ import { useEffect, useRef, useState } from "react";
 
 export const TeamMembers = () => {
 	const { scrollHeight } = useScrollHeight();
-	const { isMobile } = useWindowSize();
+	const { isLoaded, isMobile } = useWindowSize();
 	const teamRef = useRef();
 	const [offsetY, setOffsetY] = useState(0);
 
@@ -27,13 +27,17 @@ export const TeamMembers = () => {
 						teamRef.current.offsetTop -
 						teamRef.current.offsetHeight * 0.3
 				) * 0.8,
-				1000
+				800
 			)
 		);
 	}, [scrollHeight]);
 
 	return (
-		<S.TeamMembers ref={teamRef} isMobile={isMobile} offsetY={offsetY}>
+		<S.TeamMembers
+			ref={teamRef}
+			isMobile={!isLoaded || isMobile}
+			offsetY={offsetY}
+		>
 			<S.TeamMembersColumn>
 				<StaticImage
 					src="../../../assets/images/team/cooper.jpg"
@@ -61,11 +65,17 @@ export const TeamMembers = () => {
 				</Column.Text>
 
 				<S.TeamMembersLinks>
-					<BaseLink href="https://twitter.com/CoopNFT">
+					<BaseLink
+						aria-label="cooper twitter"
+						href="https://twitter.com/CoopNFT"
+					>
 						<LogoTwitter24 />
 					</BaseLink>
 
-					<BaseLink href="https://www.linkedin.com/in/coopersherwin/">
+					<BaseLink
+						aria-label="cooper linkedin"
+						href="https://www.linkedin.com/in/coopersherwin/"
+					>
 						<LogoLinkedin24 />
 					</BaseLink>
 				</S.TeamMembersLinks>
@@ -98,19 +108,31 @@ export const TeamMembers = () => {
 				</Column.Text>
 
 				<S.TeamMembersLinks>
-					<BaseLink href="https://twitter.com/0x_reefer">
+					<BaseLink
+						aria-label="andy twitter"
+						href="https://twitter.com/0x_reefer"
+					>
 						<LogoTwitter24 />
 					</BaseLink>
 
-					<BaseLink href="https://github.com/andyGallagher">
+					<BaseLink
+						aria-label="andy github"
+						href="https://github.com/andyGallagher"
+					>
 						<LogoGithub24 />
 					</BaseLink>
 
-					<BaseLink href="https://www.linkedin.com/in/%E2%9A%A1%E2%98%94%E2%9B%88/">
+					<BaseLink
+						aria-label="andy linkedin"
+						href="https://www.linkedin.com/in/%E2%9A%A1%E2%98%94%E2%9B%88/"
+					>
 						<LogoLinkedin24 />
 					</BaseLink>
 
-					<BaseLink href="https://www.andy-gallagher.com">
+					<BaseLink
+						aria-label="andy website"
+						href="https://www.andy-gallagher.com"
+					>
 						<Wikis24 />
 					</BaseLink>
 				</S.TeamMembersLinks>
