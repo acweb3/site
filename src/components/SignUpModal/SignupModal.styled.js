@@ -31,9 +31,12 @@ export const SignupModalForm = styled.div`
 	padding: 64px 32px 48px;
 	border-radius: 32px 32px 0 0;
 
+	border-top: 1px solid;
+
 	width: 100vw;
 
 	${(props) => props.theme.breakpoints.extraSmall`
+		border: none;
 		width: 360px;
 		padding: 64px 32px 32px;
 		border-radius: 0;

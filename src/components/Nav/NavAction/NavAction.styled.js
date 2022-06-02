@@ -34,6 +34,7 @@ export const NavActionPopover = styled.div`
 
 	transition: transform 200ms, opacity 200ms;
 
+	border: 1px solid;
 	box-shadow: ${(props) => props.theme.shadows.high};
 	z-index: 0;
 
@@ -67,6 +68,8 @@ export const NavActionPopover = styled.div`
 		width: 16px;
 		height: 16px;
 		background: ${(props) => props.theme.colors.black[0]};
+		border-top: 1px solid;
+		border-right: 1px solid;
 	}
 
 	${(props) => props.theme.breakpoints.extraSmall`
