@@ -7,12 +7,14 @@ import { Process } from "components/Process";
 import { RecentWork } from "components/RecentWork";
 import { SiteWrapper } from "components/SiteWrapper";
 import { Team } from "components/Team";
+import { Toasts } from "components/Toasts";
 import { WeAre } from "components/WeAre";
+import { config } from "config";
 import { Contexts } from "contexts";
 import { Helmet } from "react-helmet";
 import "styles/typography.css";
 
-const IndexPage = ({ pageContext: { highrises, thumbnail } }) => {
+const IndexPage = ({ pageContext: { thumbnail } }) => {
 	return (
 		<>
 			<Helmet
@@ -51,7 +53,7 @@ const IndexPage = ({ pageContext: { highrises, thumbnail } }) => {
 				<meta name="twitter:site" content="@aboltc_" />
 				<meta property="twitter:image" content={thumbnail} />
 				<meta property="twitter:image:alt" content="" />
-				<link rel="canonical" href="www.aboltc.com" />
+				<link rel="canonical" href={config.canonicalURL} />
 			</Helmet>
 			<Contexts>
 				<SiteWrapper>
@@ -64,6 +66,7 @@ const IndexPage = ({ pageContext: { highrises, thumbnail } }) => {
 					<CallToAction />
 					<FAQ />
 					<Footer />
+					<Toasts />
 				</SiteWrapper>
 			</Contexts>
 		</>

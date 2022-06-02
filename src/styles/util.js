@@ -1,8 +1,8 @@
 import { css } from "styled-components";
 
 export const imageTint = css`
-	/* filter: grayscale(100%) brightness(1.75);
-	mix-blend-mode: multiply; */
+	filter: grayscale(100%) brightness(1.4);
+	mix-blend-mode: multiply;
 `;
 
 export const imageTintObj = {
@@ -10,6 +10,6 @@ export const imageTintObj = {
 	mixBlendMode: "multiply",
 };
 
-const util = {
-	imageTintObj,
+export const util = {
+	imageTint,
 };
