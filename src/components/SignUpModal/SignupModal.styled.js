@@ -1,5 +1,12 @@
+import Logo from "assets/icons/logo.inline.svg";
 import { Signup } from "components/Signup";
 import styled from "styled-components";
+
+export const SignupModalLogo = styled(Logo)`
+	width: 120px;
+	margin-top: -48px;
+	margin-bottom: 16px;
+`;
 
 export const SignupModalClose = styled.div`
 	width: 32px;
@@ -49,6 +56,7 @@ export const SignupModalValueProp = styled.div`
 		font-family: ${(props) => props.theme.fontFamily.serif};
 
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	`}

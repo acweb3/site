@@ -41,6 +41,7 @@ export const SignupModal = () => {
 	return (
 		<S.SignupModal isSignup={isClosing || isSignup} isVisible={isVisible}>
 			<S.SignupModalValueProp>
+				<S.SignupModalLogo />
 				let us know about your project!
 			</S.SignupModalValueProp>
 			<S.SignupModalForm>
