@@ -62,7 +62,10 @@ export const SignupModal = styled.div`
 
 	z-index: 999;
 
-	display: flex;
+	display: none;
+
+	transform: translate3D(0, 1000px, 0);
+	transition: transform 400ms;
 
 	${(props) => props.theme.breakpoints.extraSmall`
 		border: 1px solid;
@@ -72,5 +75,17 @@ export const SignupModal = styled.div`
 		left: calc(50% - 320px);
 		overflow: hidden;
 		border-radius: 0 0 0 32px;
+	`}
+
+	${(props) =>
+		props.isSignup &&
+		`
+		display: flex;
+	`}
+
+	${(props) =>
+		props.isVisible &&
+		`
+		transform: translate3D(0, 0, 0);
 	`}
 `;

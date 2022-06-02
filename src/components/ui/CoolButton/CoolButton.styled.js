@@ -99,6 +99,8 @@ export const CoolButton = styled.button`
 
 	z-index: 2;
 
+	outline: none;
+
 	&::after {
 		position: absolute;
 		content: " ";

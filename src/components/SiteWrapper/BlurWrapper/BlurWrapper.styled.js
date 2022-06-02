@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const BlurWrapperContent = styled.div`
+	transition: filter 400ms;
+
 	${(props) =>
 		props.lock !== undefined &&
 		css`
