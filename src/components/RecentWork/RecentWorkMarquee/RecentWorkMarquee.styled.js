@@ -1,8 +1,16 @@
-import styled, { keyframes } from "styled-components";
+import { Marquee } from "components/ui/Marquee";
+import styled, { css } from "styled-components";
 
-const marquee = keyframes`
-	0% { left: 0; }
-  100% { left: -100%; }
+const recentWorkMarqueeCss = css`
+	font-family: ${(props) => props.theme.fontFamily.serif};
+	font-size: 120px;
+	white-space: nowrap;
+`;
+
+export const RecentWorkMarqueeAnimated = styled(Marquee)`
+	${recentWorkMarqueeCss}
+	position: relative;
+	height: 120px;
 `;
 
 export const RecentWorkMarqueeCopy = styled.div.attrs((attrs) => {
@@ -20,17 +28,11 @@ export const RecentWorkMarqueeCopy = styled.div.attrs((attrs) => {
 		},
 	};
 })`
+	${recentWorkMarqueeCss}
 	position: absolute;
-
-	font-family: ${(props) => props.theme.fontFamily.serif};
-	font-size: 120px;
-	white-space: nowrap;
-	animation: ${marquee} 15s linear infinite;
-
 	${(props) => props.theme.breakpoints.extraSmall`
 		position: relative;
 		transition: transform 400ms ease;
-		animation: none;
 	`}
 `;
 

@@ -1,5 +1,8 @@
+import { LogoDiscord24, Wikis24 } from "@carbon/icons-react";
 import * as S from "components/RecentWork/RecentWork.styled";
 import { RecentWorkMarquee } from "components/RecentWork/RecentWorkMarquee";
+import { BaseLink } from "components/ui/BaseLink";
+import { Column } from "components/ui/Column";
 import { StaticImage } from "gatsby-plugin-image";
 import { imageTintObj } from "styles/util";
 
@@ -38,6 +41,21 @@ export const RecentWork = () => {
 									over 10,000 members.
 								</S.RecentWorkCopy>
 							</S.RecentWorkSpreadCopy>
+							<Column.Actions>
+								<BaseLink
+									css={`
+										${(props) => props.theme.breakpoints
+											.medium`
+											margin-left: auto;
+											margin-right: 0;
+										`}
+									`}
+									aria-label="bat cowls discord"
+									href="https://discord.gg/batcowls"
+								>
+									<LogoDiscord24 />
+								</BaseLink>
+							</Column.Actions>
 						</S.RecentWorkProject>
 					</S.RecentWorkProjects>
 					<S.RecentWorkProjects>
@@ -63,6 +81,21 @@ export const RecentWork = () => {
 								implemented mint mechanics, and handled sold-out
 								drops.
 							</S.RecentWorkCopy>
+							<Column.Actions>
+								<BaseLink
+									aria-label="highrises site"
+									href="https://highrises.hythacg.com/"
+								>
+									<Wikis24 />
+								</BaseLink>
+
+								<BaseLink
+									aria-label="hytha discord"
+									href="https://discord.gg/meX2WS6Jjk"
+								>
+									<LogoDiscord24 />
+								</BaseLink>
+							</Column.Actions>
 						</S.RecentWorkProject>
 						<S.RecentWorkProject width={480}>
 							<StaticImage
@@ -75,7 +108,7 @@ export const RecentWork = () => {
 								}}
 							/>
 							<S.RecentWorkHeader>
-								e11even
+								e11even captain's club
 								<S.RecentWorkSup>community</S.RecentWorkSup>
 							</S.RecentWorkHeader>
 							<S.RecentWorkCopy>
@@ -85,6 +118,15 @@ export const RecentWork = () => {
 								and are a communications liason between the
 								nightclub and horizen labs.
 							</S.RecentWorkCopy>
+
+							<Column.Actions>
+								<BaseLink
+									aria-label="e11even discord"
+									href="https://discord.gg/11captains"
+								>
+									<LogoDiscord24 />
+								</BaseLink>
+							</Column.Actions>
 						</S.RecentWorkProject>
 					</S.RecentWorkProjects>
 				</S.RecentWorkPortfolio>

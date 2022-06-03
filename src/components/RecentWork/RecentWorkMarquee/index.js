@@ -7,16 +7,24 @@ export const RecentWorkMarquee = () => {
 	const { isMobile } = useWindowSize();
 
 	return (
-		<S.RecentWorkMarquee>
-			<S.RecentWorkMarqueeCopy
-				isMobile={isMobile}
-				offsetScroll={scrollHeight * 0.4}
-			>
-				highrises — warner brothers — e11even—horizen labs—highrises —
-				warner brothers — e11even—horizen labs—highrises — warner
-				brothers — e11even—horizen labs—highrises — warner brothers —
-				e11even—horizen labs—
-			</S.RecentWorkMarqueeCopy>
-		</S.RecentWorkMarquee>
+		<>
+			{!isMobile ? (
+				<S.RecentWorkMarquee>
+					<S.RecentWorkMarqueeCopy
+						isMobile={isMobile}
+						offsetScroll={scrollHeight * 0.4}
+					>
+						highrises — warner brothers — e11even—horizen
+						labs—highrises — warner brothers — e11even—horizen
+						labs—highrises — warner brothers — e11even—horizen
+						labs—highrises — warner brothers — e11even—horizen labs—
+					</S.RecentWorkMarqueeCopy>
+				</S.RecentWorkMarquee>
+			) : (
+				<S.RecentWorkMarqueeAnimated>
+					our recent work
+				</S.RecentWorkMarqueeAnimated>
+			)}
+		</>
 	);
 };

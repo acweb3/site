@@ -109,10 +109,7 @@ export const Footer = () => {
 					</Column>
 				</S.FooterRightColumns>
 			</S.FooterContent>
-			<S.FooterMarquee>
-				<S.FooterMarqueeSpan>aboltc aboltc aboltc </S.FooterMarqueeSpan>
-				<S.FooterMarqueeSpan>aboltc aboltc aboltc </S.FooterMarqueeSpan>
-			</S.FooterMarquee>
+			<S.FooterMarquee>aboltc aboltc aboltc</S.FooterMarquee>
 		</S.Footer>
 	);
 };

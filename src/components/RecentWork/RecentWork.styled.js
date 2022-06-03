@@ -27,7 +27,6 @@ export const RecentWorkSup = styled.div`
 
 export const RecentWorkCopy = styled.div`
 	max-width: 480px;
-	margin-bottom: 48px;
 
 	${(props) => props.theme.breakpoints.medium`
 		margin-bottom: 0;
@@ -67,6 +66,7 @@ export const RecentWorkProject = styled(ViewScroll)`
 	flex-direction: column;
 
 	background: ${(props) => props.theme.colors.white[0]};
+	margin-bottom: 48px;
 
 	${(props) => props.theme.breakpoints.medium`
 		width: ${(props) => props.width}px;
@@ -78,17 +78,17 @@ export const RecentWorkProjects = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	&:last-of-type {
-		& > ${RecentWorkProject} {
-			margin-bottom: 0px;
-		}
-	}
-
 	${(props) => props.theme.breakpoints.medium`
 		flex-direction: row;
 
 		& > ${RecentWorkProject} {
 			margin-right: 64px;
+		}
+
+		&:last-of-type {
+			& > ${RecentWorkProject} {
+				margin-bottom: 0px;
+			}
 		}
 	`}
 `;

@@ -1,5 +1,6 @@
 import Logo from "assets/icons/logo.inline.svg";
-import styled, { keyframes } from "styled-components";
+import { Marquee } from "components/ui/Marquee";
+import styled from "styled-components";
 
 export const FooterRightColumns = styled.div`
 	display: flex;
@@ -65,29 +66,13 @@ export const FooterContent = styled.div`
 	`}
 `;
 
-const marquee = keyframes`
-	0% { left: 0; }
-  100% { left: -100%; }
-`;
-
-export const FooterMarqueeSpan = styled.span`
-	width: 100%;
-`;
-
-export const FooterMarquee = styled.div`
+export const FooterMarquee = styled(Marquee)`
 	position: absolute;
+	left: 0;
 	bottom: -120px;
-
-	width: 200%;
-
-	overflow: hidden;
-
-	animation: ${marquee} 60s linear infinite;
-
 	font-size: 240px;
 	height: 240px;
 	font-family: ${(props) => props.theme.fontFamily.serif};
-	overflow: hidden;
 `;
 
 export const Footer = styled.div`
