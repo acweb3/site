@@ -60,8 +60,8 @@ export const TeamMembers = () => {
 				<Column.Text>
 					cooper is a business developer specializing in nft strategy,
 					crypto culture, and discord design. he has led multiple
-					projects to OpenSea's #1 trending position, most notably
-					Rowhomes and LinksDAO.
+					projects to opensea's #1 trending position, most notably
+					rowhomes and linksdao.
 				</Column.Text>
 
 				<S.TeamMembersLinks>

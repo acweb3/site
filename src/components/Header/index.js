@@ -60,11 +60,15 @@ export const Header = () => {
 								padding: 0 16px;
 
 								${(props) => props.theme.breakpoints.extraSmall`
-									width: 640px;
+									width: 480px;
 									padding: 0;
 
 									font-size: ${(props) => props.theme.fontSize.h4};
 								`}
+
+								${(props) =>
+									props.theme.breakpoints
+										.medium`width: 640px;`}
 							`}
 						>
 							we're a full-service web3 studio. we build discords,

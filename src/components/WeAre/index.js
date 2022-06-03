@@ -13,7 +13,7 @@ export const WeAre = () => {
 		<S.WeAre>
 			<Column
 				css={`
-					${(props) => props.theme.breakpoints.extraSmall`
+					${(props) => props.theme.breakpoints.medium`
 						flex: 0 0 320px;
 					`}
 				`}
@@ -33,7 +33,7 @@ export const WeAre = () => {
 				css={`
 					margin-bottom: 48px;
 
-					${(props) => props.theme.breakpoints.extraSmall`
+					${(props) => props.theme.breakpoints.medium`
 						flex: 0 0 280px;
 						margin-left: 64px;
 					`}
@@ -53,7 +53,7 @@ export const WeAre = () => {
 
 			<Column
 				css={`
-					${(props) => props.theme.breakpoints.extraSmall`
+					${(props) => props.theme.breakpoints.medium`
 						flex: 0 0 280px;
 						margin-left: 48px;
 					`}
@@ -71,7 +71,7 @@ export const WeAre = () => {
 									${(props) => props.theme.colors.white[0]};
 							}
 
-							${(props) => props.theme.breakpoints.extraSmall`
+							${(props) => props.theme.breakpoints.medium`
 								color: ${(props) => props.theme.colors.white[0]};
 
 								& > * {
@@ -101,7 +101,7 @@ export const WeAre = () => {
 									${(props) => props.theme.colors.white[0]};
 								${(props) =>
 									props.theme.breakpoints
-										.extraSmall`border: 1px solid ${props.theme.colors.black[0]};`}
+										.medium`border: 1px solid ${props.theme.colors.black[0]};`}
 							`}
 						>
 							call
@@ -117,7 +117,7 @@ export const WeAre = () => {
 									${(props) => props.theme.colors.white[0]};
 								${(props) =>
 									props.theme.breakpoints
-										.extraSmall`border: 1px solid ${props.theme.colors.black[0]};`}
+										.medium`border: 1px solid ${props.theme.colors.black[0]};`}
 							`}
 						>
 							email

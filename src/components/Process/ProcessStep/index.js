@@ -6,41 +6,13 @@ import { Column } from "components/ui/Column";
 import { CoolCircle } from "components/ui/CoolCircle";
 import { useIsSignupContext } from "contexts/IsSignupContext";
 import { GatsbyImage } from "gatsby-plugin-image";
-import { useEffect, useRef, useState } from "react";
 import { imageTintObj } from "styles/util";
 
-export const ProcessStep = ({ isFinal, processStep }) => {
+export const ProcessStep = ({ processStep }) => {
 	const { setIsSignup } = useIsSignupContext();
-	const { scrollHeight } = useScrollHeight();
-	const { isMobile, isLoaded } = useWindowSize();
-	const processStepRef = useRef();
-	const [offsetY, setOffsetY] = useState(0);
-
-	useEffect(() => {
-		const parentMaxScroll =
-			processStepRef.current.parentElement.offsetTop +
-			processStepRef.current.parentElement.offsetHeight -
-			(processStepRef.current.offsetTop +
-				processStepRef.current.offsetHeight);
-
-		const refScroll = Math.max(
-			0,
-			window.scrollY -
-				300 -
-				(processStepRef.current.offsetTop +
-					processStepRef.current.offsetHeight)
-		);
-
-		setOffsetY(Math.min(refScroll, parentMaxScroll));
-	}, [scrollHeight]);
 
 	return (
-		<S.ProcessStep
-			isMobile={!isLoaded || isMobile}
-			ref={processStepRef}
-			offsetY={offsetY}
-			isFinal={isFinal}
-		>
+		<S.ProcessStep>
 			<S.ProcessCaption>
 				<Column
 					css={`

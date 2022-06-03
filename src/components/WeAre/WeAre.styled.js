@@ -13,7 +13,7 @@ export const WeAre = styled.div`
 		margin-bottom: 32px;
 	}
 
-	${(props) => props.theme.breakpoints.extraSmall`
+	${(props) => props.theme.breakpoints.medium`
 		color: ${(props) => props.theme.colors.black[0]};
 		background: ${(props) => props.theme.colors.white[0]};
 

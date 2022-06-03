@@ -25,21 +25,7 @@ export const ProcessStepVisual = styled.div`
 	justify-content: center;
 `;
 
-export const ProcessStep = styled.div.attrs((attrs) => {
-	if (attrs.isFinal || attrs.isMobile) {
-		return {
-			style: {
-				transform: "translate3D(0px, 0px, 0px)",
-			},
-		};
-	}
-
-	return {
-		style: {
-			transform: `translate3D(0px, ${attrs.offsetY}px, 0px)`,
-		},
-	};
-})`
+export const ProcessStep = styled.div`
 	background: ${(props) => props.theme.colors.white[0]};
 	display: flex;
 	flex-direction: column;

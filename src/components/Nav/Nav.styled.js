@@ -68,7 +68,7 @@ export const NavLinkContainer = styled.div`
 
 	display: none;
 
-	${(props) => props.theme.breakpoints.extraSmall`
+	${(props) => props.theme.breakpoints.small`
 		display: initial;
 	`}
 `;

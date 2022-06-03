@@ -29,7 +29,7 @@ export const RecentWorkCopy = styled.div`
 	max-width: 480px;
 	margin-bottom: 48px;
 
-	${(props) => props.theme.breakpoints.extraSmall`
+	${(props) => props.theme.breakpoints.medium`
 		margin-bottom: 0;
 
 		${
@@ -68,7 +68,7 @@ export const RecentWorkProject = styled(ViewScroll)`
 
 	background: ${(props) => props.theme.colors.white[0]};
 
-	${(props) => props.theme.breakpoints.extraSmall`
+	${(props) => props.theme.breakpoints.medium`
 		width: ${(props) => props.width}px;
 		margin-bottom: 96px;
 	`}
@@ -84,7 +84,7 @@ export const RecentWorkProjects = styled.div`
 		}
 	}
 
-	${(props) => props.theme.breakpoints.extraSmall`
+	${(props) => props.theme.breakpoints.medium`
 		flex-direction: row;
 
 		& > ${RecentWorkProject} {
@@ -122,7 +122,7 @@ export const RecentWorkBanner = styled.div`
 
 	display: none;
 
-	${(props) => props.theme.breakpoints.extraSmall`
+	${(props) => props.theme.breakpoints.medium`
 		display: block;
 	`}
 `;
@@ -137,6 +137,11 @@ export const RecentWork = styled.div`
 	overflow: hidden;
 
 	${(props) => props.theme.breakpoints.extraSmall`
+		overflow: initial;
+		padding: 88px 32px 32px 32px;
+	`}
+
+	${(props) => props.theme.breakpoints.medium`
 		overflow: initial;
 		padding: 88px 120px 32px 72px;
 	`}

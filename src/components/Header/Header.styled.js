@@ -66,6 +66,12 @@ export const HeaderInfo = styled.div`
 	${(props) => props.theme.breakpoints.extraSmall`
 		transform: translate3D(0, 0, 0);
 		height: initial;
+		padding: 80px 32px 48px;
+	`}
+
+	${(props) => props.theme.breakpoints.medium`
+		transform: translate3D(0, 0, 0);
+		height: initial;
 		padding: 80px 128px 48px;
 	`}
 `;

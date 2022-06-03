@@ -71,7 +71,6 @@ export const Process = () => {
 				{processSteps.map((processStep, i) => (
 					<ProcessStep
 						key={i}
-						isFinal={i === processSteps.length - 1}
 						processStep={{ ...processStep, ...PROCESS_STEPS[i] }}
 					/>
 				))}

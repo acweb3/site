@@ -16,6 +16,10 @@ export const Process = styled.div`
 	width: 100%;
 
 	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 32px 32px 0px;
+	`}
+
+	${(props) => props.theme.breakpoints.medium`
 		padding: 64px 112px 0px;
 	`}
 `;
