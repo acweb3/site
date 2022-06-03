@@ -14,6 +14,12 @@ export const Team = styled.div`
 	background: ${(props) => props.theme.colors.black[0]};
 
 	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 0px 32px 0px;
+		color: ${(props) => props.theme.colors.black[0]};
+		background: ${(props) => props.theme.colors.white[0]};
+	`}
+
+	${(props) => props.theme.breakpoints.medium`
 		padding: 80px 120px 80px;
 		color: ${(props) => props.theme.colors.black[0]};
 		background: ${(props) => props.theme.colors.white[0]};

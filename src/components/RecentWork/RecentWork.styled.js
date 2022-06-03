@@ -53,7 +53,7 @@ export const RecentWorkSpreadCopy = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	${(props) => props.theme.breakpoints.extraSmall`
+	${(props) => props.theme.breakpoints.medium`
 		flex-direction: row;
 		justify-content: space-between;
 	`}
@@ -68,8 +68,9 @@ export const RecentWorkProject = styled(ViewScroll)`
 	background: ${(props) => props.theme.colors.white[0]};
 	margin-bottom: 48px;
 
+	width: min(${(props) => props.width}px, 100%);
+
 	${(props) => props.theme.breakpoints.medium`
-		width: ${(props) => props.width}px;
 		margin-bottom: 96px;
 	`}
 `;

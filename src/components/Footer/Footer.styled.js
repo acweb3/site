@@ -7,7 +7,7 @@ export const FooterRightColumns = styled.div`
 
 	flex-direction: column;
 
-	${(props) => props.theme.breakpoints.extraSmall`
+	${(props) => props.theme.breakpoints.small`
 		flex-direction: row;
 	`}
 `;
@@ -85,6 +85,10 @@ export const Footer = styled.div`
 	overflow: hidden;
 
 	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 32px 32px 200px;
+	`}
+
+	${(props) => props.theme.breakpoints.medium`
 		padding: 32px 120px 200px;
 	`}
 `;

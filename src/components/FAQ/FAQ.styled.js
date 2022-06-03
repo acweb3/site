@@ -79,6 +79,10 @@ export const FAQ = styled.div`
 	padding: 0 32px 48px;
 
 	${(props) => props.theme.breakpoints.extraSmall`
+		padding: 0px 32px 48px;
+	`}
+
+	${(props) => props.theme.breakpoints.medium`
 		padding: 40px 128px 48px;
 	`}
 `;

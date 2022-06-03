@@ -7,6 +7,7 @@ export const TeamMembersColumn = styled(Column)`
 	margin-bottom: 48px;
 
 	flex: 0 0 calc(50% - 16px);
+	max-width: calc(50% - 16px);
 
 	& .gatsby-image-wrapper {
 		background: ${(props) => props.theme.colors.white[0]};
@@ -52,6 +53,7 @@ export const TeamMembers = styled.div.attrs((attrs) => {
 })`
 	display: flex;
 	transition: transform 200ms linear;
+	max-width: 100%;
 
 	${(props) => props.theme.breakpoints.extraSmall`
 		padding-bottom: 80px;

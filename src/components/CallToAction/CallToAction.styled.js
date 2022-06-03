@@ -69,6 +69,12 @@ export const CallToAction = styled.div`
 	${(props) => props.theme.breakpoints.extraSmall`
 		border-radius: 64px 64px 0 0;
 		box-shadow: ${(props) => props.theme.shadows.inverse.high};
+		padding: 80px 32px 80px;
+	`}
+
+	${(props) => props.theme.breakpoints.medium`
+		border-radius: 64px 64px 0 0;
+		box-shadow: ${(props) => props.theme.shadows.inverse.high};
 		padding: 104px 120px 80px;
 	`}
 `;
