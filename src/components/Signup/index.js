@@ -3,7 +3,7 @@ import { config } from "config";
 import { useIsSignupContext } from "contexts/IsSignupContext";
 import { useToastsContext } from "contexts/ToastsContext";
 
-export const Signup = ({ className, onComplete }) => {
+export const Signup = ({ className, onComplete, idModifier }) => {
 	const { addToast } = useToastsContext();
 	const { form, setForm } = useIsSignupContext();
 
@@ -47,42 +47,44 @@ export const Signup = ({ className, onComplete }) => {
 
 	return (
 		<S.SignupForm className={className}>
-			<S.SignupInputLabel to="signup-name">your name</S.SignupInputLabel>
+			<S.SignupInputLabel to={`signup-name--${idModifier}`}>
+				your name
+			</S.SignupInputLabel>
 			<S.SignupInput
-				id="signup-name"
+				id={`signup-name--${idModifier}`}
 				type="email"
 				placeholder="kevin"
 				value={form.name}
 				onChange={formChange("name")}
 			/>
 
-			<S.SignupInputLabel to="signup-email">
+			<S.SignupInputLabel to={`signup-email--${idModifier}`}>
 				your email
 			</S.SignupInputLabel>
 			<S.SignupInput
-				id="signup-email"
+				id={`signup-email--${idModifier}`}
 				type="email"
 				placeholder="xxx@yyy.com"
 				value={form.email}
 				onChange={formChange("email")}
 			/>
 
-			<S.SignupInputLabel to="signup-project-name">
+			<S.SignupInputLabel to={`signup-project-name--${idModifier}`}>
 				your project name
 			</S.SignupInputLabel>
 			<S.SignupInput
-				id="signup-project-name"
+				id={`signup-project-name--${idModifier}`}
 				type="text"
 				placeholder="aboltc coin"
 				value={form.projectName}
 				onChange={formChange("projectName")}
 			/>
 
-			<S.SignupInputLabel to="signup-looking-for">
+			<S.SignupInputLabel to={`signup-looking-for--${idModifier}`}>
 				describe your project
 			</S.SignupInputLabel>
 			<S.SignupTextArea
-				id="signup-looking-for"
+				id={`signup-looking-for--${idModifier}`}
 				type="email"
 				placeholder="we're looking for a mint site and discord build for a 10K pfp"
 				rows={4}
@@ -90,11 +92,11 @@ export const Signup = ({ className, onComplete }) => {
 				onChange={formChange("description")}
 			/>
 
-			<S.SignupInputLabel to="signup-launch">
+			<S.SignupInputLabel to={`signup-launch--${idModifier}`}>
 				your launch date
 			</S.SignupInputLabel>
 			<S.SignupInput
-				id="signup-launch"
+				id={`signup-launch--${idModifier}`}
 				type="email"
 				placeholder={(() => {
 					const date = new Date();

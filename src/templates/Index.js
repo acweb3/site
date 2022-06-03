@@ -22,6 +22,9 @@ const IndexPage = ({ pageContext: { thumbnail } }) => {
 					lang: "en",
 				}}
 			>
+				{config.nodeEnv === "development" && (
+					<meta name="robots" content="noindex" />
+				)}
 				<meta charSet="utf-8" />
 				<meta
 					content="width=device-width, initial-scale=1.0"
@@ -53,7 +56,7 @@ const IndexPage = ({ pageContext: { thumbnail } }) => {
 				<meta name="twitter:site" content="@aboltc_" />
 				<meta property="twitter:image" content={thumbnail} />
 				<meta property="twitter:image:alt" content="" />
-				<link rel="canonical" href={config.canonicalURL} />
+				<link rel="canonical" href="https://www.aboltc.com" />
 			</Helmet>
 			<Contexts>
 				<Toasts />

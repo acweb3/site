@@ -13,7 +13,7 @@ export const ColumnText = styled.p`
 	line-height: 1;
 `;
 
-export const ColumnHeader = styled.h4`
+export const ColumnHeader = styled.div`
 	font-family: ${(props) => props.theme.fontFamily.serif};
 	font-size: ${(props) => props.theme.fontSize.h5};
 	line-height: 1;

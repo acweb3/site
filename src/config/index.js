@@ -7,6 +7,7 @@ const requiredEnvVar = (name, envVar) => {
 };
 
 export const config = {
+	nodeEnv: requiredEnvVar("nodeEnv", process.env.NODE_ENV),
 	canonicalURL: requiredEnvVar(
 		"canonicalURL",
 		process.env.GATSBY_META_CANONICAL_URL

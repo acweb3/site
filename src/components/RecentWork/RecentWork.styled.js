@@ -42,7 +42,7 @@ export const RecentWorkCopy = styled.div`
 	`}
 `;
 
-export const RecentWorkHeader = styled.h4`
+export const RecentWorkHeader = styled.div`
 	font-family: ${(props) => props.theme.fontFamily.serif};
 	font-size: ${(props) => props.theme.fontSize.h1};
 	font-weight: 600;

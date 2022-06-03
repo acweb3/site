@@ -37,6 +37,7 @@ export const NavAction = ({ children, isActive, buttonProps }) => {
 				}}
 			>
 				<S.NavActionSignup
+					idModifier="nav-action"
 					onComplete={() => setIsPopoverActive(false)}
 				/>
 			</S.NavActionPopover>

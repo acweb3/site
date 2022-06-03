@@ -48,7 +48,10 @@ export const SignupModal = () => {
 				<S.SignupModalClose onClick={() => setIsSignup(false)}>
 					<Close />
 				</S.SignupModalClose>
-				<S.SignupModalSignup onComplete={() => setIsSignup(false)} />
+				<S.SignupModalSignup
+					idModifier="modal"
+					onComplete={() => setIsSignup(false)}
+				/>
 			</S.SignupModalForm>
 		</S.SignupModal>
 	);
