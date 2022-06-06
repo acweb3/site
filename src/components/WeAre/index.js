@@ -1,5 +1,4 @@
 import { Phone16, Email16, PhoneFilled16 } from "@carbon/icons-react";
-import { useWindowSize } from "common/hooks/useWindowSize";
 import * as S from "components/WeAre/WeAre.styled";
 import { BaseButton } from "components/ui/BaseButton";
 import { BaseLink } from "components/ui/BaseLink";
@@ -8,7 +7,6 @@ import { CoolCircle } from "components/ui/CoolCircle";
 import React from "react";
 
 export const WeAre = () => {
-	const { isMobile } = useWindowSize();
 	return (
 		<S.WeAre>
 			<Column

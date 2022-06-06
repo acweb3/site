@@ -39,7 +39,7 @@ export const Header = () => {
 							justify-content: center;
 							margin-left: auto;
 							margin-right: auto;
-							max-width: 880px;
+							max-width: 1440px;
 							text-align: center;
 						`}
 					>
